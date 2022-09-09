@@ -36,7 +36,7 @@ body{
   margin: 0;
   padding: 0;
   /*  */
-  background: url(imagenes/Fondosi2.jpg) 
+  background: url(../imagenes/Fondosi2.jpg) 
   no-repeat center center fixed;
   background-size: cover;
   position: relative;
@@ -254,6 +254,7 @@ font-family: 'Open Sans', sans-serif;
     background: white;
     border: 3px solid #008037;
     border-radius: 8px;
+  
   }
   .menure:hover{
     box-shadow: 7px 13px 37px rgb(91, 122, 69);
@@ -330,7 +331,7 @@ font-family: 'Open Sans', sans-serif;
    border-radius: 1.5%;
   }
   .contenedorservicios .fexcajas:hover{
-    box-shadow: 3px 10px 10px rgb(100, 128, 55,0.4);
+    box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
   }
   
   /* Productos recomendados */
@@ -352,7 +353,7 @@ font-family: 'Open Sans', sans-serif;
    height: 280px;
   }
   .contenedorserviciosPRODUCTOS .fexcajasPR:hover{
-    box-shadow: 3px 10px 10px rgb(100, 128, 55,0.4);
+    box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
   }
   
   .boton_walmart{
