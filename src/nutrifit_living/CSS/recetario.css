@@ -1,0 +1,24 @@
+.cerrarMenu {
+  position: absolute;
+  top: -5em;
+  left: 5em;
+}
+
+.cerrarMenu button {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 1em;
+  display: none;
+}
+
+.contenerya {
+  -webkit-transition-property: display;
+  transition-property: display;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+/*# sourceMappingURL=recetario.css.map */
