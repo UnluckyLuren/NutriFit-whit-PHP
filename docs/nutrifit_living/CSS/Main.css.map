@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../sass/Main.scss"
+        "../../../docs/nutrifit_living/sass/Main.scss"
     ],
     "names": [],
     "file": "Main.css"

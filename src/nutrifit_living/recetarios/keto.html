@@ -8,41 +8,36 @@
         <meta name="Description" content="Bienvenido a una vida mas saludable">
         <link  rel="icon" href="/imagenes/LOGO NUTRIFIT LIVING_preview_rev_1.png" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../CSS/restylesrecipes.css">
-<link rel="stylesheet" href="../CSS/styles.css">
-<link rel="stylesheet" href="../CSS/responsive.css">
-<link rel="stylesheet" href="../CSS/style.css">
-<link rel="stylesheet" href="../CSS/styleheader.css">
-<script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
-<script defer src="/nutrifit living/Prueba7/java.js"></script>
-<script src="/nutrifit living/whatss.js"></script>
-<script src="/nutrifit living/Prueba/java.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/styleheader.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/style_cards.css">    
+    <link rel="stylesheet" href="../CSS/recetario.css">
+    
+   
   <style>
     p{
       font-family: 'DM Serif Text', serif;
     }
     
-    Body{
-     background: url(/imagenes/Fondorece.jpg) 
-  no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
-     }
+    Body {
+
+        background: url(../imagenes/Fondorece.jpg) 
+        no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+    }
+
   </style>
-  <script src="/nutrifit living/whatss.js"></script>
-  <script src="/nutrifit living/Prueba/java.js"></script>
+
     </head>
     <body>
 
-        <script src="whatss.js"></script>
         <header class="header ">
             <nav class="nav">
                 <a href="#" class="logo ">
@@ -53,11 +48,11 @@
     
                 </button>
                 <ul class="nav-menu ">
-                    <li class="nav-menu-item  "><a href="/nutrifit living/index (1).html" class="nav-menu-link nav-link">Inicio</a></li>
-                    <li class="nav-menu-item " ><a href="/nutrifit living/LoginFuncionando/index.html " class="nav-menu-link nav-link">Ingresar</a></li>
-                    <li class="nav-menu-item"><a href="/nutrifit living/dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
+                    <li class="nav-menu-item  "><a href="../Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
+                    <li class="nav-menu-item " ><a href="../LoginFuncionando/index.html " class="nav-menu-link nav-link">Ingresar</a></li>
+                    <li class="nav-menu-item"><a href="../dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
                     
-                    <li class="nav-menu-item "><a href="/nutrifit living/recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
+                    <li class="nav-menu-item "><a href="../recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
                 </ul>
             </nav>
         </header>
@@ -67,25 +62,35 @@
         <div class="containerre">
             <nav class="menure">
                 <ul>
-                    <li><a href="/nutrifit living/recetarios/Keto/keto.html"><p class="nombreDEpaginadondeseencuantra"> ▼     keto</p></a>
-                    <ul class="submenure"></li>
-                    <li><a href="/nutrifit living/recetarios/recetarios.html">Postres</a></li>
-                    <li><a href="/nutrifit living/recetarios/Bebidas/bebidas.html">Bebidas</a></li>
-                    <li><a href="/nutrifit living/recetarios/Cenas/cenas.html">cenas</a></li>
-                    <li><a href="/nutrifit living/recetarios/Comida/comidas.html">Comidas</a></li>
-                    <li><a href="/nutrifit living/recetarios/Desayunos/desayunos.html">Desayunos</a></li>
-                    <li><a href="/nutrifit living/recetarios/Snaks/snaks.html">Snaks</a></li>
-                    <li><a href="/nutrifit living/recetarios/Vegano/vegano.html">Vegano</a></li>
+                    
+                    <li><a href="recetarios.html"><p class="nombreDEpaginadondeseencuantra">Postres</p></a>
+                        <ul class="submenure">
+                        <li><a href="#" id="linkBebidas" >Bebidas</a></li>
+                        <li><a href="recetarios.html">cenas</a></li>
+                        <li><a href="recetarios.html">Comidas</a></li>
+                        <li><a href="recetarios.html">Desayunos</a></li>
+                        <li><a href="keto.html">keto</a></li>
+                        <li><a href="recetarios.html">Snaks</a></li>
+                        <li><a href="recetarios.html">Vegano</a></li>
                 </ul>
                 </ul>
             </nav>
         </div>
-        <div class="contenerya">
+     
+        <div class="cerrarMenu" >
+            <button id="closePreparation">Cerrar</button>
+        </div>
+
+        <div id="container" >
+
+        <div class="contenerya" id="displayPreparation" >
        <div class="card recetario" id="recetas">
+
         <div class="face front">
           <img src="/recetario/keto/KETO CLUB SANDWICH.jpg" alt="KETO CLUB SANDWICHs">
           <h3>Keto Club Sandwich</h3>
         </div>
+
         <div class="face back">
             <h3>Ingredientes</h3>
             <p>
@@ -106,7 +111,7 @@
             
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/KETO CLUB SANDWICH/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -133,7 +138,7 @@
                
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/Nidos de calabaza squash/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -160,7 +165,7 @@
             
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/PIZZA CON BORDES DE QUESO/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -194,7 +199,7 @@
                 •Adornos opcionales (tomates cherry, etc etc)
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/rollohulk/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -220,7 +225,7 @@
             
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/bolitas sorpresa/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -246,7 +251,7 @@
                 •sal y pimienta
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/FETTUCCINI DE ESPINACA/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -272,7 +277,7 @@
                 •AOVE
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/huevos/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -307,7 +312,7 @@
                 •Especias a gusto
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/Tuna Waffle/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -338,7 +343,7 @@
             
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/WRAP DE SALMÓN/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -362,7 +367,7 @@
 
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/Crema fría de pepino y aguacate/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -388,7 +393,7 @@
          
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/Empanadillas/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
@@ -411,13 +416,14 @@
               
             </p>
             <div class="link">
-                <a class="link_estilos" href="/nutrifit living/recetarios/Keto/PIZZA KETO/preparacion.html">Modo de Preparación</a>
+                <a class="link_estilos openInformation " href="#">Modo de Preparación</a>
             </div>
         </div>
     </div>
     </div>
-    <script src="/nutrifit living/whatss.js"></script>
-    <script src="/nutrifit living/Prueba/java.js"></script>
+</div>
+
+
     <br><br>
     <br><br>
     <br><br>
@@ -428,14 +434,14 @@
     <div class="item-1">
         <div class="imagen">
             <figure>
-                <a href="/nutrifit living/index (1).html">
-                    <img class="imagenfooter" src="/Nuevo proyecto.png" alt="Logo de nutrifit living" >
+                <a href="../Page-Initial.html">
+                    <img class="imagenfooter" src="../imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" >
                 </a>
             </figure>
         </div>
         
            
-   <a class="item-2" href="/nutrifit living/Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
+   <a class="item-2" href="../Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
 
       
     </div>
@@ -443,6 +449,13 @@
         <small>&copy; 2022  - Todos los Derechos Reservados.</small>
     </div>
 </footer>
+
+        <script src="../whatss.js"></script>
+        <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
+        <script defer src="../Prueba7/java.js"></script>
+        <script src="../js/preparation-Keto.js"></script>
+
+
     </body>
 </div>
 </html>
