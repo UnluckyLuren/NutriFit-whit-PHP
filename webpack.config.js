@@ -87,8 +87,7 @@ module.exports = {
 
         new CopyPlugin({
             patterns: [ 
-                { from: "src/nutrifit_living", to: "nutrifit_living/" },
-                { from: "src/recetario", to: "recetario/" } 
+                { from: "src/nutrifit_living", to: "nutrifit_living/" }
             ]
           })
 

@@ -435,7 +435,7 @@ linkPreparation[3].addEventListener('click', () => {
 
       // Acomodo Jugo verde información e imagen
 
-      img.src="/recetario/bebidas/Jugo verde.jpg";
+      img.src="../imagenes/recetario/bebidas/Jugo verde.jpg";
       titleJugo.textContent = "Jugo verde";
 
       textJugo.innerHTML=`  
@@ -459,7 +459,7 @@ linkPreparation[3].addEventListener('click', () => {
 
       // Acomodo Smotthie
 
-      imgRep.src="/recetario/bebidas/smotthies de fresa.jpg";
+      imgRep.src="../imagenes/recetario/bebidas/smotthies de fresa.jpg";
       titleSmotthie.textContent = "Smotthie de fresa";
 
       textSmotthie.innerHTML= `
