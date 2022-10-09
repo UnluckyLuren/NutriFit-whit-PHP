@@ -4,8 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -81,12 +80,8 @@ Vídeo Nutrifit Living
   margin: 50px;
   width: 700px;
   /* display: flex; */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-top: 200px;
 }
 
@@ -127,8 +122,7 @@ form {
   background-color: #e9f5e5;
   opacity: .99;
   padding: 0 20px;
-  -webkit-box-shadow: 7px 13px 37px #5b7a45;
-          box-shadow: 7px 13px 37px #5b7a45;
+  box-shadow: 7px 13px 37px #5b7a45;
   border-color: #8ac441;
 }
 
@@ -193,13 +187,10 @@ form {
 }
 
 .menu:hover {
-  -webkit-box-shadow: 7px 13px 37px #5b7a45;
-          box-shadow: 7px 13px 37px #5b7a45;
+  box-shadow: 7px 13px 37px #5b7a45;
 }
 
 .menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -209,7 +200,6 @@ form {
   padding: 0px 5px;
   text-decoration: none;
   color: #008037;
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-family: 'DM Serif Text', serif;
   font-size: 1rem;
@@ -222,8 +212,7 @@ form {
 
 .menu .submenu {
   background: white;
-  -webkit-box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
   display: none;
 }
 
@@ -256,13 +245,10 @@ form {
 }
 
 .menure:hover {
-  -webkit-box-shadow: 7px 13px 37px #5b7a45;
-          box-shadow: 7px 13px 37px #5b7a45;
+  box-shadow: 7px 13px 37px #5b7a45;
 }
 
 .menure ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -272,7 +258,6 @@ form {
   padding: 0px 5px;
   text-decoration: none;
   color: #008037;
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-family: 'DM Serif Text', serif;
   font-size: 1rem;
@@ -285,8 +270,7 @@ form {
 
 .menure .submenure {
   background: white;
-  -webkit-box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
   display: none;
 }
 
@@ -321,17 +305,10 @@ form {
 }
 
 .contenedorservicios {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .fexcajas {
@@ -344,23 +321,15 @@ form {
 }
 
 .contenedorservicios .fexcajas:hover {
-  -webkit-box-shadow: 3px 10px 10px rgba(100, 128, 55, 0.4);
-          box-shadow: 3px 10px 10px rgba(100, 128, 55, 0.4);
+  box-shadow: 3px 10px 10px rgba(100, 128, 55, 0.4);
 }
 
 /* Productos recomendados */
 .contenedorserviciosPRODUCTOS {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 5%;
 }
 
@@ -374,8 +343,7 @@ form {
 }
 
 .contenedorserviciosPRODUCTOS .fexcajasPR:hover {
-  -webkit-box-shadow: 3px 10px 10px rgba(100, 128, 55, 0.4);
-          box-shadow: 3px 10px 10px rgba(100, 128, 55, 0.4);
+  box-shadow: 3px 10px 10px rgba(100, 128, 55, 0.4);
 }
 
 .boton_walmart {
@@ -480,17 +448,14 @@ form {
   height: 720px;
   margin: 0 auto;
   padding: 1em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: white;
   background-size: cover;
   position: relative;
   display: block;
-  display: -ms-grid;
   display: grid;
   grid-gap: 10px;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   box-sizing: border-box;
   display: -moz-inline-grid;
 }
@@ -512,13 +477,10 @@ form {
 }
 
 .menuSECCIONES:hover {
-  -webkit-box-shadow: 7px 13px 37px #5b7a45;
-          box-shadow: 7px 13px 37px #5b7a45;
+  box-shadow: 7px 13px 37px #5b7a45;
 }
 
 .menuSECCIONES ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -528,7 +490,6 @@ form {
   padding: 0px 5px;
   text-decoration: none;
   color: #008037;
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-family: 'DM Serif Text', serif;
   font-size: 1rem;
@@ -541,8 +502,7 @@ form {
 
 .menuSECCIONES .submenuSECCIONES {
   background: white;
-  -webkit-box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
   display: none;
 }
 
@@ -613,7 +573,6 @@ form {
 }
 
 .buttonenviar {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0b5394), to(#1b4e99));
   background: linear-gradient(#0b5394, #1b4e99);
   border-radius: 11px;
   padding: 20px 45px;
@@ -632,16 +591,20 @@ form {
 }
 
 .buttonenviar:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0666f3), to(#0f6bbd));
   background: linear-gradient(#0666f3, #0f6bbd);
   color: white;
   font-size: 18px;
-  -webkit-box-shadow: 0 4px #127ab8;
-          box-shadow: 0 4px #127ab8;
+  box-shadow: 0 4px #127ab8;
 }
 
 .dieta {
   border-radius: 10px;
+}
+
+.btnRedirectPago {
+  display: flex;
+  justify-content: center;
+  margin: 5em 20em 10em 0;
 }
 
 /* Vídeo Nutrifit Living */
@@ -666,19 +629,13 @@ form {
 
 /* Mapa de equivalencias */
 .centarcontentEquivalencias {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .containerEquivalencias {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 30px;
   padding-top: 10px;
   width: 1200px;
@@ -691,8 +648,7 @@ form {
   width: 430px;
   margin-top: 15px;
   font-size: 1.4em;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
 }
 
 .itemsEquvalencias > a {
@@ -706,7 +662,6 @@ form {
   font-size: 1.8rem;
   color: green;
   font-weight: bold;
-  -webkit-transition: all 800ms ease;
   transition: all 800ms ease;
 }
 
@@ -770,25 +725,15 @@ color: rgb(255, 255, 255);
 
 .item-1 {
   height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .imagen {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .imagen > a {
@@ -805,15 +750,9 @@ color: rgb(255, 255, 255);
 }
 
 .item-3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 30px;
   color: white;
   background-color: #002e01;

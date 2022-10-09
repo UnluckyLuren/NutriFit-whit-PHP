@@ -20,7 +20,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                exclude: /styles\.css$/,
+                // exclude: /styles\.css$/,
                 use: [
                     'style-loader',
                     'css-loader'
@@ -88,7 +88,6 @@ module.exports = {
     ],
 
     devServer: {
-
         port:8080,
         liveReload:true,
         hot:false

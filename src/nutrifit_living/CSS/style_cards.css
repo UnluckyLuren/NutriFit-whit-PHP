@@ -1,21 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
 .contenerya {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   width: auto;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: auto;
   margin: 10em 0 0 5em;
@@ -32,18 +25,14 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
-  -webkit-transition: .5s;
   transition: .5s;
 }
 
 .card .front {
-  -webkit-transform: perspective(600px) rotateY(0deg);
   transform: perspective(600px) rotateY(0deg);
-  -webkit-box-shadow: 0 5px 10px #000;
   box-shadow: 0 5px 10px #000;
 }
 
@@ -51,7 +40,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -67,23 +55,14 @@
 }
 
 .card .back {
-  -webkit-transform: perspective(600px) rotateY(180deg);
   transform: perspective(600px) rotateY(180deg);
   background: #032336;
   padding: 15px;
   color: #f3f3f3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   text-align: center;
-  -webkit-box-shadow: 0 5px 10px #000;
   box-shadow: 0 5px 10px #000;
 }
 
@@ -108,12 +87,10 @@
 }
 
 .card:hover .front {
-  -webkit-transform: perspective(600px) rotateY(180deg);
   transform: perspective(600px) rotateY(180deg);
 }
 
 .card:hover .back {
-  -webkit-transform: perspective(600px) rotateY(360deg);
   transform: perspective(600px) rotateY(360deg);
 }
 

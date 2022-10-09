@@ -1,7 +1,6 @@
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -41,12 +40,8 @@ body {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .nav-link {
@@ -67,8 +62,6 @@ body {
 }
 
 .nav-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 40px;
   list-style: none;
@@ -80,8 +73,6 @@ body {
   line-height: 80px;
   text-transform: uppercase;
   text-decoration: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin: 0 30px;
   padding: 7px 12px;
@@ -98,7 +89,6 @@ body {
 .nav-menu-link_active {
   background-color: var(--Color4nutri);
   color: white;
-  -webkit-transition: .5s;
   transition: .5s;
   opacity: 85%;
   border-radius: 20px;
@@ -148,13 +138,8 @@ body {
     display: none;
   }
   .nav-menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     margin-right: 20px;
     list-style: none;
     background-color: #117A65;
@@ -166,7 +151,6 @@ body {
     height: calc(100% - 60px);
     overflow-y: auto;
     left: 100%;
-    -webkit-transition: left 0.3s;
     transition: left 0.3s;
   }
   .nav-menu-item {

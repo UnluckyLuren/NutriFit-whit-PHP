@@ -175,9 +175,7 @@
   }
   /* lugares recomendados */
   .contenedorservicios {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     width: 300%;
     margin-top: 180px;
   }
@@ -203,9 +201,7 @@
   }
   .contenedorserviciosPRODUCTOS {
     width: 300%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     margin-top: 25%;
     gap: 30px;
   }
@@ -242,17 +238,11 @@
   }
   /* Recetarios */
   .contenerya {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-top: -6%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     width: 270%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .card {
     position: relative;
@@ -361,10 +351,8 @@
     margin-top: 10%;
   }
   .containerEquivalencias {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 30px;
     padding-top: 10px;
     width: 960px;
@@ -377,8 +365,7 @@
     width: 450px;
     margin-top: 15px;
     font-size: 230%;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    justify-self: center;
   }
   /* footer */
   .pie-pagina {
@@ -403,9 +390,7 @@
     margin-top: 15%;
   }
   .contenedorservicios {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     width: 300%;
     margin-top: 100px;
   }
@@ -436,9 +421,7 @@
   }
   .contenedorserviciosPRODUCTOS {
     width: 300%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     margin-top: 25%;
   }
   .fexcajasPR > img {
@@ -473,17 +456,11 @@
   }
   /* Recetarios */
   .contenerya {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-top: -6%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     width: 270%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .card {
     position: relative;
@@ -598,9 +575,7 @@
     font-size: 3em;
   }
   .contenedorservicios {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     width: 350%;
     margin-top: 180px;
   }

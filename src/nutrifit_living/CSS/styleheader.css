@@ -1,13 +1,12 @@
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
   --Colornutrifit: hsl(86, 54%, 51%);
   --ColorTitulo: hsl(88, 55%, 60%);
-  --ColorSubTitulos: ;
+  --ColorSubTitulos:  hsl(88, 60%, 49%) ;
   --Colornutrifit2: hsl(88, 60%, 49%) ;
   --FondoHoverBotons: hsl(88, 59%, 61%) ;
   --Color2nutri: #84c837;
@@ -46,12 +45,8 @@ body {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 992px;
   margin: 0 auto;
 }
@@ -85,8 +80,6 @@ body {
 }
 
 .nav-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 40px;
   list-style: none;
@@ -104,8 +97,6 @@ body {
   line-height: 80px;
   text-transform: uppercase;
   text-decoration: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   /* margin: 0 20px; */
   padding: 7px 12px;
@@ -125,7 +116,6 @@ body {
     transition: .5s; */
   background-color: var(--Color4nutri);
   color: white;
-  -webkit-transition: .5s;
   transition: .5s;
   opacity: 85%;
   border-radius: 20px;
@@ -169,13 +159,8 @@ header.down ul li a {
     line-height: 60px;
   }
   .nav-menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     margin-right: 20px;
     background-color: #34a0a4;
     position: fixed;
@@ -186,7 +171,6 @@ header.down ul li a {
     height: calc(100% - 60px);
     overflow-y: auto;
     left: 100%;
-    -webkit-transition: left 0.5s;
     transition: left 0.5s;
   }
   .nav-menu-item {
@@ -211,13 +195,11 @@ header.down ul li a {
 
 .down {
   background: #b5e48c;
-  -webkit-transition: linear .5s;
   transition: linear .5s;
 }
 
 /* BOTONOES */
 .conoce {
-  background: -webkit-gradient(linear, left top, left bottom, from(#aff581), to(#65aae9));
   background: linear-gradient(#aff581, #65aae9);
   border-radius: 1000px;
   width: 150px;
@@ -239,9 +221,7 @@ a, #co {
   color: white;
   font: normal bold "Ubuntu", sans-serif;
   font-weight: bold;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .letter {
@@ -249,7 +229,6 @@ a, #co {
 }
 
 .conoce2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#008037), to(#002e01));
   background: linear-gradient(#008037, #002e01);
   border-radius: 1000px;
   width: 150px;
@@ -267,11 +246,9 @@ a, #co {
 }
 
 .hover:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#65aae9), to(#aff581));
   background: linear-gradient(#65aae9, #aff581);
   font-size: 20px;
-  -webkit-box-shadow: 0 4px #96cd9b;
-          box-shadow: 0 4px #96cd9b;
+  box-shadow: 0 4px #96cd9b;
   cursor: pointer;
 }
 /*# sourceMappingURL=styleheader.css.map */

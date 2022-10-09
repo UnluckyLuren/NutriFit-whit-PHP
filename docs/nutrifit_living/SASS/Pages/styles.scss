@@ -331,7 +331,7 @@ font-family: 'Open Sans', sans-serif;
    border-radius: 1.5%;
   }
   .contenedorservicios .fexcajas:hover{
-    box-shadow: 3px 10px 10px rgb(100, 128, 55,0.4);
+    box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
   }
   
   /* Productos recomendados */
@@ -353,7 +353,7 @@ font-family: 'Open Sans', sans-serif;
    height: 280px;
   }
   .contenedorserviciosPRODUCTOS .fexcajasPR:hover{
-    box-shadow: 3px 10px 10px rgb(100, 128, 55,0.4);
+    box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
   }
   
   .boton_walmart{
@@ -614,6 +614,12 @@ margin-top: 20px;
   .dieta{
     border-radius:10px;
   }
+
+.btnRedirectPago {
+  display: flex;
+  justify-content: center;
+  margin: 5em 20em 10em 0;
+}
   
   /* Vídeo Nutrifit Living */
 .video {
