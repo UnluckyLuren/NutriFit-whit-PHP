@@ -24,6 +24,7 @@
   --Colorletras: #3F8AC5;
   --Colorformularios: #4577B3;
   --Colorformularios2: #4592B3;
+  --skills-bar-length: 0%;
 
 }
 body{
@@ -401,27 +402,7 @@ font-family: 'Open Sans', sans-serif;
     
   }
 
-  .boton_aurrera{
-    background:    #0DB02B;
-    border:        2px solid  #317f43;
-      border-radius: 10px;
-      padding:       7px 19px;
-      color:         white;
-      font:       normal bold 26px/1 "Roboto", sans-serif;
-      text-align:    center;
-      font-size: 0.65rem;
-      position:absolute;
-      margin: 10px;
-      margin-top: -1.2%;
-    
-      text-decoration: none;
-      font-family: 'Archivo Black', sans-serif;
-  }
-  .boton_aurrera:hover{
-    background:    #317f43;
-    border:        2px solid  #0DB02B;
-    
-  }
+ 
 
   /* .dieta{
     width: 400px;
@@ -647,6 +628,259 @@ text-align: center;
   
 }
 
+
+/* Acomodo del menu de usuario */
+
+.userMenuDiv {
+  display: flex;
+  position: absolute;
+  left: 3em;
+  top: 1.5em;
+  z-index: 1000;
+}
+
+.userMenuDiv p {
+  margin: 1em 0 0 1em;
+  padding: 0;
+}
+
+.userMenuImg {
+  background-color: white;
+  border: 3px solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-color: #82c832;
+}
+
+
+.userMenuDiv a img:hover {
+  border-color: #5a586d;
+}
+
+
+
+/* Ventana emergente */
+
+.modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.329);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: center;
+          align-items: center;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1001;
+}
+
+.modal {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  border: 1px solid green;
+  width: 60em;
+  height: 60%;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.compra {
+  display: flex;
+}
+
+.info-user-page {
+  width: 100%;
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+
+.info-user-page img {
+  width: 15em;
+  height: 15em;
+  margin: 2em 0 0 0;
+  padding: 0.5em;
+  background-color: var(--Color-Menu);
+  border: 2px solid var(--Color-hover);
+  border-radius: 1em;
+}
+
+.info-user-page p, .info-text p {
+  color: var(--Color7nutri);
+  font-size: larger;
+  margin:0.5em;
+  padding: 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--Color-hover);
+}
+
+.info-text p:not(.sepr-border) {
+  border: transparent;
+  padding: 0;
+}
+
+// .info-text p:first-child {
+//   margin-top: 2em;
+// }
+
+.botonVerProgreso{
+  background:    #0DB02B;
+  border:        2px solid  #317f43;
+  border-radius: 10px;
+  padding:       7px 19px;
+  color:         white;
+  text-align:    center;
+  font-size: large;  
+  text-decoration: none;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.botonVerProgreso:hover{
+  background:    #317f43;
+  border:        2px solid  #0DB02B;
+}
+
+
+//  Acomodo progresos
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(227, 222, 222, 0.589);
+  margin: 0 0 0 2em;
+  padding: 2em 38.9em 2em 2em ;
+  width:30em;
+  border-radius: 0.5em;
+}
+
+.titleProgreso {
+  width: 20em;
+  margin-left: 6.5em;
+  font-size: large;
+  color: var(--Color4nutri);
+}
+
+.titleProgreso p {
+  width: inherit;
+}
+
+.containProgreso {
+  background-color: var(--Color2nutri);
+  width: 25em;
+  height: 10em;
+  margin: 2.5em 0 0 6em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.containProgreso p {
+  color: white;
+}
+
+.partesProgreso {
+  display: flex;
+  margin: 1em 0 0 1em ;
+}
+
+.barEjercicio {
+  width: 8em;
+  height: 0.5em;
+  margin-left: 4em;
+  background-color: rgba(223, 223, 223, 0.802);
+  border-radius: 100em 100em;
+}
+
+.barEjercicioLast {
+  margin-left: 1.3em;
+}
+
+.barEjercicio2 {
+  margin-left: 2.6em;
+}
+
+.barDieta {
+  width: 8em;
+  height: 0.5em;
+  margin-left: 4em;
+  background-color: rgba(223, 223, 223, 0.802);
+  border-radius: 100em 100em;
+}
+
+.barDieta2 {
+  margin-left: 2.1em;
+}
+
+.barDieta3 {
+  margin-left: 2.5em;
+}
+
+// Barras de aumento de progreso
+
+.barEjercicioAumento {
+  width: 8em;
+  height: 0.5em;
+  margin-left: 4em;
+  border-radius: 100em 100em;
+  position: absolute;
+  margin-left: 5em;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #0666ff;
+  animation: skills-bar-fill 2s ease-in-out forwards;
+ 
+}
+
+
+@keyframes skills-bar-fill {
+  to {
+    transform: translateX(103%);
+    opacity: 100%;
+  }
+
+}
+
+
+// Close y terminaciones de la ventana
+
+#close {
+  border-radius: 100px 100px 100px 100px;
+  background-color: var(--Color2nutri);
+  width: 3em;
+  height: 3em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  right: 38em;
+  top: 15em;
+}
+
+#close img {
+  margin: 0;
+  width:2em;
+  height:2.4em;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
 
 
      /* Mapa de equivalencias */

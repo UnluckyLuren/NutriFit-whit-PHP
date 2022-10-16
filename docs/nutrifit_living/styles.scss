@@ -15,7 +15,7 @@ $background-color_3: #EAFFD0;
 $background-color_4: white;
 $background-color_5: rgba(75, 172, 63, 0.89);
 $background-color_6: rgba(0, 122, 53, 0.89);
-$background-color_7: rgba(93, 170, 104. 0.89);
+$background-color_7: rgba(93, 170, 104, 0.89);
 $background-color_8: #002e01;
 $border-color_1: #8ac441;
 $border-color_2: none;
@@ -319,7 +319,7 @@ body{
      border-radius: 1.5%;
     }
     .contenedorservicios .fexcajas:hover{
-      box-shadow: 3px 10px 10px rgb(100, 128, 55,0.4);
+      box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
     }
     
     /* Productos recomendados */
@@ -340,7 +340,7 @@ body{
      height: 280px;
     }
     .contenedorserviciosPRODUCTOS .fexcajasPR:hover{
-      box-shadow: 3px 10px 10px rgb(100, 128, 55,0.4);
+      box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
     }
     
     .boton_walmart{
@@ -521,7 +521,7 @@ body{
       background-color: rgba(75, 172, 63, 0.89);
       position: absolute;
       background-color: rgba(0, 122, 53, 0.89);
-      background-color: rgba(93, 170, 104. 0.89);
+      background-color: rgba(93, 170, 140, 0.89);
     }
    
   .pie-pagina .grupo-1{
@@ -627,5 +627,141 @@ body{
   .imga{
     width: 190px;
     margin: 2%;
-    
   }
+
+
+
+/* Acomodo del menu de usuario */
+
+.userMenuDiv {
+  display: flex;
+  position: absolute;
+  left: 3em;
+  top: 1.5em;
+}
+
+.userMenuDiv p {
+  margin: 1em 0 0 1em;
+  padding: 0;
+}
+
+.userMenuDiv a {
+  padding:inherit;
+}
+
+.userMenuImg {
+  background-color: white;
+  border: 3px solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-color: #82c832;
+}
+
+.userMenuDiv a:hover {
+  background-color: blue;
+}
+
+/* Ventana emergente */
+.modal-container {
+  background-color: var(--sombras);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  pointer-events: none;
+  top: 5em;
+  left: 0;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal-container {
+    top: 0;
+    height: 100%;
+  }
+}
+
+.modal {
+  background-color: var(--Color-User-page);
+  border: 1px solid black;
+  width: 20%;
+  height: 60%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px var(--sombras);
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal {
+    width: 80vw;
+  }
+}
+
+.compr-PAGADA {
+  display: flex;
+  flex-direction: column;
+}
+
+.compr-PAGADA img {
+  width: 60%;
+  margin: 1em 0 0 5em;
+}
+
+.compr-PAGADA p {
+  font-size: x-large;
+  color: white;
+  margin: 0 2em;
+  margin-top: 1em;
+  border-bottom: 2px solid var(--Col-Background);
+  padding-bottom: 1em;
+}
+
+.fon-tx-pago p {
+  font-size: medium;
+  padding: 0;
+  border-bottom: transparent;
+}
+
+.fon-tx-pago p:first-child {
+  margin-top: 3em;
+}
+
+.fon-tx-pago p:last-of-type {
+  margin-bottom: 4em;
+}
+
+.btn-ver-plano {
+  width: 50%;
+  border: 2px solid #CED6E0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.192);
+  font-size: 18px;
+  padding: 5px 12px;
+  transition: .3s ease all;
+  border-radius: 5px;
+}
+
+#close {
+  border-radius: 100px 100px 100px 100px;
+  background-color: #151538;
+  width: 3em;
+  height: 3em;
+  align-self: flex-end;
+  margin: 1em;
+  transition: 0.2s;
+}
+
+#close img {
+  margin: 0;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.show {
+  pointer-events: auto;
+  display: flex;
+  transition: 0.2s;
+}

@@ -76,12 +76,13 @@ h2 {
     border-radius: 5px;
     background: var(--Color4nutri);
     /* overflow: hidden; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .5); */
 }
 
 .container .col-lg-5 {
-    background: var(--Color4nutri);
-}
+    background: rgba(0, 122, 53, 0.89);
+   
+}   
 
 .container .col-lg-7 {
     background: #ffffff;
@@ -146,7 +147,8 @@ h2 {
 .contact .contact-content {
     margin: 0 -15px;
     padding: 90px 30px;
-    background: linear-gradient(white,green), url(../img/bg-1.jpg);
+    background: linear-gradient(white,rgba(186, 186, 186, 0.719)),  url(../imagenes/img/bg-1.jpg);
+    /* background-color: white; */
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -160,7 +162,8 @@ h2 {
 .faq #accordion {
     margin: 0 -15px;
     padding: 90px 30px;
-    background: linear-gradient(white,green), url(../img/bg-1.jpg);
+    background: linear-gradient(white,rgba(186, 186, 186, 0.719)),  url(../imagenes/img/bg-1.jpg);
+    /* background-color: white; */
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;

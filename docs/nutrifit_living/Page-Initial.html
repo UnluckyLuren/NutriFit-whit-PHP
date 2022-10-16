@@ -87,6 +87,95 @@ a, #co {
         </nav>
     </header>
 
+
+    <!-- Ventana emergente -->
+
+        <!-- Para que se habra la ventana debes oponerle a un a el id: open -->
+
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <div class="compra">       
+                    <button id="close" type="submit" ><img src="imagenes/x.png" ></button>  
+                    
+                    <div class="info-user-page">
+                        <img src="imagenes/Gato enojado.webp">
+                        <p>Iván Jesus Rodríguez</p>
+                        
+                        <div class="info-text">
+                            <p> <small> Miembro desde 2017 </small> </p>
+                            <p>Suscripción activa hasta: </p>
+                            <p class="sepr-border" >28/10/2022</p>
+                        </div>
+
+                        <a href="Progreso.html"> <button class="botonVerProgreso" >Ver progreso</button> </a>
+
+                    </div>
+
+                    <div class="skills">
+
+                        <div class="titleProgreso">
+                            <p>Progreso actual de las rutinas </p>
+                        </div>
+                        
+                        <div class="progresoEjercicio containProgreso ">
+                            <p>Ejercicios</p>
+
+                            <div class="partesProgreso">
+                                <p>Entrenamiento diario </p>
+                                <div class="barEjercicio"></div>
+                                <div class="barEjercicioAumento"></div>
+                            </div>
+
+                            <div class="partesProgreso">
+                                <p>Entrenamiento semanal </p>
+                                <div class="barEjercicio barEjercicio2 "></div>
+                                <div class="barEjercicioAumento"></div>
+                            </div>
+
+                            <div class="partesProgreso">
+                                <p>Entrenamiento completado </p>
+                                <div class="barEjercicio barEjercicioLast"></div>
+                                <div class="barEjercicioAumento"></div>
+                            </div>                            
+
+                        </div>
+
+                        <div class="progresoDieta containProgreso ">
+                            <p>Dietas</p>
+
+                            <div class="partesProgreso">
+                                <p>Consumos diarios </p>
+                                <div class="barDieta barDieta1"></div>
+                            </div>
+
+                            <div class="partesProgreso">
+                                <p>Consumos semanales</p>
+                                <div class="barDieta barDieta2 "></div>
+                            </div>
+
+                            <div class="partesProgreso">
+                                <p>Progreso completado </p>
+                                <div class="barDieta barDieta3 "></div>
+                            </div>                            
+
+                        </div>
+
+                    </div>
+                   
+                </div>
+              
+            </div>
+        </div>
+
+
+        <div class="userMenuDiv" >
+            <a href="#"><img src="imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
+            <p>Iván Jesus Rodríguez</p>
+        </div>
+
+
+
+
       <div >
         <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/EWb4pKu-bkc" title="YouTube video player"  rel=0&amp;controls=0&amp;showinfo=0″ frameborder=»0″ autoplay muted loop></iframe>
     </div>
@@ -95,6 +184,7 @@ a, #co {
     <script src="whatss.js"></script>
     <script src="FinalPrueba/java.js"></script>
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
+    <script src="js/ventana-emergente-user.js"></script>
     
 </body>
 </html>
