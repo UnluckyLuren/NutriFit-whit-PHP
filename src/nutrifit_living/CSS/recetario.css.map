@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,GAAG;CACZ;;AAGD,AAAA,WAAW,CAAC,MAAM,CAAC;EACf,aAAa,EAAE,GAAG;EAClB,gBAAgB,EAAE,WAAW;EAC7B,OAAO,EAAE,GAAG;EACZ,OAAO,EAAE,IAAI;CAChB",
-    "sources": [
-        "../SASS/Pages/recetario.scss"
-    ],
-    "names": [],
-    "file": "recetario.css"
-}
+{"version":3,"sources":["../../../docs/nutrifit_living/SASS/Pages/recetario.scss","recetario.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,SAAA;EACA,SAAA;ACCJ;;ADGA;EACI,kBAAA;EACA,6BAAA;EACA,YAAA;EACA,aAAA;ACAJ","file":"recetario.css"}

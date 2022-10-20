@@ -6,7 +6,7 @@
 :root {
   --Colornutrifit: hsl(86, 54%, 51%);
   --ColorTitulo: hsl(88, 55%, 60%);
-  --ColorSubTitulos:  hsl(88, 60%, 49%) ;
+  --ColorSubTitulos: hsl(88, 60%, 49%) ;
   --Colornutrifit2: hsl(88, 60%, 49%) ;
   --FondoHoverBotons: hsl(88, 59%, 61%) ;
   --Color2nutri: #84c837;
@@ -25,7 +25,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 90px 20px 0px;
   overflow-y: auto;
   /* background: url(/imagenes/Fondosi.jpg) 
@@ -60,11 +60,11 @@ body {
 
 .logo {
   /* display: block;
-    height: 100%;
-    width: 200px;
-    margin-left: -15%;
-    margin-top: -1.5px;
-    line-height: 80px; */
+  height: 100%;
+  width: 200px;
+  margin-left: -15%;
+  margin-top: -1.5px;
+  line-height: 80px; */
   display: block;
   height: 100%;
   width: 180px;
@@ -88,19 +88,21 @@ body {
 
 .nav-menu-item {
   /* font-size: 18px;
- margin: 0 10px;
- line-height: 80px;
- text-transform: uppercase;
- width: max-content; */
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content; */
   font-size: 17.5px;
   margin: 0 10px;
   line-height: 80px;
   text-transform: uppercase;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   /* margin: 0 20px; */
   padding: 7px 12px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 1000;
   margin-left: 6%;
 }
@@ -113,10 +115,10 @@ body {
 .nav-menu-link:hover,
 .nav-menu-link_active {
   /* background-color: #034574;
-    transition: .5s; */
+  transition: .5s; */
   background-color: var(--Color4nutri);
   color: white;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 85%;
   border-radius: 20px;
 }
@@ -177,7 +179,7 @@ header.down ul li a {
     line-height: 70px;
   }
   .nav-menu-link:hover,
-  .nav-menu-link_active {
+.nav-menu-link_active {
     background: none;
     color: #184e77;
   }
@@ -192,10 +194,9 @@ header.down ul li a {
     outline: none;
   }
 }
-
 .down {
   background: #b5e48c;
-  transition: linear .5s;
+  transition: linear 0.5s;
 }
 
 /* BOTONOES */
@@ -213,7 +214,7 @@ header.down ul li a {
   margin-left: 21%;
   text-decoration: none;
   position: absolute;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 a, #co {
@@ -242,7 +243,7 @@ a, #co {
   margin-left: 35.5%;
   text-decoration: none;
   position: absolute;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .hover:hover {
@@ -250,5 +251,4 @@ a, #co {
   font-size: 20px;
   box-shadow: 0 4px #96cd9b;
   cursor: pointer;
-}
-/*# sourceMappingURL=styleheader.css.map */
+}/*# sourceMappingURL=styleheader.css.map */

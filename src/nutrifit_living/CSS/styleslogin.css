@@ -54,6 +54,7 @@ main {
   padding: 5px 20px;
   display: flex;
   justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: #52b69a;
 }
@@ -180,5 +181,4 @@ main {
   .contenedor__login-register form {
     position: relative;
   }
-}
-/*# sourceMappingURL=styleslogin.css.map */
+}/*# sourceMappingURL=styleslogin.css.map */

@@ -2,7 +2,7 @@
 //Declaración variables
 
 const body = document.body,
-      ContainerProd = document.getElementById('ContainerProdHTML');
+    ContainerProd = document.getElementById('ContainerProdHTML');
 
 
 // Direcciones
@@ -76,8 +76,10 @@ const InitialHtml = () => {
     for ( let i=0; i<Linksimg.length; i++ ) {
 
         imgs[i].src = Linksimg[i];
+        imgs[i].setAttribute("id", `imgProductsLegs${i}`);
         
     }
+
 
 }
 

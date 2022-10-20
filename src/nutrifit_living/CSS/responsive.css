@@ -18,7 +18,6 @@
     height: 100%;
   }
 }
-
 /* Escritorios Muy grandes */
 @media (min-width: 1200px) {
   /* logo */
@@ -37,7 +36,6 @@
     margin-top: 5%;
   }
 }
-
 @media (min-width: 1024px) and (max-width: 1439px) {
   .nav {
     margin-left: 70px;
@@ -71,7 +69,6 @@
     margin-top: 1.5%;
   }
 }
-
 /* Tabletas en horizontal y escritorios normales */
 @media (min-width: 490px) and (max-width: 1023px) {
   /* logo */
@@ -184,7 +181,7 @@
     width: 500px;
     height: 500px;
     border-radius: 2.5%;
-    border: 2.5px solid #d8d8d8;
+    border: 2.5px solid rgb(216, 216, 216);
   }
   .imga {
     width: 450px;
@@ -193,7 +190,7 @@
   /* productos recomendados */
   .fexcajasPR {
     background: white;
-    border: 1.5px solid #d8d8d8;
+    border: 1.5px solid rgb(216, 216, 216);
     border-radius: 1.5%;
     margin: 1rem;
     width: 550px;
@@ -255,7 +252,6 @@
     font-size: 30px;
   }
 }
-
 /* Móviles en horizontal o Tablets en verticaal */
 @media (max-width: 767px) {
   /* logo */
@@ -307,7 +303,6 @@
     margin-top: 5%;
   }
 }
-
 /* Móviles en vertical */
 @media (max-width: 480px) {
   /* logo */
@@ -358,7 +353,7 @@
     width: 960px;
     background-color: #cfffca;
     border: green 5px solid;
-    border-radius: .5%;
+    border-radius: 0.5%;
     gap: 20px;
   }
   .itemsEquvalencias {
@@ -395,7 +390,7 @@
     margin-top: 100px;
   }
   .fexcajas {
-    border: 2.5px solid #d8d8d8;
+    border: 2.5px solid rgb(216, 216, 216);
     margin: 1.5rem;
     width: 400px;
     height: 400px;
@@ -413,7 +408,7 @@
   /* Productos recomendados */
   .fexcajasPR {
     background: white;
-    border: 1.5px solid #d8d8d8;
+    border: 1.5px solid rgb(216, 216, 216);
     border-radius: 1.5%;
     margin: 1rem;
     width: 380px;
@@ -473,7 +468,6 @@
     font-size: 15px;
   }
 }
-
 @media (min-width: 483px) and (max-width: 767px) {
   /* logo */
   .logo {
@@ -579,5 +573,4 @@
     width: 350%;
     margin-top: 180px;
   }
-}
-/*# sourceMappingURL=responsive.css.map */
+}/*# sourceMappingURL=responsive.css.map */
