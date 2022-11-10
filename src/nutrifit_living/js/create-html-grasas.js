@@ -60,6 +60,58 @@ const Linksimg = ["../imagenes/Grasas/Aceite Enature de Coco Extra virgen 1 l.jp
                  ];
 
 
+                 const nameProductos = ["Aceite Enature de Coco Extra virgen",
+                 "Aceite Great Value",
+                 "Aceite Great Value No Aerosol",
+                 "Aceite Oli",
+                 "Aceite Oli Aerosol",
+                 "Aceite Pam",
+                 "Aceitunas verdes Bufalo sin hueso 150g",
+                 "Aguacate Kg",
+                 "Aguacate malla",
+                 "Ajonjolí GreatValue",
+                 "Ajonjolí Valle Verde",
+                 "Almendra La Colina entera 100g",
+                 "Almendra Verde Valle 100g",
+                 "Almendras Great Value 100g",
+                 "Avellana Pelada Entera Calidad Premium 500g",
+                 "Cacahuates Calidad Selecta tostados 250g",
+                 "Cacahuates Great Value rostizados 454g",
+                 "Cacahuates Mafer premium tostado sazonado sin aceite 180g",
+                 "Campo Vivo Campo Vivo Semillas De Chía",
+                 "Chía Okko semilla 300g",
+                 "Chía Tía Ofilia orgánica 250g",
+                 "Chía Verde Valle 320g",
+                 "Chía Wand's 220g",
+                 "Chía Okko semilla 150g",
+                 "Crema de cacahuate Mister natural 840g",
+                 "Crema de Cacahuate On+top Cacao Crujiente 500g",
+                 "Crema de Cacahuate On+top Natural Crunchy 480g",
+                 "Crema de Cacahuate On+top Natural Whey 470g",
+                 "Fruta Mixta Bontatti Vitrolero 454g",
+                 "Mezcla de frutas deshidratadas y nueces Nature's Heart Fruit & Nut Collection 450g",
+                 "Mezcla de frutas deshidratadas y nueces Nature's Heart Fun Trial 900g",
+                 "Mezcla de frutas deshidratadas y nueces Nature's Heart Go! Nuts 450g",
+                 "Mezcla de frutos secos Great Value 624g",
+                 "Mezcla de frutos secos Verde Valle 80g",
+                 "Nuez Fun Fruit en mitades 200g",
+                 "Nuez Great Value 100g",
+                 "Nuez Verde Valle en mitades 100g",
+                 "Okko Avellana Entera Sin Cascara 200g",
+                 "Pistache Bolsa 100g Wonderful",
+                 "Pistache Wonderful 227g Bol",
+                 "Semilla De Chía Las Balsas",
+                 "Semilla de Girasol Cerepak 500g",
+                 "Semilla de girasol Okko Super Foods 200g",
+                 "Semilla de girasol pelada Wand's 300g",
+                 "Semillas de chia Dinat 100g",
+                 "Semillas de girasol Bel Ara acarameladas 250g",
+                 "Semillas de girasol Bel Ara natural tostadas 250g",
+                 "Surtido salado Mafer 146g",
+                 "Vitrolero Pistache Blanco Valley Foods 800g"
+              ];
+
+
 //Construccion del HTML
 
 
@@ -67,9 +119,8 @@ const crearHtml = () => {
 
 
     const html = ` <div class="fexcajasPR"><img src="/imagenes/Grasas/AceiteGreatValue.jpg" class="imgProductos" alt="Aceite de oliva Great Value extra virgen en aerosol 141 g"></a>
-    <div><a class="boton_walmart" href="https://super.walmart.com.mx/aceites-de-cocina/aceite-de-oliva-great-value-extra-virgen-en-aerosol-141-g/00750179166104" target="ba_blank">Ver en walmart</a></div>
-    <div><a class="boton_soriana" href="https://despensa.bodegaaurrera.com.mx/p/aceite-comestible-great-value-puro-oliva-extra-virgen-aerosol-198-g-00750179160788" target="ba_blank">Ver en soriana</a>
-    </div></div> `;
+                    <p class="titleProductCount"></p>
+            </div> `;
 
     const div = document.createElement('div');
     div.innerHTML = html;
@@ -89,13 +140,14 @@ const InitialHtml = () => {
     }
 
     const imgs = document.querySelectorAll('.imgProductos');
-    // const walmartLink = document.querySelectorAll('.walmart');
-    // const sorianaLink = document.querySelectorAll('.soriana');
+    const title = document.querySelectorAll('.titleProductCount');
 
 
     for ( let i=0; i<Linksimg.length; i++ ) {
 
         imgs[i].src = Linksimg[i];
+        imgs[i].alt = nameProductos[i];
+        title[i].textContent = nameProductos[i];
         
     }
 

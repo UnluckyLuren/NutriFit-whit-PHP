@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    
 <style>
   
 
@@ -20,8 +21,10 @@
 
 </style>    
 
-    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/styleheader.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/Productos-style-extra.css">
+    <link rel="stylesheet" href="CSS/lugares-styles.css">
     <link rel="stylesheet" href="CSS/responsive.css">
 
 </head>
@@ -37,6 +40,12 @@
         <a class="button4" href="/nutrifit living/index (1).html">Inicio</a>
     </div> -->
     <header class="header ">
+
+        <div class="userMenuDiv" >
+            <a href="#"><img src="imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
+            <p>Iván Jesus Rodríguez</p>
+        </div>
+
         <nav class="nav">
             <a href="#" class="logo ">
                 <img src="imagenes/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">
@@ -47,7 +56,7 @@
             </button>
             <ul class="nav-menu ">
                 <li class="nav-menu-item  "><a href="Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item " ><a href="LoginFuncionando/index.html" class="nav-menu-link nav-link">Ingresar</a></li>
+                <li class="nav-menu-item " ><a href="productos.html" class="nav-menu-link nav-link">Productos</a></li>
                 <li class="nav-menu-item"><a href="dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
                 <li class="nav-menu-item "><a href="recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
             </ul>
@@ -56,6 +65,7 @@
     
         <!-- menu desplegable -->
        
+        <br><br><br><br><br>
 <div class="container">
     <nav class="menu">
         <ul>
@@ -68,17 +78,42 @@
         </ul>
     </nav>
 </div>
-<pre class="titulo_de_servicios">Lugares recomendados</pre>
-    <div class="contenedorservicios">
-        <div class="fexcajas"><a href="https://www.google.com.mx/maps/place/Azucar+de+coco/@19.974355,-102.2889589,17z/data=!4m5!3m4!1s0x842e898352bd7a13:0x3c2c10e25afa7dae!8m2!3d19.9732206!4d-102.2887658" target="ba_blank"><img class="imga" src="imagenes/Azucardecoco.jpg" alt="Azucardecoco"></a></a></div>
-        <div class="fexcajas"><a href="https://www.google.com/maps/place/Divino+Verde/@19.993465,-102.3042392,14z/data=!4m5!3m4!1s0x842e89ec68403c4b:0xa2af1832366c6284!8m2!3d19.9786383!4d-102.2900338?shorturl=1" target="ba_blank"><img class="imga" src="imagenes/Divinoverde.jpg" alt="Divinoverde"></a></a></div>
-        <div class="fexcajas"><a href="https://www.google.com/maps/place/Distrito+Saludable/@19.9933587,-102.3042392,14z/data=!4m5!3m4!1s0x842e89448ca05d1b:0xa88254c8a96b981b!8m2!3d19.977939!4d-102.2876109" target="ba_blank"><img class="imga" src="imagenes/Dristritosaludable.jpg" alt="distrito saludable"></a></a></div>
-        <div class="fexcajas"><a href="https://www.google.com/maps/place/Bamb%C3%BA/@19.9751222,-102.2881589,18z/data=!3m1!4b1!4m5!3m4!1s0x842e89a251f77f11:0xeb8ba3998b0495f0!8m2!3d19.9751012!4d-102.2870662" target="ba_blank"><img class="imga" src="imagenes/Bamb£.jpg" alt="bambu.zam"></a></a></div>
-        <div class="fexcajas"><a href="https://www.google.com/maps/place/Nutrilab+Clinic/@19.9961444,-102.2953898,15z/data=!4m5!3m4!1s0x842e89c4f62f8ead:0xf74419859b8c89da!8m2!3d19.9833854!4d-102.2833219?shorturl=1" target="ba_blank"><img class="imga" src="imagenes/Nutriclinicbar.jpg" alt="nutrilabclinicbarra"></a></a></div>
-        <div class="fexcajas"><a href="https://www.google.com.mx/maps/place/Siete+Tallos/@19.9712849,-102.2913184,16z/data=!4m9!1m2!2m1!1ssietetallosrestaurante!3m5!1s0x842e88e837571005:0x948e4f1d1bc699f2!8m2!3d19.9712849!4d-102.286941!15sChdzaWV0ZXRhbGxvcyByZXN0YXVyYW50ZVoZIhdzaWV0ZXRhbGxvcyByZXN0YXVyYW50ZZIBDWdyb2Nlcnlfc3RvcmU" target="ba_blank"><img class="imga" src="imagenes/Sietetallos.jpg" alt="sietetallosrestaurante"></a></a></div>
-        <div class="fexcajas"><a href="https://www.instagram.com/agranel.monarca/?hl=ess" target="ba_blank"><img class="imga" src="imagenes/Agranel.jpg" alt="agranel.monarca"></a></a></div>
 
+<pre class="titulo_de_servicios">Lugares recomendados</pre>
+    <div class="contenedorservicios" id="containerLugares" >
+        <div class="fexcajas"><a href="#"><img class="imga"  src="imagenes/Azucardecoco.jpg" alt="Azucar de coco"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Divinoverde.jpg"  alt="Divino Verde"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Dristritosaludable.jpg" alt="Distrito Saludable"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Bamb£.jpg" alt="Bambú"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Nutriclinicbar.jpg" alt="Nutrilab clinic"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Sietetallos.jpg" alt="Siete Tallos"></a></a></div>
     </div>
+
+
+    <div class="infoProductMap disNone" id="containerMap" >
+        <div class="disNone" id="mapDirectionLugares" >
+            <h2 class="titleInfoProduct" >Lugares Recomendados</h2> <br>
+            <button id="close" ><img src="imagenes/x.png"></button>
+            <div id="mapIframe"></div>
+           
+            <div class="infoPrincipalProduct">
+                <h2 id="titleProductSelect"></h2>
+                <br>
+                <img src="imagenes/Azucardecoco.jpg" class="imgProductSelect" id="imgProductSelect" alt="imgProducto">
+                <br><br>
+                <h4 id="leyendaContent" ></h4>
+                <br>
+                <p id="serviciosContent" ></p>
+                <br>
+                <p id="telefonoContent" ></p>
+                <br>
+                <p id="horarioContent" ></p>
+            </div>
+        </div>
+    </div>
+
+
+
     <footer class="containerfooter">
         <div class="item-1">
             <div class="imagen">
@@ -104,6 +139,7 @@
     <script defer src="Prueba7/java.js"></script>
     <script src="whatss.js"></script>
     <script src="FinalPrueba/java.js"></script>
+    <script src="./js/maps-sites.js"></script>
 
 
 </body>

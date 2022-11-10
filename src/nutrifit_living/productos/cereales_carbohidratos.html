@@ -18,10 +18,12 @@
     }
     
     </style>   
-       <link rel="stylesheet" href="../CSS/styles.css">
-       <link rel="stylesheet" href="../CSS/style.css">
-       <link rel="stylesheet" href="../CSS/styleheader.css">
-       <link rel="stylesheet" href="../CSS/responsive.css">
+      
+      <link rel="stylesheet" href="../CSS/styleheader.css">
+<link rel="stylesheet" href="../CSS/styles.css">
+<link rel="stylesheet" href="../CSS/responsive.css">
+<link rel="stylesheet" href="../CSS/Productos-style-extra.css">
+<link rel="stylesheet" href="../CSS/styles-productos-responsive.css">
 
 </head>
 <body>
@@ -36,6 +38,12 @@
         <a class="button4" href="/nutrifit living/index (1).html">Inicio</a>
     </div> -->
     <header class="header ">
+
+        <div class="userMenuDiv" >
+            <a href="#"><img src="../imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
+            <p>Iván Jesus Rodríguez</p>
+        </div>
+
         <nav class="nav">
             <a href="#" class="logo ">
                 <img src="../imagenes/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">
@@ -46,7 +54,7 @@
             </button>
             <ul class="nav-menu ">
                 <li class="nav-menu-item  "><a href="../Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item " ><a href="../LoginFuncionando/index.html " class="nav-menu-link nav-link">Ingresar</a></li>
+                <li class="nav-menu-item " ><a href="../productos.html" class="nav-menu-link nav-link">Productos</a></li>
                 <li class="nav-menu-item"><a href="../dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
                 
                 <li class="nav-menu-item "><a href="../recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
@@ -455,6 +463,42 @@
     </div></div> -->
 
 </div>
+
+
+<div class="infoProductMap disNone" id="containerMap" >
+    <div class="disNone" id="mapDirectionLugares" >
+        <h2 class="titleInfoProduct" >Lugares Cercanos</h2> <br>
+        <button id="close" ><img src="../imagenes/x.png"></button>
+        <div id="mapIframe">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1L5SUu3RgqrKnrYEdCSRr0sKu3SAORWU&ehbc=2E312F" width="640" height="480"></iframe>
+        </div>
+       
+        <div class="infoPrincipalProduct">
+            <h2 id="titleProductSelect">Leguminosas</h2>
+            <br>
+            <img src="../imagenes/Azucardecoco.jpg" class="imgProductSelect" id="imgProductSelect" alt="imgProducto">
+            <p>Se encuentra disponible en:</p>
+            <div class="imgLugaresDisponibles">
+                <img src="../imagenes/Lugares disponibles/Merza.png"   class="imgMapSelec imgSelectLugar" alt="Merza" >
+                <img src="../imagenes/Lugares disponibles/walmart.png" class="imgMapSelec" alt="Walmart">
+                <img src="../imagenes/Lugares disponibles/aurrera.svg" class="imgMapSelec" alt="Aurrera">
+                <img src="../imagenes/Lugares disponibles/soriana.png" class="imgMapSelec" alt="Soriana">
+            </div>
+
+            <div class="verProductOnline">
+                <h3>Ver producto en la tienda en linea</h3>
+                <br><br>
+                <div class="btnIrUrlProduct">
+                    <a class="boton_soriana" href="https://www.soriana.com/biolicious-organico-alubia---/11259922.html" target="ba_blank">Ver en soriana</a>
+                    <a class="boton_walmart" href="https://super.walmart.com.mx/enlatados-y-conservas/soya-texturizada-wand-s-sabor-chorizo-300-g/00750046389040?adBanner=express&adStoreId=0000009998" target="ba_blank">Ver en walmart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <footer class="containerfooter">
     <div class="item-1">
         <div class="imagen">
@@ -481,6 +525,7 @@
     <!-- <script src="../FinalPrueba/java.js"></script> -->
     <script src="../Prueba7/java.js"></script>
     <script src="../js/create-html-cereales.js"></script>
+    <script src="../js/maps-directions.js"></script>
 
 </body>
 </html>

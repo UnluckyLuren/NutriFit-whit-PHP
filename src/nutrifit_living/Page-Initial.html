@@ -1,3 +1,27 @@
+<!-- 
+<?php
+
+session_start();
+
+//Sino existe la variable sesión, llamada usuario, ejecutar el siguiente script (mensaje)
+//Se imprime el alert
+if (!isset($_SESSION{ 'usuario'})){
+
+  echo '
+    <script>
+       alert ("Para tener un servicio personalizado, debes iniciar sesión");
+        window.location= "Page-Initial.php";
+    </script>
+ ';
+  //Dirige a index
+  
+  //Destruye cualquier sesión iniciada
+  sesion_destroy();
+  die(); //Termina de ejecutar código
+}
+
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +34,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styleheader.css">
-    <link rel="stylesheet" href="CSS/styles.css">     
+    <link rel="stylesheet" href="CSS/styles.css">    
     <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="CSS/Page-initial-responsive.css"> 
+
     <Style>
     
-   
+
+/* 
+    ESTA PAGINA FUE HECHA EN MEDIO AÑO 
+
+⣿⣿⣿⣿⡿⠟⠛⠋⠉⠉⠉⠉⠉⠛⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⠟⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠈⠙⠾⣿⣾⣿⣾⣿⣾⣿⣾⣿
+⠋⡁⠀⠀⠀⠀⠀⢀⠔⠁⠀⠀⢀⠠⠐⠈⠁⠀⠀⠁⠀⠈⠻⢾⣿⣾⣿⣾⣟⣿
+⠊⠀⠀⠀⠀⢀⠔⠃⠀⠀⠠⠈⠁⠀⠀⠀⠀⠀⠀⠆⠀⠀⠄⠀⠙⣾⣷⣿⢿⣿
+⠀⠀⠀⠀⡠⠉⠀⠀⠀⠀⠠⢰⢀⠀⠀⠀⠀⠀⠀⢰⠀⠀⠈⡀⠀⠈⢿⣟⣿⣿
+⠀⠀⢀⡜⣐⠃⠀⠀⠀⣠⠁⡄⠰⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠰⠀⠀⠈⢿⣿⣿
+⠀⢠⠆⢠⡃⠀⠀⠀⣔⠆⡘⡇⢘⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿
+⢀⡆⠀⡼⢣⠀⢀⠌⢸⢠⠇⡇⢘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿
+⣼⣃⠀⠁⢸⢀⠎⠀⢸⠎⠀⢸⢸⡄⠀⠀⠀⠀⠀⠂⢀⠀⠀⠀⠀⠀⠀⠀⠀⣿
+⠃⡏⠟⣷⣤⠁⠀⠀⠸⠀⠀⡾⢀⢇⠀⠀⠀⠀⠀⠄⠸⠀⠀⠀⠀⠄⠀⠀⠀⣿
+⠀⠀⣀⣿⣿⣿⢦⠀⠀⠀⠀⡧⠋⠘⡄⠀⠀⠀⠀⡇⢸⠀⠀⠠⡘⠀⠀⠀⢠⣿
+⠈⠀⢿⢗⡻⠃⠀⠀⠀⠀⠀⠀⠀⠀⠱⡀⠀⠀⢰⠁⡇⠀⠀⢨⠃⡄⢀⠀⣸⣿
+⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣱⠀⠀⡎⠸⠁⠀⢀⠞⡸⠀⡜⢠⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣺⣿⣧⢰⣧⡁⡄⠀⡞⠰⠁⡸⣠⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡿⠏⣿⠟⢁⠾⢛⣧⢼⠁⠀⠀⢰⣿⡿⣷⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠡⠄⠀⡠⣚⡷⠊⠀⠀⠀⣿⡿⣿⡿⣿
+⡀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠁⢸⠁⠀⠀⠀⢰⣿⣿⡿⣿⣿
+⠱⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠊⠀⠀⠀⡞⠀⠀⠀⠀⢸⣿⣷⣿⣿⣿
+⠀⠙⢦⣀⠀⠀⠀⠀⠀⢀⣀⣠⠖⠁⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⣸⣿⣾⡿⣷⣿
+⠀⠀⠀⠀⠉⠉⣩⡞⠉⠁⠀⢸⡄⠀⠀⠀⠀⠀⢰⠇⠀⠀⠀⠀⣿⣿⣷⣿⣿⣿
+⡆⠀⠀⣀⡠⠞⠁⣧⢤⣀⣀⣀⡇⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⣿⣷⣿⣷⣿⣿
+⣿⣷⠊⠁⠀⠀⡰⠁⠀⠀⠀⠀⣹⠶⢦⡀⠀⠀⡇⠀⠀⠀⠀⠀⢸⣿⣷⣿⣷⣿
+⣿⢿⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡄⡇⠀⠀⠀⠀⠀⠈⣿⣾⣷⣿⣿
+⠋⠈⠀⢀⠜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠈⣧⠀⠀⠀⠀⠀⠀⠻⣿⣽⣾⣿
+⢀⡄⡠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠁⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⣿⣿⣻⣿
+⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⢰⠀⠐⠀⠀⠀⠀⣀⡿⠀⠀⠀⠀⠀⠀⠀⢹⣿⣻⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀⢀⣃⡇⠀⠲⡀⠀⠀⠀⠀⠈⣿⡿⣿
+⣀⠤⠤⠤⡀⠀⠀⠀⠀⡴⠃⠀⠀⠀⠀⠀⢬⠞⡇⠀⠀⠇⠀⠀⠀⠀⠀⣿⣿⣿
+⡁⢀⠀⠀⡇⠀⠀⠀⡼⠁⠀⠀⠀⠀⠀⣸⠁⠀⠇⠀⠀⡇⠀⠀⠀⠀⠀⣿⣿⣿
+⠔⠃⠀⠀⡇⠀⠀⡼⠁⠀⠀⠀⠀⠀⢀⡇⠀⠀⡃⠀⠀⠙⢄⠀⠀⠀⠀⣿⣷⣿
+⠒⠊⠀⠀⢸⠀⣸⠃⠀⠀⠀⠀⠀⠀⡞⠀⠀⠀⢅⠀⠀⡂⠸⡄⠀⠀⠀⣿⣟⣿
+⠓⠀⠉⠀⢸⣰⠃⠀⠀⠀⠀⠀⠀⡜⡆⠀⠀⠀⢸⠀⠀⡇⢀⠇⠀⠀⠀⣿⣿⣿
+⠉⠁⠀⢠⠞⠀⠀⠀⠀⠀⠀⠀⣰⠁⡇⠀⠀⠀⡇⠀⠀⡇⢸⠀⠀⠀⠀⣿⣷⣿
+⡀⠀⢀⢿⣥⡤⠤⠤⠤⣀⣀⢠⠇⠀⢸⠀⠀⢰⠁⠀⢨⠀⢸⠀⠀⠀⠀⣿⣟⣿ 
+
+*/
+
+
+/* body {
+    background-image: url("imagenes/Fondosi2.jpg");
+}
+    */
 .conoce{
     
     background:    linear-gradient(#aff581, #65aae9);
@@ -67,7 +138,7 @@ a, #co {
     </Style>
 </head>
 <body>
-    <header class="header ">
+    <header class="header">
         <nav class="nav">
             <a href="#" class="logo ">
                 <img src="imagenes/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">
@@ -76,9 +147,9 @@ a, #co {
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <ul class="nav-menu ">
+            <ul class="nav-menu">
                 <li class="nav-menu-item  "><a href="Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item " ><a href="LoginFuncionando/index.php" class="nav-menu-link nav-link">Ingresar</a></li>
+                <li class="nav-menu-item " ><a href="productos.html" class="nav-menu-link nav-link">productos</a></li>
                 <li class="nav-menu-item"><a href="dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
                 <li class="nav-menu-item "><a href="recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
             </ul>
@@ -97,7 +168,13 @@ a, #co {
                     <button id="close" type="submit" ><img src="imagenes/x.png" ></button>  
                     
                     <div class="info-user-page">
-                        <img src="imagenes/Gato enojado.webp">
+                        
+                        <div class="insertImg" id="insertImg" >
+							<img src="" id="imgChoosen" class="">
+                            <p id="textAnadir" >Añadir Foto</p>
+                            <input type="file" id="inputFile" class="inputFile" name="imageInput" accept="image/*" >
+						</div>
+
                         <p>Iván Jesus Rodríguez</p>
                         
                         <div class="info-text">
@@ -173,17 +250,33 @@ a, #co {
         </div>
 
 
+        <iframe class="video positionVideo" width="560" height="315" src="https://www.youtube.com/embed/EWb4pKu-bkc" title="YouTube video player"  rel=0&amp;controls=0&amp;showinfo=0″ frameborder=»0″ autoplay muted loop></iframe>
 
 
-      <div >
-        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/EWb4pKu-bkc" title="YouTube video player"  rel=0&amp;controls=0&amp;showinfo=0″ frameborder=»0″ autoplay muted loop></iframe>
-    </div>
+    <footer class="containerfooter objDisplay" id="footerDieta" >
+        <div class="item-1">
+            <div class="imagen">
+                <figure>
+                    <a href="Page-Initial.html">
+                        <img class="ImagenFooterOpccion2" src="../nutrifit_living/imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" >
+                    </a>
+                </figure>
+            </div>   
+            <a class="item-2" href="../nutrifit living/Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
+        </div>
+
+            <div class="item-3">
+                <small>&copy; 2022  - Todos los Derechos Reservados.</small>
+            </div>
+    </footer>
+
+
 
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>     
     <script src="whatss.js"></script>
-    <script src="FinalPrueba/java.js"></script>
+    <script src="Prueba7/java.js"></script>
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
-    <script src="js/ventana-emergente-user.js"></script>
+    <script src="./js/ventana-emergente-user.js"></script>
     
 </body>
 </html>

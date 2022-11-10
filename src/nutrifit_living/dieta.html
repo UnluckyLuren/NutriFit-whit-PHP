@@ -83,13 +83,25 @@
         </style>
             
         </style>
-  <link rel="stylesheet" href="CSS/styles.css">
+
+  
+  
+  <link rel="stylesheet" href="CSS/estilos-cards-dieta.css">
   <link rel="stylesheet" href="CSS/styleheader.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/dieta.css">
   <link rel="stylesheet" href="CSS/responsive.css">
 
     </head>
     <body>
+
         <header class="header ">
+            
+        <div class="userMenuDiv" >
+            <a href="#"><img src="imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
+            <p>Iván Jesus Rodríguez</p>
+        </div>
+
             <nav class="nav">
                 <a href="#" class="logo ">
                     <img src="imagenes/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">
@@ -98,9 +110,9 @@
                     <i class="fa-solid fa-bars"></i>
     
                 </button>
-                <ul class="nav-menu ">
+                <ul class="nav-menu">
                     <li class="nav-menu-item  "><a href="Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                    <li class="nav-menu-item " ><a href="LoginFuncionando/index.html " class="nav-menu-link nav-link">Ingresar</a></li>
+                    <li class="nav-menu-item " ><a href="productos.html" class="nav-menu-link nav-link">Productos</a></li>
                     <li class="nav-menu-item"><a href="dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
                     <li class="nav-menu-item "><a href="recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
                 </ul>
@@ -109,10 +121,10 @@
 
 <!-- menu desplegable -->
        
-<div class="container">
-    <nav class="menu">
+<div class="container containerMenuDes">
+    <nav class="menu menuSoloDeDieta">
         <ul>
-            <li><a href="dieta.html"><p class="nombreDEpaginadondeseencuantra"> ▼     Dietas</p></a>
+            <li><a href="dieta.html"><p class="nombreDEpaginadondeseencuantra">Dietas</p></a>
             <ul class="submenu"></li>
             <li><a href="equivalencias.html">Mapa de equivalencias</a></li>
             <li><a href="lugares.html">Lugares Recomendados</a></li>
@@ -122,184 +134,245 @@
     </nav>                      
 </div>    
 
-<pre class="titulo_de_servicios ">Plan Perzonalizado</pre>
 
-<form  class="dieta" id="dietaForm" >
+<pre class="titulo_de_servicios">Planes para elegir</pre>
+
+
+<form  class="dieta  formDietaGratis acomodoformGratis" id="FormGratis">
+    <h2>Plan Gratuito</h2>
+    <br>
  <div>
-        <label >Nombre
+        <!-- <label >Nombre -->
             <br>
-         <input type="text" name="name">        
-        </label>
-    </div>
-    <div>
-     <label>Edad
+         <input type="text" name="name" placeholder="Nombre" >        
+        <!-- </label> -->
+ </div>
+ <div>   
+     <!-- <label>Edad -->
          <br>
-         <input id="edad" type="text" required>
-     </label>
+         <input id="edad" type="text" required placeholder="Edad" >
+     <!-- </label> -->
  </div>
  <div>
-     <label >Peso (Kg)                   
+     <!-- <label >Peso (Kg)                    -->
          <br>
-         <input id="peso" type="text" required>
-     </label>
+         <input id="peso" type="text" required placeholder="Peso (kg)" >
+     <!-- </label> -->
  </div>
  <div>
-     <label> Altura (m)
+     <!-- <label> Altura (m) -->
          <br>
-         <input id="altura" type="text" required>
-     </label>
+         <input id="altura" type="text" required placeholder="Altura (m)" >
+     <!-- </label> -->
  </div>
+ <br>
  
 <legend> Sexo: </legend>
+<br>
     <div >
-        <label >
-      <input class="hombre" onclick="sexohombre();" name="gender" type="radio" required>
+        <label>
+            <input class="hombre radioInputForm" onclick="sexohombre();" name="gender" type="radio" required>
             Hombre
         </label>
     
        <label >
-           <input class="mujer" onclick="medidasmujer();" name="gender" type="radio" required >
+           <input class="mujer radioInputForm" onclick="medidasmujer();" name="gender" type="radio" required >
            Mujer
        </label>
-     </div>
- <div>
+    </div>
+
+    <a href="metodo_de_pago.html"> <button class="buttonenviar">Enviar</button> </a>
+
+</form>
+
+<!-- Plan Personalizado -->
+
+<form class="formDietaGratis dieta acomodoformPersonalizado showForm minimizarForm " id="FormPago" >
+
+    <h2>Plan Personalizado</h2>
+    <br><br>
       <legend >Ingrese las siguientes medidas</legend>
      <div>
-         <label> Cuello (cm)
+         <!-- <label> Cuello (cm) -->
              <br>
-             <input type="number">
-         </label>
+             <input type="number" placeholder="Cuello (cm)" >
+         <!-- </label> -->
      </div>
      <div>
-         <label> Cintura (cm)
+         <!-- <label> Cintura (cm) -->
              <br>
-             <input type="number">
-         </label>
+             <input type="number" placeholder="Cintura" >
+         <!-- </label> -->
      </div>
      <div id="medidas">
- <div>
-     <label> 
-         
-     </label>
- </div>
 </div>
-  <legend> Alergias: (Puede elegir más de una)</legend>
-    <div >
+
+  <legend> Alergias:</legend>
+    <div class="alergiasInputs">
         <br>
-     <input   type="checkbox" name="Alergias" value="Fresa">
-        Fresa
-       </label>
-       <label >
-    <input  type="checkbox" name="Alergias" value="Maní">
-       Maní
-       </label>
-       <label >
-       <input type="checkbox" name="Alergias" value="Lacteos">
-       Lacteos
-      </label>
-        <label >
-         <input type="checkbox" name="Alergias" value="Lacteos">
-         Otros
+        <label>
+            <input   type="checkbox" name="Alergias" value="Fresa">
+            Fresa
+        </label>
+       
+        <label>
+            <input  type="checkbox" name="Alergias" value="Maní">
+            Mani
+        </label>
+        
+        <label>
+            <input type="checkbox" name="Alergias" value="Lacteos">
+            Lacteos
+        </label>
+
+        <label>
+            <input type="checkbox" name="Alergias" value="Otros" placeholder="Otros">
+            Otros
         </label>
    </div>
-   <legend>Si ingreso "Otros" escriba su alergia:</legend>
-   <label >
-     <input type="text" name="Alergias" >
-    </label>
-    <br>
 
-     <div>
-         <br>
-    <legend>¿Posee alguna enfermedad?</legend>
-    <select name="disease" id="disease" required>
-     <option value="Ninguna" selected >Ninguna</option> 
-     <optgroup label="Enfermedades Crónicas">
-         <option value="Hipertensión">Hipertensión</option>
-        <option value="Enfermedades cardiovasculares">Enfermedades cardiovasculares</option>
-        <option value="Diabetes" >Diabetes</option>
-       </optgroup>
-       <optgroup label="Enfermedades Respiratorias">
-        <option value="Asma">Asma</option>
-       </optgroup>
-    </select>
+   <legend>Escriba su alergia:</legend>
+   <div>
+        <input type="text" name="Alergias" placeholder="----">
+   </div>
+<br>
+
+    <div class="acomodoPreferencias acomodoEnfermedades" >
+        <br>
+        <legend>¿Posee alguna enfermedad?</legend>
+        <select name="disease" id="disease" required>
+            <option value="Ninguna" selected >Ninguna</option> 
+            <optgroup label="Enfermedades Crónicas">
+                <option value="Hipertensión">Hipertensión</option>
+                <option value="Enfermedades cardiovasculares">Enfermedades cardiovasculares</option>
+                <option value="Diabetes" >Diabetes</option>
+            </optgroup>
+            <optgroup label="Enfermedades Respiratorias">
+                <option value="Asma">Asma</option>
+            </optgroup>
+        </select>
     </div>
-    <div>
-        <legend>¿Qué prefieres?</legend>
-    <select name="disease" id="disease" required>
-        <option value="Dulce">Dulce</option>
-        <option value="Salado">Salado</option>
-    </select>
+
+    <div class="acomodoPreferencias">
+            <legend>¿Qué prefieres?</legend>
+        <select name="disease" id="disease" required  >
+            <option value="Dulce">Dulce</option>
+            <option value="Salado">Salado</option>
+        </select>
      </div>
-    </div>
 </div>
-<div><button class="plato"><img src="imagenes/Dieta.jpg" alt="Plato" class=""></button> 
-</div>
-     <div>
-     <legend>¿Realiza algún tipo de actividad física?</legend>
-     <select name="disease" id="disease" required>
-        <option value="Ninguna">Ninguna</option>
-        <option value="GYM">GYM</option>
-        <option value="Ejercicio aeróbico">Ejercicio aeróbico</option>
-        <option value="Ejercicio de resistencia">Dulce</option>
-    </select>
+
+<div><button class="plato"><img src="imagenes/Dieta.jpg" alt="Plato" class=""></button> </div>
+
+     <div class="acomodoPreferencias acomodoActividades " >
+        <legend>¿Realiza algún tipo de actividad física?</legend>
+        <select name="disease" id="disease" required>
+            <option value="Ninguna">Ninguna</option>
+            <option value="Ejercicio aeróbico">Ejercicio aeróbico</option>
+            <option value="Ejercicio Anaerobico">Ejercicio Anaerobico</option>
+            <option value="Ejercicio cardiovascular">Ejercicio cardiovascular</option>
+            <option value="Otro Ejercicio">Otro</option>
+        </select>
      </div>
-     <legend>¿Cuántos días  a la semana realiza actividad fìsica?</legend>
-     <div >
-         <label >
-         <input onclick="ejercicio();" name="days" type="radio">
-               5 días 
+     <legend class="sepEjercSem" >¿Cuántos días  a la semana realiza actividad fìsica?</legend>
+     <div class="acomodoEjercicioSemanal" >
+         <label>
+            <input onclick="ejercicio();" name="days" type="radio">
+            <p>5 días</p>
          </label>
        
          <label >
-              <input onclick="ejercicio();" name="days" type="radio">
-              7  días
+            <input onclick="ejercicio();" name="days" type="radio">
+            <p>7  días</p> 
          </label>
          <label >
              <input onclick="ejercicio();" name="days" type="radio">
-             3  días
+             <p>3  días</p>
          </label>
          <label >
-             <input onclick="noejercicio();" name="days" type="radio">
-             0  días
-         </label>
-     </div>
-     <div>
-         <div id="actividadfisica">
-     <legend>Duración de la actividad física: </legend>
-     <div >
-         <label >
-             <input name="days" type="radio">
-                   30 min
-             </label>
-         <label >
-         <input name="days" type="radio">
-               45 min
-         </label>
-       
-         <label >
-              <input name="days" type="radio">
-              1 h
-         </label>
-         <label >
-             <input name="days" type="radio">
-             2-3 h 
+             <input onclick="ejercicio();" name="days" type="radio">
+             <p>Ocasionalmente</p>
          </label>
      </div>
- </div>
+<div>
+    <div id="actividadfisica">
+        <legend class="acomodoDuracionEjerc sepEjercSem" >Duración de la actividad física: </legend>
+        <div class="acomodoEjercicioSemanal">
+            <label>
+                <input name="days" type="radio">
+                   <p>30 Minutos</p>
+                </label>
+            <label >
+            <input name="days" type="radio">
+            <p>45 Minutos</p>
+            </label>
+        
+            <label >
+                <input name="days" type="radio">
+                <p>1 Hora</p>
+            </label>
+            <label >
+                <input name="days" type="radio">
+                <p>2-3 Horas</p>
+            </label>
+        </div>
+    </div>
+
+    <a href="metodo_de_pago.html" class="disNone" id="btniraPago" > <button class="buttonenviar">Enviar</button> </a>
+
 </div>
-         <!-- <div> <a href="/nutrifit living/progreso.html">Conozca sus Resultados Actuales </a>
-         </div> --> 
+
+    
 
 </form>
 
 
-<div class="btnRedirectPago" >
-    <a href="metodo_de_pago.html"> <button class="buttonenviar">Enviar</button> </a>
+<!-- BOTON DE CAMBIO DE FORMULARIO E INFORMACIÓN DE CADA UNO -->
+
+<div class="infoFormPago moverInfoCardsRigth" id="InfoApartForms" >
+
+    <h2>Tienes alguna duda?</h2>
+    <br>
+    <div class="containerCards">
+       
+        <div class="card">
+            <img src="imagenes/imgCardsDieta/salad-g59f0b46f7_1920.jpg">
+            <h4>Conocenos</h4>
+            <p>Ten la seguridad de que toda tu información sera usada debidamente de acuerdo a nuestra politica de privacidad</p>
+            <br><br><br>
+            <a href="#">Leer más</a>
+        </div>
+        
+        <div class="card">
+            <img src="imagenes/imgCardsDieta/Nutricionista.jfif">
+            <h4>Nútriologa Gabriela V. Águila</h4>
+            <p>Asesoria Nutricional Personalizada.</p>
+            <p>Control de Peso (Perdida y Aumento).</p>
+            <p>Alimentación en diabetes, HTA, Dislipidemias.</p>
+            <br>
+            <a href="#">Leer más</a>
+        </div>
+        
+        <div class="card">
+            <img src="imagenes/imgCardsDieta/running-gd2b436189_1920.jpg">
+            <h4>Mejora tu calidad de vida
+            </h4>
+            <p> Mantener hábitos saludables es el punto de partida para alcanzar tus metas.</p>
+            <br><br><br><br>
+            <a href="#">Leer más</a>
+        </div>
+        
+    </div>
+
+    <button id="btnCambiarPlan" >Ver plan Personalizado</button>
 </div>
 
 
+<!-- Footer -->
+
+
 <br><br>
-<footer class="containerfooter">
+<footer class="containerfooter objDisplay footerEnDieta" id="footerDieta" >
     <div class="item-1">
         <div class="imagen">
             <figure>
@@ -308,7 +381,6 @@
                 </a>
             </figure>
         </div>
-        
            
    <a class="item-2" href="../nutrifit living/Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
 
@@ -317,11 +389,12 @@
         <div class="item-3">
             <small>&copy; 2022  - Todos los Derechos Reservados.</small>
         </div>
-    </footer>
+</footer>
 
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
     <script defer src="Prueba7/java.js"></script>
     <script src="whatss.js"></script>
+    <script src="./js/cambiar-plan.js"></script>
 
             
     </body>

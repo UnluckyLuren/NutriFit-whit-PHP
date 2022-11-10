@@ -78,6 +78,78 @@ const Linksimg = [ "../imagenes/frutas/Agua de coco A de Coco 1.jpg",
                    ];
 
 
+
+const nameProductos = [ "Agua de Coco",
+                    "Agua de coco Calahua Acapulcoco orgánica",
+                    "Agua de coco Coco Dream 500 ml",
+                    "Agua de coco Nature's Heart 330 ml",
+                    "Alimento líquido de coco A de Coco",
+                    "Arándano Jumbo Paradise 278 g",
+                    "Arándanos Nature's Heart deleite 700 g",
+                    "Blueberry cosecha especial Driscoll's 310 g",
+                    "ciruela importada por kilo",
+                    "Ciruela pasa La Merced sin hueso 250 g",
+                    "Ciruela pasa Mister Natural sin hueso 250 g",
+                    "Ciruela roja nacional por kilo",
+                    "Clementina Halos en malla 908 g",
+                    "Cubos de ciruela pasa Verde Valle 150 g",
+                    "Dátil premium Mister Natural 250 g",
+                    "Dútiles Del Desierto medjool 500 g",
+                    "Durazno amarillo por kilo",
+                    "Durazno blanco por kilo",
+                    "Durazno Chihuahua por kilo",
+                    "Durazno saturno por kilo",
+                    "Durazno sonora por kilo",
+                    "Frambuesa Driscoll's 170 g",
+                    "Frambuesa orgánica 170 g",
+                    "Frambuesas Global Premier congeladas 907 g",
+                    "Fresas",
+                    "Fresas 454 g",
+                    "Fresas congeladas Great Value enteras 500 g",
+                    "Fresas congeladas La Huerta 500 g",
+                    "guayaba por kilo",
+                    "Guayaba rosa por kilo",
+                    "lima por kilo",
+                    "Mamey por kilo",
+                    "mandarina por kilo",
+                    "Mango ataulfo por kilo",
+                    "Mango congelado Gran Valor en cubos 500 g",
+                    "Manzana Ambrosía por kilo",
+                    "Manzana gala en bolsa por kilo",
+                    "Manzana gala por kilo",
+                    "Manzana granny smith por kilo",
+                    "Manzana pink lady por kilo",
+                    "Manzana red delicious por kilo",
+                    "Melón chino por kilo",
+                    "Melón golden dew por kilo",
+                    "membrillo por kilo",
+                    "congeladas Topex Fruit fresa, zarzamora, frambuesa, moras azules 907 g", 
+                    "Mora azul 170 g",
+                    "Naranja agria por kilo",
+                    "Naranja navel por pieza",
+                    "Naranja orgánica Marketside en malla 2 kg",
+                    "Naranja sangre por pieza",
+                    "Papaya maradol por kilo",
+                    "Perón dorado en bolsa 1,3 aprox precio por kilo",
+                    "Perón golden en bolsa 1.3 aprox precio por kilo",
+                    "Pera de anjou por kilo",
+                    "Pera roja de anjou por kilo",
+                    "Piña miel por kilo",
+                    "Plátano orgánico Marketside por kilo",
+                    "Sandía personal por kilo",
+                    "Sandía roja por kilo.", 
+                    "SANDIA SIN SEMILLA POR KILO",
+                    "Toronja importada por kilo",
+                    "Tuna Blanca por Kilo",
+                    "Uva blanca sin semilla por kilo",
+                    "Uva roja sin semilla por kilo",
+                    "Zarzamora 170 g",
+                    "Zarzamora Driscoll's 170 g",
+                    "Zarzamora orgánica Driscolls 170 g",
+                    "Zarzamoras Global Premier congeladas 907 g",
+                   ];
+
+
 //Construccion del HTML
 
 
@@ -85,9 +157,8 @@ const crearHtml = () => {
 
 
     const html = ` <div class="fexcajasPR"><img src="" class="imgProductos" alt=""></a>
-    <div><a class="boton_walmart" href="https://super.walmart.com.mx/frutas-y-verduras-congeladas/fresas-congeladas-great-value-enteras-500-g/00750179166585?adBanner=express&adStoreId=0000009998" target="ba_blank">Ver en walmart</a></div>
-    <div><a class="boton_aurrera" href="https://despensa.bodegaaurrera.com.mx/p/fresas-congeladas-great-value-enteras-500-g-00750179166585" target="ba_blank">Ver en aurrera</a>
-    </div></div> `;
+            <p class="titleProductCount"></p>
+        </div> `;
 
     const div = document.createElement('div');
     div.innerHTML = html;
@@ -107,13 +178,14 @@ const InitialHtml = () => {
     }
 
     const imgs = document.querySelectorAll('.imgProductos');
-    // const walmartLink = document.querySelectorAll('.walmart');
-    // const sorianaLink = document.querySelectorAll('.soriana');
+    const title = document.querySelectorAll('.titleProductCount');
 
 
     for ( let i=0; i<Linksimg.length; i++ ) {
 
         imgs[i].src = Linksimg[i];
+        imgs[i].alt = nameProductos[i];
+        title[i].textContent = nameProductos[i];
         
     }
 

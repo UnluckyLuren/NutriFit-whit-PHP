@@ -1,4 +1,32 @@
-@media (min-width: 2500px){
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw !important;
+    height: 100vh !important;
+    box-sizing: border-box;
+}
+
+
+.container {
+    position: absolute;
+    right: 20em;
+    margin-top: 2em;
+    z-index:999;
+  }
+
+.containerSECCIONES {
+    position: absolute;
+    right: 7em;
+    width: 10em;
+    margin: 2em 0 0 0;
+    z-index: 999;
+}
+
+
+@media (min-width: 2500px) {
     .nav{
        
         margin-left: 800px;
@@ -20,66 +48,44 @@
     }
 }
 
-
-
 /* Escritorios Muy grandes */
-@media (min-width: 1200px){
-       /* logo */
-  .logo {
-    margin-left: -10%;
-}
 
-/* Vídeo Nutrifit Living */
-.video {
-    width: 650px;
-    height: 300px;
-    margin-top: 5%;
-    margin-left: 30.3%;
-  }
-
-  /* formulario registro */
-  .contenedor__todo{
-    margin-top: 5%;
-}
-
- 
-}
-@media (min-width: 1024px)and (max-width: 1439px){
-    .nav{
-        margin-left: 70px;
-    }
-    .nav-menu-item{
-        height: 90px;
-        margin-right: 5px;
-        padding: 7px -2px;
-        margin: 0px 5px;;
+// @media (min-width: 1024px)and (max-width: 1439px){
+//     .nav{
+//         margin-left: 70px;
+//     }
+//     .nav-menu-item{
+//         height: 90px;
+//         margin-right: 5px;
+//         padding: 7px -2px;
+//         margin: 0px 5px;;
         
-    }
-    ul .nav-menu{
-        margin: -5px 2px;
-    }
-    .nav-menu-link{
-        font-size: 17px;
-    }
-    .logo{
-        margin-left: -30px;
-        width: 150px;
-        height: 80px;
-        margin-top: 5px;
-    }
-    .video{
-        margin-left: 222px;
-        width: 600px;
-        height: 300px;
-        margin-top: 160px;
-    }
-    .menure {
-        margin-right: -4%;
-        margin-top: 1.5%;
+//     }
+//     ul .nav-menu{
+//         margin: -5px 2px;
+//     }
+//     .nav-menu-link{
+//         font-size: 17px;
+//     }
+//     .logo{
+//         margin-left: 7em;
+//         width: 150px;
+//         height: 80px;
+//         margin-top: 5px;
+//     }
+//     .video{
+//         margin-left: 222px;
+//         width: 600px;
+//         height: 300px;
+//         margin-top: 160px;
+//     }
+//     .menure {
+//         margin-right: -4%;
+//         margin-top: 1.5%;
       
-    }
+//     }
     
-}
+// }
 
 
 
@@ -141,9 +147,9 @@
 /* Tabletas en horizontal y escritorios normales */
 @media (min-width: 490px) and (max-width:1023px){
     /* logo */
-    .logo {
-        margin-left: 2.5%;
-    }
+    // .logo {
+    //     margin-left: 2.5%;
+    // }
  /* Vídeo Nutrifit Living */
 .video {
     width: 550px;
@@ -252,6 +258,7 @@ font-size: 350%;
     margin-right: -120%;
     margin-top: 15%;
 }
+
 
 .nombreDEpaginadondeseencuantraSECCIONES {
     font-size: 3em;
@@ -423,7 +430,7 @@ font-size: 30px;
 
 
 /* Móviles en horizontal o Tablets en verticaal */
-@media (max-width: 767px){
+@media (max-width: 767px) and (min-width:481px ) {
   /* logo */
   .logo {
     margin-left: 3.5%;
@@ -435,6 +442,7 @@ font-size: 30px;
     margin-top: 25%;
     margin-left: 20.3%;
   }
+
    /* formulario registro */
 .contenedor__todo{
     width: 75%;
@@ -529,25 +537,56 @@ font-size: 30px;
 
 
 /* Móviles en vertical */
-@media (max-width:480px){
+@media (max-width:480px) and (min-width: 400px ){
     /* logo */
   .logo {
     margin-left: 3.5%;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw !important;
+    margin: 0;
+}
+
+.nav-menu {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.userMenuDiv {
+    display: none;
+}
+
 /* footer */
 .containerfooter {
-    width: 300%;
+    width: 100vw;
     background: rgba(0, 122, 53, 0.89);
-    margin-top: 100%;
+    margin: 0;
+    position: absolute;
+    top: 68vh;
+    // margin-top:100vh;
 }
 
 /* Vídeo Nutrifit Living */
 .video {
     width: 350px;
     height: 175px;
-    margin-top: 45%;
-    margin-left: 5%;
+    margin: 0;
+    position: absolute;
+    top: 10em;
+    left: 2em;
   }
 
 
@@ -616,7 +655,7 @@ font-size: 30px;
     font-size: 1.8em;
     }
     .nombreDEpaginadondeseencuantra {
-    margin: 0%;
+    margin: 0;
     font-size:1.8em;
 
 }
@@ -784,22 +823,104 @@ font-size: 15px;
 
 
 
+//  Celulares normales
 
 
-
-@media (min-width: 483px) and (max-width: 767px){
+@media (min-width: 200px) and (max-width: 399px) {
 
   /* logo */
   .logo {
     margin-left: 2.5%;
 }
+
+
+header {
+    width: 100vw !important;
+    margin: 0;
+}
+
+.nav-menu {
+    width: 110vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.userMenuDiv {
+    display: none;
+}
+
+
+.container {
+    // position: absolute;
+   top: 4em;
+   left: 0;
+   margin: 0;
+}
+
+.containerSECCIONES {
+    top: 3.1em;
+    right: 10em;
+    margin: 0;
+}
+
+.contenedorserviciosPRODUCTOS {
+    margin: 7em  0 0 0;
+}
+
+
+.titulo_de_servicios_productos {
+    font-size: x-large;
+    margin: 3em 0 0 0;
+}
+
+
+/* footer */
+
+.containerfooter {
+    width: 110vw !important;
+    background: rgba(0, 122, 53, 0.89);
+    margin:0;
+    height: 10em;
+    position: relative;
+    bottom: 20em;
+}
+
+.item-1 {
+    height: 10em !important;
+}
+
+.item-2 {
+    display: none;
+}
+
+.item-3 {
+    font-size: small !important;
+}
+
+
+.ImagenFooterOpccion2 {
+    margin: 5em 0.5em 0 0 !important;
+    margin-bottom: 5em !important;
+    width: 20em !important;
+}
+
+.imagenfooter {
+    margin: 5em 0.5em 0 0 !important;
+    margin-bottom: 5em !important;
+    width: 20em !important ;
+}
+
 /* Vídeo Nutrifit Living */
 .video {
-width: 550px;
-height: 270px;
- margin-top: 15%;
- margin-left: 15.3%;
-}
+    width:80vw;
+    height:25vh;
+    margin: 0;
+    position: absolute;
+    top: 10em;
+    left: 2.2em;
+  }
+
+
 /* formulario registro */
 .contenedor__todo{
 width: 90%;
@@ -848,11 +969,6 @@ margin-right: -200%;
 margin-top: 15%;
 }
 
-.titulo_de_servicios {
-    margin-top: 50%;
-    margin-left: 70%;
-    font-size: 6.5em;
-}
 .dieta {
 width: 200%;
 margin-left: 50%;
@@ -904,6 +1020,7 @@ margin-top: 15%;
 
 .nombreDEpaginadondeseencuantraSECCIONES {
 font-size: 3em;
+
 }
 .nombreDEpaginadondeseencuantra {
 margin: 0%;
@@ -917,5 +1034,70 @@ font-size: 3em;
     width: 350%;
     margin-top: 180px;
 }
+
+.nombreDEpaginadondeseencuantra, .nombreDEpaginadondeseencuantraSECCIONES {
+    font-size: small !important;
+}
+
+
+//  Estilos dieta
+
+
+.infoFormPago h2{
+    display: none;
+}
+
+.infoFormPago {
+    background-color: transparent;
+    border: transparent;
+    width: min-content;
+    height: min-content;
+    padding: 0;
+    top: 45em;
+    right: 5em;
+}
+
+.formDietaGratis {
+    font-size: large;
+    margin: 0;
+    position: absolute;
+    top: 5em;
+    width: 20em !important;
+    left: 0.7em;
+}
+
+.titulo_de_servicios {
+    font-size: 1.5em;
+    margin: 5em 0 2em 0;
+}
+
+
+.containerMenuDes {
+    position: absolute;
+    top: 2em;
+    right: 1em !important;
+    margin: 0;
+}
+
+.menuSoloDeDieta {
+    margin: 0;
+}
+
+.containerCards {
+    display: none;
+}
+
+.footerEnDieta {
+    display: none;
+}
+
+.btnChangeFormResponsive {
+    top: 100em;
+    left: -4.5em;
+}
+
+
+
+
 
 }

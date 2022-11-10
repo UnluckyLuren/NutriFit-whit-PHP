@@ -25,11 +25,12 @@
   --Colorformularios: #4577B3;
   --Colorformularios2: #4592B3;
   --skills-bar-length: 0%;
-
+  --Color-container-BG: rgba(227, 222, 222, 0.589);
+  --Color-BG-Modal: #00000054;
 }
 body{
   min-height: 100vh;
- 
+  background-color: rgb(238, 239, 230);
   width: 100%;
   position: relative; 
   background-size: cover;
@@ -37,8 +38,7 @@ body{
   margin: 0;
   padding: 0;
   /*  */
-  background: url(../imagenes/Fondosi2.jpg) 
-  no-repeat center center fixed;
+  // background: url(../imagenes/Fondosi2.jpg) 
   background-size: cover;
   position: relative;
 }
@@ -69,10 +69,15 @@ body::-webkit-scrollbar-track {
   border-radius: 10px;  
 }
 
+//  Clase para ocultar el scroll en body
 
+.ocultScroll {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
  
-Vídeo Nutrifit Living
+// Vídeo Nutrifit Living
 .video {
 
   position: relative;
@@ -185,7 +190,7 @@ font-family: 'Open Sans', sans-serif;
 
 /* Menu desplegable */
 
-.container {
+.container{
   max-width: 1100px;
   margin: auto;
   }
@@ -321,6 +326,8 @@ font-family: 'Open Sans', sans-serif;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
+    left: 6em;
   }
   
   .fexcajas{
@@ -435,23 +442,23 @@ font-family: 'Open Sans', sans-serif;
     display:-moz-inline-grid;
   } */
   .dieta{
-    position: fixed;
-    position : relative;
+    // position: fixed;
+    // position : relative;
     width  : 740px;
     height : 720px;
     margin : 0 auto;
     padding: 1em;
     box-sizing: border-box;
-    background-color: white;
-    background-size: cover;
-    position: relative;
-    display: block;
+    // background-color: rgb(162, 28, 28);
+    // background-size: cover;
+    // position: relative;
+    // display: block;
 
-    display  : grid;
-    grid-gap : 10px;
-    grid-template-columns : repeat(2, 1fr);
-    box-sizing: border-box;
-    display:-moz-inline-grid;
+    // display  : grid;
+    // grid-gap : 10px;
+    // grid-template-columns : repeat(2, 1fr);
+    // box-sizing: border-box;
+    // display:-moz-inline-grid;
   }
 
  /* MENU DE SECCIONES DE PRODUCTOS */
@@ -582,7 +589,7 @@ height: 40px;
 font-size: 15px;
 padding: 12px;
 font-weight: bold;
-margin-left: 290px;
+// margin-left: 290px;
 margin-top: 20px;
   }
   .buttonenviar:hover {
@@ -651,6 +658,7 @@ text-align: center;
   height: 50px;
   border-radius: 50%;
   border-color: #82c832;
+  margin: 0;
 }
 
 
@@ -687,7 +695,7 @@ text-align: center;
   background-color: white;
   border: 1px solid green;
   width: 60em;
-  height: 60%;
+  height: 70%;
   border-radius: 0.5em;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -704,13 +712,12 @@ text-align: center;
   padding: 0;
 }
 
-.info-user-page img {
+.info-user-page div img {
   width: 15em;
   height: 15em;
-  margin: 2em 0 0 0;
+  margin:0;
   padding: 0.5em;
   background-color: var(--Color-Menu);
-  border: 2px solid var(--Color-hover);
   border-radius: 1em;
 }
 
@@ -726,6 +733,31 @@ text-align: center;
 .info-text p:not(.sepr-border) {
   border: transparent;
   padding: 0;
+}
+
+
+// estilizado input file
+
+.inputFile {
+  opacity: 0;
+  padding: 8em 0 8.4em 0;
+  width: 18em;
+  z-index: 1000;
+  background-color: #002e01;
+}
+
+.insertImg {
+  width:15em;
+  height: 15em;
+  margin: 2em 0 2em 0;
+  background-color: rgba(0, 0, 0, 0.355);
+  border-radius: 1em;
+}
+
+.insertImg p {
+  color: black;
+  position: absolute;
+  margin: 5.5em 0 0 3.8em;
 }
 
 // .info-text p:first-child {
@@ -757,7 +789,7 @@ text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: rgba(227, 222, 222, 0.589);
+  background-color: var(--Color-container-BG);
   margin: 0 0 0 2em;
   padding: 2em 38.9em 2em 2em ;
   width:30em;
@@ -839,7 +871,6 @@ text-align: center;
   overflow: hidden;
   background-color: #0666ff;
   animation: skills-bar-fill 2s ease-in-out forwards;
- 
 }
 
 
@@ -865,8 +896,8 @@ text-align: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
-  right: 38em;
-  top: 15em;
+  right: 30em;
+  top: 10em;
 }
 
 #close img {
@@ -1057,3 +1088,112 @@ font-weight: bold;
   font-weight: bold;
   color: #008037;
 }
+
+
+.positionVideo {
+  position: absolute;
+  top: 7em;
+}
+
+
+.moverbtnPago {
+  position: absolute;
+  top: 92em;
+  right: 18em;
+}
+
+
+.disNone{
+  display: none;
+}
+
+// Estilizado mapa Productos
+
+.mapDirectionLugares {
+  position: fixed;
+  top: 15vh;
+  left: 17vw;
+  width: 70em;
+  height: 40em;
+  padding: 3em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid green;
+  z-index: 1001;
+}
+
+.infoProductMap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Color-BG-Modal);
+  z-index: 1000;
+}
+
+.infoPrincipalProduct {
+  position: absolute;
+  top: 0;
+  right:0;
+  background-color: var(--Color-container-BG);
+  height:inherit;
+  width:25em;
+  padding: 4em 1em 1em 1em;
+  border-radius: 0 1em 1em 0;
+  text-align: center;
+}
+
+.titleInfoProduct {
+  color: var(--Color4nutri);
+}
+
+.imgLugaresDisponibles {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.imgLugaresDisponibles img{
+  width: 6em;
+  height: 4em;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.imgSelectLugar{
+  border: 2px solid var(--Color4nutri);
+  transition: all 0.2s ease;
+}
+
+.imgProductSelect{
+  width: 12em;
+  height: 12em;
+  padding: 0.3em;
+  background-color:var(--Color4nutri);
+  border-radius: 1em;
+}
+
+.verProductOnline {
+  margin: 1em 0;
+}
+
+.btnIrUrlProduct {
+  margin: 0;
+  position: absolute;
+  width: 50em;
+  left: -21em;
+}
+
+.logo {
+  margin:0;
+}
+
+
+
+

@@ -1,0 +1,337 @@
+:root {
+    --primaryColor: #000916;
+    --secundaryColor: #130f40;
+    --fontColor: #fff;
+    --background: #1e1f21;
+
+    --color-primary: #7380ec;
+    --color-white: #fff;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-background: #f6f6f9;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --card-padding: 1.8rem;
+    --bax-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+/* Tamaño del display en la pagina */
+.grid-container {
+    display: grid;
+    /* grid-template-columns: 100px 1fr 1fr 1fr; */
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "sidebar header header header"
+      "sidebar main main main";
+    height: 100vh;
+  }
+  
+  
+  /* ---------- HEADER ---------- */
+  
+  .header {
+    grid-area: header;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+  }
+  
+  .main-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-title > p {
+    font-size: 20px;
+  }
+
+body {
+    width: 100%;
+    /* background: #261f77; */
+    background: var(--color-background);
+}
+
+.container {
+    width: 100%;
+    height: max-content;
+    padding: 2rem 2rem 2rem 20rem;
+    margin: 4rem 0 0 20rem;
+
+    /* OTRO */
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    /* grid-template-columns: 14rem auto 23rem; */
+}
+
+/* Parte de enmedio */
+
+.insights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    z-index: 1;
+    height: 100%;
+    min-height: 100vh;
+    /* left: 70px; */
+    position: relative;
+}
+
+.insights {
+    margin-top: 1rem;
+    /* box-shadow: var(--bax-shadow); */
+}
+
+h1, pre {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: black;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: black;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+small {
+    color: black;
+}
+
+
+.sales {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+}
+
+.wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+    width: 73rem;
+    gap: 1rem;
+}
+
+.card-wrapper {
+    /* flex: 1; */
+    display: flex;
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    width: 95%;
+    /* height: 100%; */
+    background: white;
+    box-shadow: var(--bax-shadow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--card-border-radius);
+    padding: 1rem;
+    color: var(--fontColor);
+} 
+
+.card2 {
+    width: 95%;
+}
+
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+/* Graficas */
+
+.svg1 {
+    width: 110px;
+    height: 130px;
+}
+  
+.box_porcentaje {
+    height: 250px;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 76%;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.porcentaje {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #777;
+}
+  
+.progress {
+    fill: none;
+    stroke-width: 14;
+    stroke: green;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    /* transform: rotate(-90deg); */
+    transform-origin: center;
+}
+
+.progress2 {
+    fill: none;
+    stroke: rgb(233, 233, 233);
+    stroke-width: 15;
+}
+
+
+
+/* Parte derecha */
+.containerUsuario {
+    /* flex: 0.4; */
+    gap: 2rem;
+}
+
+.containerUsuario img {
+    width: 13rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.containerUsuario h2 {
+    margin: 1rem 0;
+}
+
+
+/* Menu personal usuario */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Diseño */
+    background: white;
+    box-shadow: var(--bax-shadow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--card-border-radius);
+    padding: 1rem;
+    color: var(--fontColor);
+}
+
+
+
+
+
+
+/* Barras */
+
+.card3 {
+    background: white;
+    box-shadow: var(--bax-shadow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--card-border-radius);
+    padding: 1rem;
+    color: var(--fontColor);
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+.charts-card {
+    background-color: #ffffff; 
+    /* background: red; */
+    margin-bottom: 20px;
+    /* padding: 25px; */
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    /* border-radius: 5px; */
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--bax-shadow);
+}
+  
+.chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+  
+/* Grafica Usuario */
+.base {
+    width: 100%;
+    max-width: 250px;
+    font-size: 32px;
+    color: #004033;
+  }
+  
+  .base__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #b4c0be;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+  }
+  
+  .base__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #009578;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+  }
+  
+  .base__cover {
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+  }
+  

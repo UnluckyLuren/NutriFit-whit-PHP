@@ -6,7 +6,6 @@ navToggle.addEventListener("click", () => {
 
     if(navMenu.classList.contains("nav-manu_visible")){
         navToggle.setAttribute("aria-label", "Cerrar menú");
-        
     }
     else{
         navToggle.setAttribute("aria-label", "Abrir menú");

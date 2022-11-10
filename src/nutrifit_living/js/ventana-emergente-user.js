@@ -14,16 +14,27 @@ close.addEventListener('click', () => {
 });
 
 
-/* Mostrar menu emergente */
+// Añadir imagen al usuario
 
-// const Menu_emergente_Open = document.getElementById('Menu-emergente-image'),
-//     Menu_emergente = document.getElementById('Menu-emergente'),
-//     Body_scroll = document.getElementById('Body-scroll')
 
-// Menu_emergente_Open.addEventListener('click', () => {
+const imgSRC = document.getElementById('inputFile'),
+		containImg = document.getElementById('imgChoosen'),
+        textAnadir = document.getElementById('textAnadir');
 
-//         Body_scroll.classList.toggle('body-scroll')
-//         Menu_emergente.style.display ="inline"
-//         Menu_emergente.classList.toggle('Look-menu-emergente')
+		containImg.style.display="none";
 
-// })
+imgSRC.onchange = () => {
+
+		imgSRC.style.display = "none";
+		containImg.style.display="inline";
+        textAnadir.style.display="none";
+
+		let reader = new FileReader();
+	
+		reader. readAsDataURL (imgSRC. files[0]) ;
+
+		reader.onload = () => {
+		imgChoosen.setAttribute("src",reader.result);
+
+	}
+}

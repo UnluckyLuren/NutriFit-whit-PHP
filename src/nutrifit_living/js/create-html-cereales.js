@@ -85,6 +85,84 @@ const Linksimg = ["../imagenes/cereales-carbohidratos/Alubia grande San L zaro 
                     "../imagenes/cereales-carbohidratos/Totopos Sanissimo nopal 200 g.jpg"
                  ];
 
+const nameProductos = ["Alubia grande San Lazaro 500g",
+                    "Amaranto Aires de Campo orgánico 250g",
+                    "Amaranto Dul Cerel natural 250g",
+                    "Arroz La Merced integral 1kg",
+                    "Arroz SOS grueso Súper extra 1kg",
+                    "Arroz SOS impegable parbolizado 1kg",
+                    "Arroz Verde Valle grano grueso 900g",
+                    "Arroz Verde Valle precocido blanco 300g",
+                    "Avena Aires de Campo orgánica 500g",
+                    "Avena Granvita orgánica 350g",
+                    "Avena Integral Granvita 1kg",
+                    "Avena Quaker 3 minutos 610g",
+                    "Avena Quaker Super Foods linaza ch¡a y quinoa 475g",
+                    "Avena T¡a Ofilia orgánica 300g",
+                    "Barras Great Value integrales 180g",
+                    "Barras Nature Valley Crunchy con avena integral y miel 252g",
+                    "Camote amarillo en malla 900g",
+                    "Camote Amarillo por kg",
+                    "Camote de azafrán por kilo",
+                    "Camote morado por kilo",
+                    "Pan En Barra Bimbo Cero 610g",
+                    "Cereal de avena Quaker Multibran con pasas 420g",
+                    "Cereal Great Value Bran Fibra Flakes 620g",
+                    "Cereal hojuelas de trigo integral Nestl Fitness con fruta 350g",
+                    "Cereal Nestle Fitness nutrición y energía con avena integral 600g",
+                    "Churros de nopal Susalia Churri Nopal sabor chile limón 200g",
+                    "Elote blanco por pieza",
+                    "Galleta de arroz san¡simo con quinoa 108g",
+                    "Galletas de arroz Okko con quinoa 140g",
+                    "Galletas Gamesa Habaneras salvado y germen de 106g",
+                    "Galletas Gamesa Habaneras Clásicas trigo, salvado y germen 117g",
+                    "Galletas Gamesa Habaneras surtidas 468g",
+                    "Galletas Marías Gamesa 3 rollos de 144g",
+                    "Galletas Okko de arroz integral 140g",
+                    "Hojuela de avena Granvita de grano entero 425g",
+                    "Hojuelas de avena Great Value 1kg",
+                    "Hojuelas de avena Quaker Oats integral 475g",
+                    "Medias noches Bimbo cero cero 384g",
+                    "Palomitas de maíz ACT II Balance sabor pimienta y limón 130g",
+                    "Palomitas de maíz ACT II Balance sabor sal de mar 110g",
+                    "Palomitas Slim Pop mezcla de chiles 110g",
+                    "Pan Barra Francesa 1 Pieza",
+                    "Pan Bimbo Multigrano 610g",
+                    "Pan En Barra Bimbo Cero 610g",
+                    "Pan Francés 1 Pieza",
+                    "Pan integral New York Deli & Bagel Premium Golden Grain 625g",
+                    "Pan integral Oroweat 12 granos y semillas 680g",
+                    "Pan integral Oroweat 680g",
+                    "Pan para hamburgesa Bimbo cero cero 528g",
+                    "Papa blanca alfa por kilo",
+                    "Papa cambray por kilo",
+                    "Pasta Barilla spaghetti No 7 500g",
+                    "Pasta Barilla spaguetti No5 de 500g",
+                    "Pasta Great Value spaghetti 500g",
+                    "Quinoa Goya tricolor orgánica 340g",
+                    "Quinoa Okko granos 300g",
+                    "Quinoa T¡a Ofilia orgánica 200g",
+                    "Quinoa Verde Valle 340g",
+                    "Quinoa Wand's 220g",
+                    "Sopa de pasta La Moderna Spaghetti 500g",
+                    "Spaghetti La Moderna corto 200g",
+                    "Spaghetti La Moderna integral 200g",
+                    "Tortillas Azucena de maíz y nopal 420g",
+                    "Tortillas con nopal Señor Cactus original 500g",
+                    "Tortillas de harina T¡a Rosa Tortillinas ligeras 306g",
+                    "Tortillas de nopal Nopalia 500g",
+                    "Tortillas Maiz Nopal 500g",
+                    "Tortillas Mission ligeras 550g",
+                    "Tostada Horneada Susalia con Chía y Linaza",
+                    "Tostadas con nopal Señor Cactus horneadas 200g",
+                    "Tostadas de maíz azul Salmas horneadas 7 paquetes de 3 piezas",
+                    "Tostadas de maíz Salmas horneadas 23 paquetes de 3 piezas",
+                    "Tostadas de maíz Sanísimo horneadas 240g",
+                    "Tostadas Great Value de maíz horneadas 237g",
+                    "Totopos Maiz Con Nopal Horneados 200g",
+                    "Totopos Sanissimo nopal 200g" ];
+
+
 
 //Construccion del HTML
 
@@ -93,9 +171,8 @@ const crearHtml = () => {
 
 
     const html = ` <div class="fexcajasPR"><img src="/imagenes/cereales-carbohidratos/Amaranto Aires de Campo orgánico 250 g.jpg" class="imgProductos" alt="Amaranto Aires de Campo orgánico 250 g"></a>
-    <div><a class="boton_walmart" href="https://super.walmart.com.mx/arroz-frijol-y-semillas/amaranto-aires-de-campo-organico-250-g/00750221983115" target="ba_blank">Ver en walmart</a></div>
-    <div><a class="boton_aurrera" href="https://despensa.bodegaaurrera.com.mx/p/amaranto-aires-campo-organico-250-g-00750221983115" target="ba_blank">Ver en aurrera</a>
-    </div></div> `;
+            <p class="titleProductCount"></p>
+        </div> `;
 
     const div = document.createElement('div');
     div.innerHTML = html;
@@ -115,13 +192,14 @@ const InitialHtml = () => {
     }
 
     const imgs = document.querySelectorAll('.imgProductos');
-    // const walmartLink = document.querySelectorAll('.walmart');
-    // const sorianaLink = document.querySelectorAll('.soriana');
+    const title = document.querySelectorAll('.titleProductCount');
 
 
     for ( let i=0; i<Linksimg.length; i++ ) {
 
         imgs[i].src = Linksimg[i];
+        imgs[i].alt = nameProductos[i];
+        title[i].textContent = nameProductos[i];
         
     }
 

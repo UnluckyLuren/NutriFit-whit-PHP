@@ -47,7 +47,7 @@ linkPreparation[0].addEventListener('click', () => {
 
       div.innerHTML= ` 
       
-      <h1 class="ingredientes">Preparacion</h1>
+      <h1 class="ingredientes">Preparación</h1>
       <pre class="textoI">
           <br>
           - Licua todos los ingredientes
@@ -72,7 +72,7 @@ linkPreparation[1].addEventListener('click', () => {
 
     div.innerHTML= ` 
    
-    <h1 class="ingredientes">Preparacion</h1>
+    <h1 class="ingredientes">Preparación</h1>
     <pre class="textoI">
         <br>
         - Pela y corta las manzanas y 
@@ -102,7 +102,7 @@ linkPreparation[2].addEventListener('click', () => {
     
     div.innerHTML= ` 
     
-    <h1 class="ingredientes">Preparacion</h1>
+    <h1 class="ingredientes">Preparación</h1>
     <pre class="textoI">
         <br>
         - Licua todos los ingredientes
@@ -128,7 +128,7 @@ linkPreparation[3].addEventListener('click', () => {
         
     div.innerHTML= ` 
         
-    <h1 class="ingredientes">Preparacion</h1>
+    <h1 class="ingredientes">Preparación</h1>
     <pre class="textoI">
         <br>
         - Licua todos los ingredientes
@@ -156,7 +156,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             -  Mezclar todos los ingredientes 
@@ -179,7 +179,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             -  Llevar los frutos rojos al microondas
@@ -202,7 +202,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             - Empieza formando capas
@@ -230,7 +230,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             - LICUA:
@@ -263,7 +263,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             - Prepara un recipiente de vidrio
@@ -293,7 +293,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             - LICUA:
@@ -330,7 +330,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             - Mezclar:
@@ -362,7 +362,7 @@ linkPreparation[3].addEventListener('click', () => {
         const div = divCreation();
         
         div.innerHTML= ` 
-        <h1 class="ingredientes">Preparacion</h1>
+        <h1 class="ingredientes">Preparación</h1>
         <pre class="textoI">
             <br>
             - En un recipiente redondo para microondas 
