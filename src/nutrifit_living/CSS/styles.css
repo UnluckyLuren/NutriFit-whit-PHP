@@ -1114,4 +1114,122 @@ color: rgb(255, 255, 255);
 
 .logo {
   margin: 0;
+}
+
+.buscador {
+  position: absolute;
+  top: 2em;
+  left: 10em;
+}
+
+.buscador button img {
+  width: 3em;
+  height: 4em;
+  margin: 0;
+}
+
+.buscador button {
+  width: 5em;
+  height: 5em;
+  border: 1px solid var(--Color4nutri);
+  border-radius: 50% 50%;
+  position: absolute;
+  margin: 0;
+  top: -1em;
+  left: -6em;
+}
+
+.buscador input {
+  width: 20em;
+  height: 2.5em;
+  font-size: large;
+  border-radius: 5em 5em;
+  border: 2px solid var(--Color3nutri);
+}
+
+.buscador button:hover, .buscador input:hover {
+  border: 2px solid #002e01;
+}
+
+.buscador button:hover img {
+  width: 2.8em;
+  height: 3.8em;
+}
+
+.mostrarVentanaDietaCalculos {
+  opacity: 100;
+  pointer-events: all;
+  position: fixed;
+}
+
+.containerVentanaDieta {
+  flex-direction: column;
+  margin: 0;
+}
+
+.PorcentajesGrasasEjemplos {
+  width: 50%;
+  display: flex;
+  padding-left: 8%;
+}
+
+.PorcentajesGrasasEjemplos img {
+  width: 25em;
+  height: 18em;
+  margin: 0;
+}
+
+.textMejorarSalud {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  height: inherit;
+  margin: 0 0 0 2em;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid green;
+  padding: 1em 0 0.2em 0;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.textMejorarSalud div {
+  font-size: small;
+  width: inherit;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 0;
+}
+
+.textMejorarSalud div h2 {
+  color: var(--Color2nutri);
+}
+
+.textMejorarSalud div p {
+  margin: 0;
+  margin: 0.5em 0;
+  font-size: larger;
+}
+
+.EscalasResults img {
+  width: 90%;
+  height: 5em;
+  margin-top: 3em;
+}
+
+.indicePeso {
+  position: relative;
+  width: 12em;
+  left: 5em;
+  margin: 0;
+  top: 2.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--Color4nutri);
+  transition: all 1s ease-in-out;
+}
+
+.indicePeso h2, .indicePeso p {
+  font-size: large;
 }/*# sourceMappingURL=styles.css.map */

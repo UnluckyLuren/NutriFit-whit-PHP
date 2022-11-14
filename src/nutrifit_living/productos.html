@@ -91,6 +91,12 @@ img{
     </nav>
 </div>
 <pre class="titulo_de_servicios_productos">Proteínas</pre>
+
+<div class="buscador">
+        <button id="buscarBtn" ><img src="imagenes/Lupa.svg"></button>
+        <input type="text" id="buscadorGeneral">
+    </div>
+
 <div class="contenedorserviciosPRODUCTOS" id="ContainerProdHTML" >
     <!-- <div class="fexcajasPR"><img src="/imagenes/proteinas/Jamón de pavo Zwan premium 400 g.jpg" alt="Jamón de pavo Zwan premium 400 g"></a>
         <div><a class="boton_walmart" href="https://super.walmart.com.mx/carnes-frias/jamon-de-pavo-zwan-premium-400-g/00750105771102" target="ba_blank">Ver en walmart</a></div>
@@ -624,6 +630,27 @@ img{
         <script defer src="Prueba7/java.js"></script>
         <script src="js/create-html-products.js"></script>
         <script src="js/maps-directions.js"></script>
+
+        <script>
+
+        const buscarBtn = document.getElementById('buscarBtn');
+        const buscadorGeneral = document.getElementById('buscadorGeneral');
+
+        buscarBtn.addEventListener('click', () => {
+
+        window.location="productos/general-productos.html";
+
+        })
+
+
+        buscadorGeneral.addEventListener('keyup', () => {
+
+        let prodctBuscar = buscadorGeneral.value;
+        window.location="productos/general-productos.html";
+
+        })
+
+        </script>
 
 </body>
 </html>

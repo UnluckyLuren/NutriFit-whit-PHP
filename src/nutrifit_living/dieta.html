@@ -150,19 +150,19 @@
  <div>   
      <!-- <label>Edad -->
          <br>
-         <input id="edad" type="text" required placeholder="Edad" >
+         <input id="edadUser" type="text" required placeholder="Edad" >
      <!-- </label> -->
  </div>
  <div>
      <!-- <label >Peso (Kg)                    -->
          <br>
-         <input id="peso" type="text" required placeholder="Peso (kg)" >
+         <input id="pesoUser" type="text" required placeholder="Peso (kg)" >
      <!-- </label> -->
  </div>
  <div>
      <!-- <label> Altura (m) -->
          <br>
-         <input id="altura" type="text" required placeholder="Altura (m)" >
+         <input id="alturaUser" type="text" required placeholder="Altura (m)" >
      <!-- </label> -->
  </div>
  <br>
@@ -171,17 +171,17 @@
 <br>
     <div >
         <label>
-            <input class="hombre radioInputForm" onclick="sexohombre();" name="gender" type="radio" required>
+            <input class="hombre radioInputForm" id="hombreUser" name="gender" type="radio">
             Hombre
         </label>
     
        <label >
-           <input class="mujer radioInputForm" onclick="medidasmujer();" name="gender" type="radio" required >
+           <input class="mujer radioInputForm" id="mujerUser" name="gender" type="radio">
            Mujer
        </label>
     </div>
 
-    <a href="metodo_de_pago.html"> <button class="buttonenviar">Enviar</button> </a>
+    <a href="#"> <button class="buttonenviar" id="calcSalud" >Calcular</button> </a>
 
 </form>
 
@@ -368,6 +368,68 @@
 </div>
 
 
+
+    <!-- Ventana emergente -->
+
+        <!-- Para que se habra la ventana debes oponerle a un a el id: open -->
+
+        <div class="modal-container" id="ventanaCalculosGratis">
+            <div class="modal">
+                <div class="compra containerVentanaDieta">       
+                    <button id="close" type="submit" ><img src="imagenes/x.png" ></button>  
+                    
+                    <div class="EscalasResults">
+                  
+                        <div class="indicePeso" id="indicePeso">
+                            <h2>Tú peso Ideal es:</h2>
+                            <p id="textPesoIdeal"></p>
+                            v
+                        </div>
+                        <img src="./imagenes/EscalasGrasasMujeres.png" id="EscalaImg">
+                    </div>
+
+                    <div class="PorcentajesGrasasEjemplos">
+                        <img src="./imagenes/grasas mujeres.jpg" id="porcentajesImg">
+
+                        <div class="textMejorarSalud">
+                            <div class="IMCInfo">
+                                <h2>Tú indice de masa corporal es de:</h2>
+                                <p id="textIMC" ></p>
+                            </div>
+
+                            <div class="GrasaTotalInfo">
+                                <h2>Tú grasa Total en kg es de:</h2>
+                                <p id="textGrasaTotal" ></p>
+                            </div>
+
+                            <div class="GrsaMagraInfo">
+                                <h2>Tú masa magra es de:</h2>
+                                <p id="textGrasaMagra" ></p>
+                            </div>
+
+                            <div class="PorcentajeGrasaInfo">
+                                <h2>Tú porcentaje de grasa es del:</h2>
+                                <p id="textPorcentajeGrasa" ></p>
+                            </div>
+
+                            <div class="DisminucionInfo">
+                                <h2>La cantidad de kg a disminuir es de:</h2>
+                                <p id="textDisminucion" ></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                   
+            </div>
+              
+        </div>
+
+
+
+
 <!-- Footer -->
 
 
@@ -393,9 +455,9 @@
 
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
     <script defer src="Prueba7/java.js"></script>
-    <script src="whatss.js"></script>
+    <!-- <script src="whatss.js"></script> -->
     <script src="./js/cambiar-plan.js"></script>
-
+    <script src="js/calculos-formularios.js"></script>
             
     </body>
 
