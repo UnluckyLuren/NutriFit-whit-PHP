@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes</title>
-
-    <link rel="stylesheet" href="estiloscards.css">
+    
     <link rel="stylesheet" href="../CSS/styleheader.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="estiloscards.css">
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
@@ -41,6 +46,7 @@
         </header>
 
 
+    <form class="formPrivilegios" action="Dar_Privilegios.php"  method="post">
         <div class="body__page">
 
             <div class="container__card">
@@ -50,9 +56,9 @@
                         <img class="vip"src="891438.png" alt="VIP">
                     </div>
                     <div class="info__description">
-                        <strong><p>FREE PLAN</p></strong>
-                        <p>Tendrás acceso al plan de dieta y su mapa de equivalencias de forma gratuita e inmediata.</p>
-                        <a href="../Page-Initial.html"><input type="button" value="INICIO"></a>
+                            <strong><p>FREE PLAN</p></strong>
+                            <p>Tendrás acceso al plan de dieta y su mapa de equivalencias de forma gratuita e inmediata.</p>
+                            <a href="#"><input type="submit" name="freePlan" value="INICIO"></a>
                     </div>
                 </div>
 
@@ -64,7 +70,7 @@
                     <div class="info__description">
                         <strong><p>NutriFit Living Experience</p></strong>
                         <p>Tendrás acceso al plan de dieta 100% perzonalizado, enfocado en ti, tu salud, tiempo, gustos y necesidades.</p>
-                        <a href="../metodo_de_pago.html"><input type="button" value="PAGAR"></a>
+                        <a href="#"><input type="submit" name="intermediumPlan" value="PAGAR"></a>
                     </div>
                 </div>
 
@@ -75,12 +81,14 @@
                     <div class="info__description">
                         <strong><p>VIP NutriFit Living PASS</p></strong>
                         <p>Acceso a  plan personalizado y herramientas que te acompañarán en el proceso (recetario, lugares y productos recomendados, etc.)</p>
-                        <a href="../metodo_de_pago.html"><input type="button" value="PAGAR"></a>
+                        <a href="#"><input type="submit" name="vipPlan" value="PAGAR"></a>
                     </div>
                 </div>
             </div>
         </div>
-</div>
+    </div>
+                
+</form>
 
 
 

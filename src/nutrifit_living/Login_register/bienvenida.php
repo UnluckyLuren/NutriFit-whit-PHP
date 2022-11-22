@@ -52,7 +52,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
             <div class="ctn-welcome">
                 <h1 class="title-welcome"><b> BIENVENIDO A NUTRIFIT LIVING</b></h1>
-                <a href="../cards_planes/index.html" class="close-sesion">Planes</a>
+                <a href="../cards_planes/index.php" class="close-sesion">Planes</a>
                 <a href="cerrar-sesion.php" class="close-sesion">Cerrar Sesión</a>
             </div>
 

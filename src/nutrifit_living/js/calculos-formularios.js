@@ -34,7 +34,7 @@ const calcPesoIdeal = (porcentajeIdeal, grasaTotal, porcentajeGrasaCorporal, gra
         pesoIdeal = grasaMagra + pesoMeta,
         grasaParaDisminuir = grasaTotal - pesoMeta;
 
-    let resultadosDelPeso = [pesoIdeal, grasaParaDisminuir]
+    let resultadosDelPeso = [pesoIdeal, grasaParaDisminuir];
 
     return resultadosDelPeso;
 }
@@ -172,7 +172,7 @@ const calcGrasas = () => {
 
             pesoMetaSaludable = calcPesoIdeal(0.22, grasaTotal, GrasaCorporal, grasaMagra);
 
-        } else if ( edadUser.value <20 ) {
+        } else if ( edadUser.value < 20 ) {
 
             pesoMetaSaludable = calcPesoIdeal(0.10, grasaTotal, GrasaCorporal, grasaMagra);
 

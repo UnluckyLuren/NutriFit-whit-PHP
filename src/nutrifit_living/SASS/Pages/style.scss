@@ -40,6 +40,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
+    z-index: 1000;
 }
 .nav-link{
     color: var(--Colornutrifit2);
@@ -168,3 +169,14 @@ body{
 
 }
 }
+
+
+
+
+
+
+
+
+
+
+

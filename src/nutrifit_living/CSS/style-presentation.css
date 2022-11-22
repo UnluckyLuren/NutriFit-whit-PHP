@@ -16,23 +16,22 @@
     --Color7nutri:#bcd896;
     --Color8nutri:#89BC47;
 }
-
-
+/* 
 body {
     font-family: 'Montserrat', sans-serif;
     color: #003200;
     font-weight: 400;
     background: #ffffff;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+/* } */
 
-a {
+/* a {
     color: #006400;
     transition: 0.5s;
-}
+}  */
 
-a:hover,
+/* a:hover,
 a:active,
 a:focus {
     color: #000000;
@@ -44,9 +43,9 @@ p {
     color: #003200;
     padding: 0;
     margin: 0 0 15px 0;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -57,34 +56,38 @@ h6 {
     color: #003200;
     margin: 0 0 15px 0;
     padding: 0;
-}
+} */
 
-h1,
+/* h1,
 h2 {
     font-weight: 700;
-}
+} */
 
 
 
 /**********************************/
 /***** Layout & Section Title *****/
 /**********************************/
+
+
+
+
 .main-wrapper {
     padding: 0;
     /* margin-top: 30px; */
     margin-bottom: 30px;
     border-radius: 5px;
-    background: var(--Color4nutri);
+    /* background: var(--Color4nutri); */
     /* overflow: hidden; */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, .5); */
 }
 
 .container .col-lg-5 {
-    background: #003200;
+    /* background: #003200; */
 }   
 
 .container .col-lg-7 {
-    background: #ffffff;
+    /* background: #ffffff; */
 }
 
 .section-title {
@@ -102,7 +105,7 @@ h2 {
 .section-title p {
     font-size: 22px;
     font-weight: 600;
-    color: #ffffff;
+    /* color: #ffffff; */
     margin: 0;
 }
 
@@ -146,12 +149,12 @@ h2 {
 .contact .contact-content {
     margin: 0 -15px;
     padding: 90px 30px;
-    background: linear-gradient(white,rgba(186, 186, 186, 0.719)),  url(../imagenes/img/bg-1.jpg);
+    /* background: linear-gradient(white,rgba(186, 186, 186, 0.719)),  url(../imagenes/img/bg-1.jpg); */
     /* background-color: white; */
-    background-position: right bottom;
+    /* background-position: right bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     
 }
 
@@ -161,12 +164,12 @@ h2 {
 .faq #accordion {
     margin: 0 -15px;
     padding: 90px 30px;
-    background: linear-gradient(white,rgba(186, 186, 186, 0.719)),  url(../imagenes/img/bg-1.jpg);
+    /* background: linear-gradient(white,rgba(186, 186, 186, 0.719)),  url(../imagenes/img/bg-1.jpg); */
     /* background-color: white; */
-    background-position: center bottom;
+    /* background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 @media(max-width: 568px) {
@@ -426,26 +429,38 @@ h2 {
 /**********************************/
 /********** Review Style **********/
 /**********************************/
+
+.review {
+    position: absolute;
+    top: 10em;
+    left: 40em;
+    height: min-content;
+    z-index: 0;
+}
+
 .review .review-carousel {
     padding: 90px 15px;
-    width: calc(100% + 30px);
+    width: max-content;
+    height: min-content;
 }
 
 .review .review-item {
     position: relative;
-    width: 100%;
-    padding: 0 15px;
+    width: 20em;
     text-align: center;
+    margin: 0;
 }
 
 .review .review-img {
     position: relative;
-    width: 100%;
+    width: 10em;
     margin-bottom: 15px;
 }
 
 .review .review-item img {
-    width: 100%;
+    width: 18em;
+    height: 25em;
+    margin: 0;
 }
 
 .review .review-content {
@@ -461,18 +476,18 @@ h2 {
 
 .review .review-content h4 {
     font-size: 14px;
-    font-style: italic;
+    /* font-style: italic; */
     margin-bottom: 15px;
 }
 
 .review .review-content p {
     margin: 0;
-    color: white;
+    color: black;
 }
 
 .review .owl-nav,
 .review .owl-dots {
-    margin-top: 15px;
+    margin: 20px 6em 0 0;
     text-align: center;
 }
 
@@ -487,6 +502,12 @@ h2 {
 
 .review .owl-dot.active {
     background: rgba(000, 100, 000, 1);
+}
+
+.titlePageInterm {
+    position: absolute;
+    width: max-content;
+    /* margin-bottom: 1em; */
 }
 
 
@@ -551,6 +572,25 @@ h2 {
 /**********************************/
 /*********** FAQs Style ***********/
 /**********************************/
+
+.faq {
+    position: relative;
+    top: 38em;
+    left: -35em;
+    z-index: 0;
+}
+
+.faqIntermedium {
+    top: 55em;
+    left: -5em;
+}
+
+
+.col-lg-5 {
+    margin: 0;
+}
+
+
 .faq .card {
     margin-bottom: 15px;
     border: none;
@@ -564,7 +604,7 @@ h2 {
 .faq .card-header {
     padding: 0;
     border: none;
-    background: #006400;
+    background: var(--Color8nutri);
 }
 
 .faq .card-header span {
@@ -586,6 +626,7 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     background: white;
+    color: var(--Color4nutri);
 }
 
 .faq .card-header [data-toggle="collapse"]:after {
@@ -617,6 +658,32 @@ h2 {
     border: none;
     /* background: #006400; */
 }
+
+.faqTitle {
+    position: relative;
+    top: -8em;
+    left: 15em;
+    width: max-content;
+    margin: 0;
+}
+
+.faqTitleIntermedium {
+    top: 1em;
+}
+
+.visualizerPage {
+    height: min-content !important;
+}
+
+.footerPageInitial {
+    top: 80em !important;
+}
+
+.footerPageInitialIntermedium {
+    top: 100em !important;
+    margin: 0;
+}
+
 
 
 

@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
 :root{
   --Colornutrifit: hsl(86, 54%, 51%);
   --ColorTitulo: hsl(88, 55%, 60%);
@@ -244,6 +244,8 @@ font-family: 'Open Sans', sans-serif;
   .nombreDEpaginadondeseencuantra{
     margin: 0%;
   }
+
+
   
 
 /* Menu desplegable recetarios */
@@ -300,7 +302,9 @@ font-family: 'Open Sans', sans-serif;
   padding: 0%;
   }
 
-  /* Luagres recomendados */
+
+
+  /* Lugares recomendados */
   
   .titulo_de_servicios {
     margin-top: 5%;
@@ -676,10 +680,10 @@ text-align: center;
   display: flex;
   background-color: rgba(0, 0, 0, 0.329);
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: center;
-          align-items: center;
-  position: absolute;
+  -ms-flex-pack: start;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   pointer-events: none;
   opacity: 0;
   top: 0;
@@ -690,7 +694,24 @@ text-align: center;
 }
 
 .modal {
+  position: absolute;
   display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  border: 1px solid green;
+  width: 60em;
+  height: 70%;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modalVentInitial {
+  display: flex;
+  position: absolute;
+  top: 17vh;
+  left: 21vw;
   justify-content: flex-start;
   background-color: white;
   border: 1px solid green;
@@ -726,7 +747,7 @@ text-align: center;
   font-size: larger;
   margin:0.5em;
   padding: 0;
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
   border-bottom: 1px solid var(--Color-hover);
 }
 
@@ -810,7 +831,7 @@ text-align: center;
 .containProgreso {
   background-color: var(--Color2nutri);
   width: 25em;
-  height: 10em;
+  height: 12em;
   margin: 2.5em 0 0 6em;
   border-radius: 0.5em;
   padding: 0.5em;
@@ -822,7 +843,7 @@ text-align: center;
 
 .partesProgreso {
   display: flex;
-  margin: 1em 0 0 1em ;
+  margin: 0 0 0 1em ;
 }
 
 .barEjercicio {
@@ -896,8 +917,8 @@ text-align: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
-  right: 30em;
-  top: 10em;
+  right: 0;
+  top: 0;
 }
 
 #close img {
@@ -1322,6 +1343,94 @@ font-weight: bold;
 }
 
 
+
+  // Hover en pagina inicial
+
+  .navMenuLink a:hover{
+    background-color: var(--Color4nutri);
+    width:min-content;
+    height:min-content;
+    color: white;
+    transition: .5s;
+    opacity: 85%;
+    border-radius: 20px;
+  }
+
+
+  // Estilizado del form para subida de imagen
+
+
+  .formImage {
+    position: absolute !important;
+    width: 0 !important;
+    height:0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+  }
+
+
+  // Estilizado boto de cambiar imagen del usuario
+
+  .changeImageUser {
+    border-color: var(--Color4nutri);
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid;
+    padding: 0.3em;
+    margin: 0;
+    width: 10em;
+
+    position: relative;
+    top: -2.3em;
+    left: 3em;
+  }
+
+  .updateImageUser {
+    position: absolute;
+    top: 18em;
+    left: 5em;
+  }
+
+
+  .changeImageUser:hover {
+
+    border: 1px solid green;
+    transition: all 0.2s;
+    border-radius: 1em;
+
+  }
+  
+
+  #textAnadir {
+
+    width:max-content;
+    padding:0;
+    margin-left: 2.7em ;
+
+  }
+
+  .updateImageUserGratis {
+    margin-top: 2em;
+  }
+
+
+  .textUpdateGratis {
+    position: relative;
+    top: 1.5em;
+  }
+
+
+  .updateUnlock {
+    width: 20em;
+    height: 10em;
+    z-index: 2000;
+  }
+
+
+
+    
+  
 
 
 

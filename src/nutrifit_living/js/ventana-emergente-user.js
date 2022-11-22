@@ -2,11 +2,8 @@ const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
 
-console.log(open)
-
 open.addEventListener('click', () => {
     modal_container.classList.add('show');
-    console.log('si se añadio la clase');
 });
 
 close.addEventListener('click', () => {
@@ -21,13 +18,22 @@ const imgSRC = document.getElementById('inputFile'),
 		containImg = document.getElementById('imgChoosen'),
         textAnadir = document.getElementById('textAnadir');
 
-		containImg.style.display="none";
+const changebtnImg = document.getElementById('changebtnImg');
+
+
+		if ( containImg.src.length === 81 ) {
+
+			containImg.style.display="none";
+			changebtnImg.style.display="none";
+			
+		}
 
 imgSRC.onchange = () => {
 
 		imgSRC.style.display = "none";
 		containImg.style.display="inline";
         textAnadir.style.display="none";
+		btnEnviarImg.style.top = "0.9em";
 
 		let reader = new FileReader();
 	
@@ -38,3 +44,19 @@ imgSRC.onchange = () => {
 
 	}
 }
+
+
+changebtnImg.addEventListener('click', () => {
+
+    seleccionarImagen();
+    imagenToSrc.src="";
+	changebtnImg.style.display="none";
+	btnEnviarImg.style.display="inline";
+
+});
+
+
+
+
+
+
