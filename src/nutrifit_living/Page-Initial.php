@@ -142,10 +142,10 @@ a, #co {
             </button>
 
             <ul class="nav-menu navMenuInitial">
-                <li class="nav-menu-item navMenuLink"><a href="Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item navMenuLink" ><a href="productos.html" class="nav-menu-link nav-link">productos</a></li>
-                <li class="nav-menu-item navMenuLink"><a href="dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
-                <li class="nav-menu-item navMenuLink"><a href="recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
+                <li class="nav-menu-item navMenuLink"><a href="Page-Initial.php" class="nav-menu-link nav-link">Inicio</a></li>
+                <li class="nav-menu-item navMenuLink" ><a href="productos.php" class="nav-menu-link nav-link">productos</a></li>
+                <li class="nav-menu-item navMenuLink"><a href="dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
+                <li class="nav-menu-item navMenuLink"><a href="recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
             </ul>
 
         </nav>
@@ -251,11 +251,16 @@ a, #co {
                                 <img src="imagenes/user.png" id="imgChoosen">
                                 <p id="textAnadir" >Añade tú Foto</p>
                                 <input type="file" id="inputFile" class="inputFile" name="imagenDelUsuario" accept="image/*" >
-                                <button type="submit" id="btnEnviarImg" class="changeImageUser"> Guardar </button>
+                                <button id="btnEnviarImg" class="changeImageUser"> Guardar </button>
                             </form>
                     </div>
                         
-                        <button id="updateGratisUser" class="changeImageUser updateImageUser" >Cambiar foto</button>
+                    <div class="btnUsuarioControl">
+                            <form action="./Login_register/cerrar-sesion.php" method="POST" class="formCerrarSesión" >
+                                <button type="submit" id="btnCerrarSesión" class="changeImageUser"> Cerrar Sesión </button>
+                            </form>
+                            <button id="changebtnImg" class="changeImageUser updateImageUser">Cambiar foto</button>
+                    </div>
 
                         <p class="textUpdateGratis" ><?php echo $nombre ?></p>
                         
@@ -265,7 +270,7 @@ a, #co {
                             <p class="sepr-border" >28/10/2022</p>
                         </div>
 
-                        <a href="Progreso.html"> <button class="botonVerProgreso" >Ver progreso</button> </a>
+                        <a href="#"> <button class="botonVerProgreso" id="progressBlock" >Ver progreso</button> </a>
 
                     </div>
 
@@ -349,12 +354,12 @@ a, #co {
         <div class="item-1">
             <div class="imagen">
                 <figure>
-                    <a href="Page-Initial.html">
+                    <a href="Page-Initial.php">
                         <img class="ImagenFooterOpccion2" src="../nutrifit_living/imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" >
                     </a>
                 </figure>
             </div>   
-            <a class="item-2" href="../nutrifit living/Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
+            <a class="item-2" href="../nutrifit living/Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
         </div>
 
             <div class="item-3">

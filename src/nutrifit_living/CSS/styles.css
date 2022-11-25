@@ -1264,11 +1264,28 @@ color: rgb(255, 255, 255);
 }
 
 .formImage {
-  position: absolute !important;
-  width: 0 !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.formCerrarSesión {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 0;
+}
+
+.btnUsuarioControl {
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .changeImageUser {
@@ -1277,17 +1294,8 @@ color: rgb(255, 255, 255);
   border: transparent;
   border-bottom: 1px solid;
   padding: 0.3em;
-  margin: 0;
-  width: 10em;
-  position: relative;
-  top: -2.3em;
-  left: 3em;
-}
-
-.updateImageUser {
-  position: absolute;
-  top: 18em;
-  left: 5em;
+  margin: 0 0.2em;
+  width: 8em;
 }
 
 .changeImageUser:hover {
@@ -1317,4 +1325,10 @@ color: rgb(255, 255, 255);
   width: 20em;
   height: 10em;
   z-index: 2000;
+}
+
+.changeImageUserMove {
+  position: relative;
+  top: -3em;
+  left: 3.2em;
 }/*# sourceMappingURL=styles.css.map */

@@ -37,10 +37,10 @@
     
                 </button>
                 <ul class="nav-menu">
-                    <li class="nav-menu-item  "><a href="../Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                    <li class="nav-menu-item " ><a href="../productos.html" class="nav-menu-link nav-link">Productos</a></li>
-                    <li class="nav-menu-item"><a href="../dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
-                    <li class="nav-menu-item "><a href="../recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
+                    <li class="nav-menu-item  "><a href="../Page-Initial.php" class="nav-menu-link nav-link">Inicio</a></li>
+                    <li class="nav-menu-item " ><a href="../productos.php" class="nav-menu-link nav-link">Productos</a></li>
+                    <li class="nav-menu-item"><a href="../dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
+                    <li class="nav-menu-item "><a href="../recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
                 </ul>
             </nav>
         </header>
@@ -96,14 +96,14 @@
     <div class="item-1">
         <div class="imagen">
             <figure>
-                <a href="Page-Initial.html">
+                <a href="Page-Initial.php">
                     <img class="imagenfooter" src="../imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" width="40%">
                 </a>
             </figure>
         </div>
         
            
-   <a class="item-2" href="Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
+   <a class="item-2" href="Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
 
       
     </div>

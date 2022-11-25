@@ -11,6 +11,16 @@ close.addEventListener('click', () => {
 });
 
 
+const subirImagen = document.getElementById('btnEnviarImg'),
+	btnCerrarSesión= document.getElementById('btnCerrarSesión'),
+	FormImagenUser = document.getElementById('FormImagenUser');
+
+
+	console.log(FormImagenUser);
+	console.log(btnCerrarSesión);
+
+
+
 // Añadir imagen al usuario
 
 
@@ -45,6 +55,9 @@ imgSRC.onchange = () => {
 	}
 }
 
+changebtnImg.addEventListener('click',() => {
+	btnCerrarSesión.classList.add("disNone");
+});
 
 changebtnImg.addEventListener('click', () => {
 

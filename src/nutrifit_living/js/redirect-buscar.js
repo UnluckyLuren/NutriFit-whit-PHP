@@ -3,7 +3,7 @@ const buscadorGeneral = document.getElementById('buscadorGeneral');
 
 buscarBtn.addEventListener('click', () => {
 
-    window.location="general-productos.html";
+    window.location="general-productos.php";
 
 })
 
@@ -11,7 +11,7 @@ buscarBtn.addEventListener('click', () => {
 buscadorGeneral.addEventListener('keyup', () => {
 
     let prodctBuscar = buscadorGeneral.value;
-    window.location="general-productos.html";
+    window.location="general-productos.php";
 
 })
 

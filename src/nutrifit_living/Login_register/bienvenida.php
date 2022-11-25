@@ -40,10 +40,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
                 </button>
                 <ul class="nav-menu">
-                    <li class="nav-menu-item  "><a href="Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                    <li class="nav-menu-item " ><a href="productos.html" class="nav-menu-link nav-link">Productos</a></li>
-                    <li class="nav-menu-item"><a href="dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
-                    <li class="nav-menu-item "><a href="recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
+                    <li class="nav-menu-item  "><a href="../Page-Initial.php" class="nav-menu-link nav-link">Inicio</a></li>
+                    <li class="nav-menu-item " ><a href="../productos.php" class="nav-menu-link nav-link">Productos</a></li>
+                    <li class="nav-menu-item"><a href="../dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
+                    <li class="nav-menu-item "><a href="../recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
                 </ul>
             </nav>
         </header>

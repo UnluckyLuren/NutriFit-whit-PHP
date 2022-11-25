@@ -42,10 +42,10 @@
 
           </button>
           <ul class="nav-menu ">
-              <li class="nav-menu-item  "><a href="../Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-              <li class="nav-menu-item " ><a href="../LoginFuncionando/index.html " class="nav-menu-link nav-link">Ingresar</a></li>
-              <li class="nav-menu-item"><a href="../dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
-              <li class="nav-menu-item "><a href="../recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
+              <li class="nav-menu-item  "><a href="../Page-Initial.php" class="nav-menu-link nav-link">Inicio</a></li>
+              <li class="nav-menu-item " ><a href="../LoginFuncionando/index.php " class="nav-menu-link nav-link">Ingresar</a></li>
+              <li class="nav-menu-item"><a href="../dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
+              <li class="nav-menu-item "><a href="../recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
           </ul>
       </nav>
   </header>
@@ -54,11 +54,11 @@
 <div class="container">
     <nav class="menu">
         <ul>
-            <li><a href="../equivalencias.html"><p class="nombreDEpaginadondeseencuantra"> ▼     Mapa de equivalencias</p></a>
+            <li><a href="../equivalencias.php"><p class="nombreDEpaginadondeseencuantra"> ▼     Mapa de equivalencias</p></a>
             <ul class="submenu"></li>
-            <li><a href="../dieta.html">Dietas</a></li>
-            <li><a href="../lugares.html">Lugares Recomendados</a></li>
-            <li><a href="../productos.html">Productos recomendados</a></li>
+            <li><a href="../dieta.php">Dietas</a></li>
+            <li><a href="../lugares.php">Lugares Recomendados</a></li>
+            <li><a href="../productos.php">Productos recomendados</a></li>
         </ul>
         </ul>
     </nav>
@@ -69,13 +69,13 @@
 <div class="containerSECCIONES">
     <nav class="menuSECCIONES">
         <ul>
-            <li><a href="leguminosas.html"><p class="nombreDEpaginadondeseencuantraSECCIONES"> ▼  Leguminosas</p></a>
+            <li><a href="leguminosas.php"><p class="nombreDEpaginadondeseencuantraSECCIONES"> ▼  Leguminosas</p></a>
             <ul class="submenuSECCIONES"></li>
-            <li><a href="lacteos.html"> Lacteos</a></li>
-            <li><a href="frutas.html">Frutas</a></li>
-            <li><a href="Carbohidratos.html"> Carbohidratos </a></li>
-            <li><a href="grasas.html">Grasas</a></li>
-            <li><a href="../equivalencias.html">Verduras</a></li>
+            <li><a href="lacteos.php"> Lacteos</a></li>
+            <li><a href="frutas.php">Frutas</a></li>
+            <li><a href="Carbohidratos.php"> Carbohidratos </a></li>
+            <li><a href="grasas.php">Grasas</a></li>
+            <li><a href="../equivalencias.php">Verduras</a></li>
         </ul>
         </ul>
     </nav>
@@ -90,14 +90,14 @@
         <div class="item-1">
             <div class="imagen">
                 <figure>
-                    <a href="../Page-Initial.html">
+                    <a href="../Page-Initial.php">
                         <img class="imagenfooter" src="../imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" width="50%">
                     </a>
                 </figure>
             </div>
             
                
-       <a class="item-2" href="../Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
+       <a class="item-2" href="../Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
     
           
         </div>

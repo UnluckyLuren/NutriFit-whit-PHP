@@ -1361,16 +1361,27 @@ font-weight: bold;
 
 
   .formImage {
-    position: absolute !important;
-    width: 0 !important;
-    height:0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    position: absolute;
+    width: 0;
+    height:0;
+    padding: 0;
+    margin: 0;
 
+  }
+
+  .formCerrarSesión {
+    width:min-content;
+    height: min-content;
+    padding: 0;
   }
 
 
   // Estilizado boto de cambiar imagen del usuario
+
+  .btnUsuarioControl {
+    display: flex;
+    width: max-content;
+  }
 
   .changeImageUser {
     border-color: var(--Color4nutri);
@@ -1378,20 +1389,9 @@ font-weight: bold;
     border: transparent;
     border-bottom: 1px solid;
     padding: 0.3em;
-    margin: 0;
-    width: 10em;
-
-    position: relative;
-    top: -2.3em;
-    left: 3em;
+    margin: 0 0.2em;
+    width: 8em;
   }
-
-  .updateImageUser {
-    position: absolute;
-    top: 18em;
-    left: 5em;
-  }
-
 
   .changeImageUser:hover {
 
@@ -1400,6 +1400,7 @@ font-weight: bold;
     border-radius: 1em;
 
   }
+
   
 
   #textAnadir {
@@ -1428,6 +1429,11 @@ font-weight: bold;
   }
 
 
+  .changeImageUserMove {
+    position: relative;
+    top: -3em;
+    left: 3.2em;
+}
 
     
   

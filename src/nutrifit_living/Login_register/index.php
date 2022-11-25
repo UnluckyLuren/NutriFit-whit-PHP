@@ -33,10 +33,10 @@
             </button>
 
             <ul class="nav-menu">
-                <li class="nav-menu-item  "><a href="../Page-Initial.html" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item " ><a href="../productos.html" class="nav-menu-link nav-link">productos</a></li>
-                <li class="nav-menu-item"><a href="../dieta.html" class="nav-menu-link nav-link">Servicios</a></li>
-                <li class="nav-menu-item "><a href="../recetarios/recetarios.html" class="nav-menu-link nav-link">Recetario</a></li>
+                <li class="nav-menu-item  "><a href="../../index.html" class="nav-menu-link nav-link">Inicio</a></li>
+                <li class="nav-menu-item " ><a href="../productos.php" class="nav-menu-link nav-link">productos</a></li>
+                <li class="nav-menu-item"><a href="../dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
+                <li class="nav-menu-item "><a href="../recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
             </ul>
 
         </nav>
@@ -80,12 +80,12 @@
         <div class="item-1">
             <div class="imagen">
                 <figure>
-                    <a href="Page-Initial.html">
+                    <a href="Page-Initial.php">
                         <img class="ImagenFooterOpccion2" src="../imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" >
                     </a>
                 </figure>
             </div>   
-            <a class="item-2" href="../nutrifit living/Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
+            <a class="item-2" href="../nutrifit living/Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
         </div>
 
             <div class="item-3">

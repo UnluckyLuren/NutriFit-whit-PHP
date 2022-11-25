@@ -79,7 +79,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["privilegio"] = $privilegios;
                             $_SESSION["imagen"] = $imagen;
                             
-                            header("location: ../Page-Initial.html");
+                            header("location: ../Page-Initial.php");
                             exit;
 
                         } else if ( $privilegios == 1 ) {
