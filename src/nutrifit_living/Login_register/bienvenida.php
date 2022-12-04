@@ -7,6 +7,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
+$nombre = $_SESSION["user"];
+$privilegio = $_SESSION["privilegio"];
+$imageUser = $_SESSION["imagen"];
+
+
 ?>
 
 
@@ -26,10 +31,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <header class="header ">
             
-        <div class="userMenuDiv" >
-            <a href="#"><img src="../imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
-            <p>Iván Jesus Rodríguez</p>
-        </div>
+            <div class="userMenuDiv" >
+                    <a href="#"><img src="<?php echo".".$imageUser; ?>" id="open"  class="userMenuImg"></a>
+                    <p> <?php echo $nombre ?> </p>
+            </div>
 
             <nav class="nav">
                 <a href="#" class="logo ">
@@ -50,7 +55,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
    
         <br><br><br><br>
 
-            <div class="ctn-welcome">
+            <div class="ctn-welcome acomodoBienvenida">
                 <h1 class="title-welcome"><b> BIENVENIDO A NUTRIFIT LIVING</b></h1>
                 <a href="../cards_planes/index.php" class="close-sesion">Planes</a>
                 <a href="cerrar-sesion.php" class="close-sesion">Cerrar Sesión</a>

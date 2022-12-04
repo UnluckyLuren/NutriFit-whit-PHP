@@ -1,3 +1,16 @@
+<?php
+
+
+session_start();
+
+$nombre = $_SESSION["user"];
+$privilegio = $_SESSION["privilegio"];
+$imageUser = $_SESSION["imagen"];
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,9 +53,9 @@ img{
     </div> -->
     <header class="header ">
         <div class="userMenuDiv" >
-                <a href="#"><img src="imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
-                <p>Iván Jesus Rodríguez</p>
-            </div>
+                <a href="#"><img src="<?php echo $imageUser; ?>" id="open"  class="userMenuImg"></a>
+                <p> <?php echo $nombre ?> </p>
+        </div>
     
         <nav class="nav">
             <a href="#" class="logo ">

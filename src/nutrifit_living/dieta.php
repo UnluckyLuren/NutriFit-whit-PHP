@@ -1,3 +1,49 @@
+<?php
+
+
+session_start();
+
+$nombre = $_SESSION["user"];
+$privilegio = $_SESSION["privilegio"];
+$imageUser = $_SESSION["imagen"];
+
+if ( isset( $_SESSION['viewForm'] ) ) {
+    $viewForm = $_SESSION['viewForm'];
+} else {
+    $viewForm = "true";
+}
+
+if ( !isset( $_SESSION['nombreFormGratis'] ) ) {
+    
+    $_SESSION['nombreFormGratis'] = "Nombre";
+    $_SESSION['edadFormGratis'] = "Edad";
+    $_SESSION['pesoFormGratis'] = "Peso (kg)";
+    $_SESSION['alturaFormGratis'] = "Altura (m)";
+    $_SESSION['sexoFormGratis'] = "ninguno";
+
+}
+
+
+function ChequeadoMujer() {
+
+    if ( $_SESSION['sexoFormGratis'] == 'mujer' ) {
+        echo 'checked';
+    } 
+
+}
+
+function ChequeadoHombre() {
+
+    if ( $_SESSION['sexoFormGratis'] == 'hombre' ) {
+        echo 'checked';
+    }
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -9,8 +55,8 @@
         <link  rel="icon" href="imagenes/LOGO NUTRIFIT LIVING_preview_rev_1.png" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        
-         <style>
+        <style>
+
           a{
               text-decoration: none;
               color: white;
@@ -96,11 +142,10 @@
     <body>
 
         <header class="header ">
-            
-        <div class="userMenuDiv" >
-            <a href="#"><img src="imagenes/Gato enojado.webp" id="open"  class="userMenuImg"></a>
-            <p>Iván Jesus Rodríguez</p>
-        </div>
+            <div class="userMenuDiv" >
+                <a href="#"><img src="<?php echo $imageUser; ?>" id="open"  class="userMenuImg"></a>
+                <p> <?php echo $nombre ?> </p>
+            </div>
 
             <nav class="nav">
                 <a href="#" class="logo ">
@@ -118,6 +163,7 @@
                 </ul>
             </nav>
         </header>
+        
 
 <!-- menu desplegable -->
        
@@ -138,192 +184,193 @@
 <pre class="titulo_de_servicios">Planes para elegir</pre>
 
 
-<form  class="dieta  formDietaGratis acomodoformGratis" id="FormGratis">
+<form action="cards_planes/code-form-gratis.php"  method="POST"  class="dieta  formDietaGratis acomodoformGratis" id="FormGratis">
+    
     <h2>Plan Gratuito</h2>
     <br>
  <div>
         <!-- <label >Nombre -->
             <br>
-         <input type="text" name="name" placeholder="Nombre" >        
+         <input type="text" name="nombre" class="evaluarFormGratis" value="<?php echo $_SESSION['nombreFormGratis']; ?>" placeholder="Nombre" >        
         <!-- </label> -->
  </div>
  <div>   
      <!-- <label>Edad -->
          <br>
-         <input id="edadUser" type="text" required placeholder="Edad" >
+         <input id="edadUser" type="text" class="evaluarFormGratis" required value="<?php echo $_SESSION['edadFormGratis']; ?>" placeholder="Edad" name="edad">
      <!-- </label> -->
  </div>
  <div>
      <!-- <label >Peso (Kg)                    -->
          <br>
-         <input id="pesoUser" type="text" required placeholder="Peso (kg)" >
+         <input id="pesoUser" type="text" class="evaluarFormGratis" required value="<?php echo $_SESSION['pesoFormGratis']; ?>" placeholder="Peso (kg)" name="peso">
      <!-- </label> -->
  </div>
  <div>
      <!-- <label> Altura (m) -->
          <br>
-         <input id="alturaUser" type="text" required placeholder="Altura (m)" >
+         <input id="alturaUser" type="text" class="evaluarFormGratis" required value="<?php echo $_SESSION['alturaFormGratis']; ?>" placeholder="Altura (m)" name="altura">
      <!-- </label> -->
  </div>
  <br>
  
 <legend> Sexo: </legend>
+
 <br>
     <div >
         <label>
-            <input class="hombre radioInputForm" id="hombreUser" name="gender" type="radio">
+            <input class="hombre radioInputForm evaluarFormGratis" id="hombreUser" name="sexo" type="radio" value="hombre" <?php ChequeadoHombre() ?> >
             Hombre
         </label>
     
        <label >
-           <input class="mujer radioInputForm" id="mujerUser" name="gender" type="radio">
+           <input class="mujer radioInputForm evaluarFormGratis" id="mujerUser" name="sexo" type="radio" value="mujer" <?php ChequeadoMujer() ?> >
            Mujer
        </label>
     </div>
 
-    <a href="#"> <button class="buttonenviar" id="calcSalud" >Calcular</button> </a>
+    <button type="submit" class="buttonenviar" id="calcSalud" name="send" value="<?php echo $viewForm; ?>" >Calcular</button>
 
 </form>
 
 <!-- Plan Personalizado -->
 
-<form class="formDietaGratis dieta acomodoformPersonalizado showForm minimizarForm"  action="./cards_planes/subida-personalizado.php" method="POST" id="FormPago" >
+<form class="formDietaGratis dieta acomodoformPersonalizado showForm minimizarForm"  action="cards_planes/code-form-personalizado.php" method="post" id="FormPago" >
 
-    <h2>Plan Personalizado</h2>
-    <br><br>
-      <legend >Ingrese las siguientes medidas</legend>
-     <div>
-         <!-- <label> Cuello (cm) -->
-             <br>
-             <input type="number" name="cuello" placeholder="Cuello (cm)" >
-         <!-- </label> -->
-     </div>
-     <div>
-         <!-- <label> Cintura (cm) -->
-             <br>
-             <input type="number" placeholder="Cintura" name="cintura" >
-         <!-- </label> -->
-     </div>
-     <div id="medidas">
+<h2>Plan Personalizado</h2>
+<br><br>
+  <legend >Ingrese las siguientes medidas</legend>
+ <div>
+     <!-- <label> Cuello (cm) -->
+         <br>
+         <input type="number" placeholder="Cuello (cm)" name="cuello" >
+     <!-- </label> -->
+ </div>
+ <div>
+     <!-- <label> Cintura (cm) -->
+         <br>
+         <input type="number" placeholder="Cintura" name="cintura" >
+     <!-- </label> -->
+ </div>
+ <div id="medidas">
 </div>
 
-  <legend> Alergias:</legend>
-    <div class="alergiasInputs">
-        <br>
-        <label>
-            <input   type="checkbox" name="Alergias" value="Fresa">
-            Fresa
-        </label>
-       
-        <label>
-            <input  type="checkbox" name="Alergias" value="Maní">
-            Mani
-        </label>
-        
-        <label>
-            <input type="checkbox" name="Alergias" value="Lacteos">
-            Lacteos
-        </label>
+<legend> Alergias:</legend>
+<div class="alergiasInputs">
+    <br>
+    <label>
+        <input   type="checkbox" name="opalergia[]" value="Fresa" >
+        Fresa
+    </label>
+   
+    <label>
+        <input  type="checkbox" name="opalergia[]" value="Maní">
+        Mani
+    </label>
+    
+    <label>
+        <input type="checkbox" name="opalergia[]" value="Lacteos">
+        Lacteos
+    </label>
 
-        <label>
-            <input type="checkbox" name="Alergias" value="Otros" placeholder="Otros">
-            Otros
-        </label>
-   </div>
+    <label>
+        <input type="checkbox" name="opalergia[]" value="Otros" placeholder="Otros">
+        Otros
+    </label>
+</div>
 
-   <legend>Escriba su alergia:</legend>
-   <div>
-        <input type="text" name="alergiasEspecificas" placeholder="----">
-   </div>
+<legend>Escriba su alergia:</legend>
+<div>
+    <input type="text" name="especifica" placeholder="----">
+</div>
 <br>
 
-    <div class="acomodoPreferencias acomodoEnfermedades" >
-        <br>
-        <legend>¿Posee alguna enfermedad?</legend>
-        <select name="enfermedades" id="disease" required>
+<div class="acomodoPreferencias acomodoEnfermedades" >
+    <br>
+    <legend>¿Posee alguna enfermedad?</legend>
+    <select name="enfermedad" id="disease" required>
+        <option value="ninguna" selected >Ninguna</option> 
+        <optgroup label="Enfermedades Crónicas">
+            <option value="hipertension">Hipertensión</option>
+            <option value="cardiovasculares">Enfermedades cardiovasculares</option>
+            <option value="diabetes" >Diabetes</option>
+        </optgroup>
+        <optgroup label="Enfermedades Respiratorias">
+            <option value="asma">Asma</option>
+        </optgroup>
+    </select>
+</div>
 
-            <option value="Ninguna" selected >Ninguna</option> 
-            <optgroup label="Enfermedades Crónicas">
-                <option value="Hipertensión">Hipertensión</option>
-                <option value="cardiovasculares">Enfermedades cardiovasculares</option>
-                <option value="diabetes">Diabetes</option>
-            </optgroup>
-            <optgroup label="Enfermedades Respiratorias">
-                <option value="Asma">Asma</option>
-            </optgroup>
-        </select>
-    </div>
-
-    <div class="acomodoPreferencias">
-            <legend>¿Qué prefieres?</legend>
-        <select name="preferencia" id="disease" required  >
-            <option value="Dulce">Dulce</option>
-            <option value="Salado">Salado</option>
-        </select>
-     </div>
+<div class="acomodoPreferencias">
+        <legend>¿Qué prefieres?</legend>
+    <select name="preferencias" id="disease" required  >
+        <option value="dulce">Dulce</option>
+        <option value="salado">Salado</option>
+    </select>
+ </div>
 </div>
 
 <div><button class="plato"><img src="imagenes/Dieta.jpg" alt="Plato" class=""></button> </div>
 
-     <div class="acomodoPreferencias acomodoActividades " >
-        <legend>¿Realiza algún tipo de actividad física?</legend>
-        <select name="ejercicio" id="disease" required>
-            <option value="Ninguna">Ninguna</option>
-            <option value="aeróbico">Ejercicio aeróbico</option>
-            <option value="anaerobico">Ejercicio Anaerobico</option>
-            <option value="cardiovascular">Ejercicio cardiovascular</option>
-            <option value="otro">Otro</option>
-        </select>
-     </div>
-     <legend class="sepEjercSem" >¿Cuántos días  a la semana realiza actividad fìsica?</legend>
-     <div class="acomodoEjercicioSemanal" >
-         <label>
-            <input onclick="ejercicio();" name="days" type="radio" value="5dias" >
-            <p>5 días</p>
-         </label>
-       
-         <label >
-            <input onclick="ejercicio();" name="days" type="radio" value="7dias">
-            <p>7  días</p> 
-         </label>
-         <label >
-             <input onclick="ejercicio();" name="days" type="radio" value="3dias">
-             <p>3  días</p>
-         </label>
-         <label >
-             <input onclick="ejercicio();" name="days" type="radio" value="ocasionalmente">
-             <p>Ocasionalmente</p>
-         </label>
-     </div>
-<div>
-    <div id="actividadfisica">
-        <legend class="acomodoDuracionEjerc sepEjercSem" >Duración de la actividad física: </legend>
-        <div class="acomodoEjercicioSemanal">
-            <label>
-                <input name="duracion" type="radio" value="30min">
-                   <p>30 Minutos</p>
-                </label>
-            <label >
-            <input name="duracion" type="radio" value="45min">
-            <p>45 Minutos</p>
-            </label>
-        
-            <label >
-                <input name="duracion" type="radio" value="1hr" >
-                <p>1 Hora</p>
-            </label>
-            <label >
-                <input name="duracion" type="radio" value="2-3hr" >
-                <p>2-3 Horas</p>
-            </label>
-        </div>
-    </div>
+ <div class="acomodoPreferencias acomodoActividades " >
+    <legend>¿Realiza algún tipo de actividad física?</legend>
+    <select name="ejercicio" id="actividadRel" required>
+        <option value="Ninguna">Ninguna</option>
+        <option value="Ejercicioaerobico">Ejercicio aeróbico</option>
+        <option value="EjercicioAnaerobico">Ejercicio Anaerobico</option>
+        <option value="Ejerciciocardiovascular">Ejercicio cardiovascular</option>
+        <option value="OtroEjercicio">Otro</option>
+    </select>
+ </div>
+ <div class="acomodoEjercicioSemanal disNone" id="ejercicioSemanal" >
+    <legend class="sepEjercSem" >¿Cuántos días  a la semana realiza actividad fìsica?</legend>
+     <label>
+        <input class="duraCtividad"  name="diasactivos" type="radio" value="cincodiasdeact">
+        <p>5 días</p>
+     </label>
+   
+     <label >
+        <input class="duraCtividad"  name="diasactivos" type="radio" value="sietediasdeact">
+        <p>7  días</p> 
+     </label>
+     <label >
+         <input class="duraCtividad" name="diasactivos" type="radio" value="tresdiasdeact">
+         <p>3  días</p>
+     </label>
+     <label >
+         <input class="duraCtividad" name="diasactivos" type="radio" value="ocasionalmente">
+         <p>Ocasionalmente</p>
+     </label>
+ </div>
 
-    <a href="metodo_de_pago.php" class="disNone" id="btniraPago" > <button name="send" class="buttonenviar">Enviar</button> </a>
+<div id="duraciónActividad" class="disNone" >
+    <legend class="acomodoDuracionEjerc sepEjercSem" >Duración de la actividad física: </legend>
+    <div class="acomodoEjercicioSemanal">
+        <label>
+            <input name="duracion" type="radio" value="treintamin">
+               <p>30 Minutos</p>
+            </label>
+        <label >
+        <input name="duracion" type="radio" value="cuarentaycincomin">
+        <p>45 Minutos</p>
+        </label>
+    
+        <label >
+            <input name="duracion" type="radio" value="unahora">
+            <p>1 Hora</p>
+        </label>
+        <label >
+            <input name="duracion" type="radio" value="dosatreshoras">
+            <p>2-3 Horas</p>
+        </label>
+    </div>
+</div>
+
+<a href="metodo_de_pago.html" class="disNone" id="btniraPago" > <button class="buttonenviar" name="sends">Enviar</button> </a>
 
 </div>
 
-    
+
 
 </form>
 
@@ -454,11 +501,67 @@
         </div>
 </footer>
 
+
+
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
     <script defer src="Prueba7/java.js"></script>
     <!-- <script src="whatss.js"></script> -->
-    <script src="./js/cambiar-plan.js"></script>
+    <script src="js/cambiar-plan.js"></script>
     <script src="js/calculos-formularios.js"></script>
+
+
+<script>
+
+    if ( calcSalud.value === "false" ) {
+
+        if (hombreUser.checked) {
+
+            resultadosFinales(true);
+
+        } else if (mujerUser.checked) {
+
+            resultadosFinales(false);
+        }
+
+        ventanaCalculosGratis.classList.toggle('mostrarVentanaDietaCalculos');
+        <?php $_SESSION['viewForm']  = "true"; ?>
+    }
+
+  
+    const Actividad = document.getElementById('actividadRel'),
+    ejercicioSemanal = document.getElementById('ejercicioSemanal'),
+    ejerOcasional = document.querySelectorAll('.duraCtividad'),
+    actividadfisica = document.getElementById('duraciónActividad');
+
+    Actividad.addEventListener('change', () => {
+        ejercicioSemanal.classList.remove('disNone');
+
+        if ( Actividad.value === "Ninguna" ) {
+            ejercicioSemanal.classList.add('disNone');
+            actividadfisica.classList.add('disNone');
+        }
+
+    });
+
+    ejerOcasional[0].addEventListener('click', () => {
+        actividadfisica.classList.remove('disNone');
+    });
+
+    ejerOcasional[1].addEventListener('click', () => {
+        actividadfisica.classList.remove('disNone');
+    });
+
+    ejerOcasional[2].addEventListener('click', () => {
+        actividadfisica.classList.remove('disNone');
+    });
+
+    ejerOcasional[3].addEventListener('click', () => {
+        actividadfisica.classList.remove('disNone');
+    });
+
+
+</script>
+
             
     </body>
 

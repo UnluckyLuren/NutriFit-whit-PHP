@@ -1,3 +1,16 @@
+<?php
+
+
+session_start();
+
+$nombre = $_SESSION["user"];
+$privilegio = $_SESSION["privilegio"];
+$imageUser = $_SESSION["imagen"];
+
+
+?>
+
+
 <!DOCTYPE html>
 
 <html
@@ -49,6 +62,12 @@
   <body>
 
     <header class="header ">
+
+        <div class="userMenuDiv" >
+          <a href="#"><img src="<?php echo"../.".$imageUser; ?>" id="open"  class="userMenuImg"></a>
+          <p> <?php echo $nombre ?> </p>
+        </div>
+
       <nav class="nav">
           <a href="#" class="logo ">
               <img src="../img/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">

@@ -1,7 +1,7 @@
 //  objetos de eventos
 
 const calcSalud = document.getElementById('calcSalud'),
-    ventanaCalculosGratis = document.getElementById('ventanaCalculosGratis'),
+    ventanaCalculosFormGratis = document.getElementById('ventanaCalculosGratis'),
     close = document.getElementById('close');
 
 
@@ -220,28 +220,14 @@ calcSalud.addEventListener('click', () => {
         resultadosFinales(false);
     }
 
-    ventanaCalculosGratis.classList.toggle('mostrarVentanaDietaCalculos');
+    ventanaCalculosFormGratis.classList.toggle('mostrarVentanaDietaCalculos');
 
 });
-
-
 
 close.addEventListener('click', () => {
 
-    ventanaCalculosGratis.classList.toggle('mostrarVentanaDietaCalculos');
+    ventanaCalculosFormGratis.classList.toggle('mostrarVentanaDietaCalculos');
 
 });
-
-
-/* Evitar que el evento submit recargue la página */
-
-const form = document.getElementById('FormGratis');
-
-form.addEventListener('submit', function(event) {
-	event.preventDefault();
-})
-
-
-
 
 

@@ -75,7 +75,3 @@ btnCambiar.addEventListener('click', () => {
 
 
 
-
-
-
-
