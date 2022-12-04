@@ -3,6 +3,11 @@
 
 session_start();
 
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+        header("location: Login_register/index.php");
+        exit;
+}
+
 $nombre = $_SESSION["user"];
 $privilegio = $_SESSION["privilegio"];
 $imageUser = $_SESSION["imagen"];

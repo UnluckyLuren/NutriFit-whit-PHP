@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
-                            $_SESSION["imagen"] = $imagen;
+                            $_SESSION["imagen"] = "./imagenes/user.png";
                             
                             header("location: bienvenida.php");
                             exit;
@@ -77,7 +77,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
-                            $_SESSION["imagen"] = $imagen;
+                            $_SESSION["imagen"] = "./imagenes/user.png";
                             
                             header("location: ../Page-Initial.php");
                             exit;

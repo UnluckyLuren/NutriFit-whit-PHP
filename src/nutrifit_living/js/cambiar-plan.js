@@ -49,8 +49,11 @@ const cambiarAFormGratis = () => {
 btnCambiar.addEventListener('click', () => {
 
     if (valForm) {
-        cambiarAFormPago();
-        valForm= false;
+
+        if ( btnCambiar.value === "#" ) {
+            cambiarAFormPago();
+            valForm= false;
+        }
 
     } else {
         cambiarAFormGratis();

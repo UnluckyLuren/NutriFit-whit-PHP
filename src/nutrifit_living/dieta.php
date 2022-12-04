@@ -3,6 +3,13 @@
 
 session_start();
 
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: Login_register/index.php");
+    exit;
+}
+
+require "./cards_planes/evaluacion-form-gratis.php";
+
 $nombre = $_SESSION["user"];
 $privilegio = $_SESSION["privilegio"];
 $imageUser = $_SESSION["imagen"];
@@ -11,16 +18,6 @@ if ( isset( $_SESSION['viewForm'] ) ) {
     $viewForm = $_SESSION['viewForm'];
 } else {
     $viewForm = "true";
-}
-
-if ( !isset( $_SESSION['nombreFormGratis'] ) ) {
-    
-    $_SESSION['nombreFormGratis'] = "Nombre";
-    $_SESSION['edadFormGratis'] = "Edad";
-    $_SESSION['pesoFormGratis'] = "Peso (kg)";
-    $_SESSION['alturaFormGratis'] = "Altura (m)";
-    $_SESSION['sexoFormGratis'] = "ninguno";
-
 }
 
 
@@ -39,6 +36,17 @@ function ChequeadoHombre() {
     }
 
 }
+
+
+if ($privilegio == 0) {
+
+    $accesoPrzn = " ";
+
+} else {
+
+    $accesoPrzn = "#";
+
+} 
 
 
 ?>
@@ -412,7 +420,7 @@ function ChequeadoHombre() {
         
     </div>
 
-    <button id="btnCambiarPlan" >Ver plan Personalizado</button>
+    <button id="btnCambiarPlan" value="<?php echo $accesoPrzn; ?>" >Ver plan Personalizado</button>
 </div>
 
 
@@ -506,7 +514,7 @@ function ChequeadoHombre() {
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
     <script defer src="Prueba7/java.js"></script>
     <!-- <script src="whatss.js"></script> -->
-    <script src="js/cambiar-plan.js"></script>
+    <script src="./js/cambiar-plan.js"></script>
     <script src="js/calculos-formularios.js"></script>
 
 

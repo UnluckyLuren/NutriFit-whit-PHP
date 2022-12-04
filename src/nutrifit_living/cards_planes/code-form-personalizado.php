@@ -11,21 +11,26 @@ $resultValidacion = $link->query($validacion);
 
 if(isset($_POST['sends'])) {
 
+    // Alergias
+
+    if ( !empty($_POST['opalergia']) ) {
+        $allalergia=implode(',', $_POST['opalergia']);
+    } else {
+        $allalergia = "Ninguna";
+    }
+
     // Demas datos
 
     $id=$_SESSION['id'];
     $cuello= $_POST['cuello'];
     $cintura=$_POST['cintura'];
-    $allalergia=implode(',', $_POST['opalergia']);
     $especifica= $_POST['especifica'];
     $enfermedad= $_POST['enfermedad'];
     $preferencias= $_POST['preferencias'];
     $ejercicio= $_POST['ejercicio'];
     $diasactivos= $_POST['diasactivos'];
     $duracion= $_POST['duracion'];
-
-    // '$allalergia', , '$diasactivos', '$duracion'
-
+    
 
     if ( $resultValidacion->num_rows > 0 ) {
 
