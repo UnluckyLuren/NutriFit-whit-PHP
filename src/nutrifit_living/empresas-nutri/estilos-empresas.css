@@ -1,0 +1,98 @@
+table {
+    border-collapse: collapse;
+    width: 60vw;
+  }
+  
+  td, th {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.infoUserPedido {
+    margin-top: 5em;
+}
+
+.infoUserPedido h2 {
+    margin-bottom: 1em;
+    color: green;
+}
+
+.iframeAcomodo iframe {
+    width: 35em;
+    height: 25em;
+}
+
+.iframeAcomodo {
+    position: absolute;
+    top: 14em;
+    right: 4em;
+}
+
+.empresaFormCerrar {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: min-content;
+    height: min-content;
+}
+
+.empresaFormCerrar button {
+    border: none;
+    font-size: 1.2em;
+}
+
+.infoContainer {
+    position: absolute;
+    top: 40em;
+    right: 10em;
+}
+
+.infoContainer form{
+    /* padding: 0.5em; */
+    font-size: large;
+    text-align:left;
+    width: max-content;
+    height: max-content;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.info {
+    display: none;
+}
+
+.infoContainer form button {
+    background-color: rgba(128, 128, 128, 0.55);
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    color: white;
+    font-size: large;
+    padding: 0.5em;
+    margin-top: 1em;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.infoContainer form input {
+    margin-bottom: 1em;
+    border: transparent;
+    border-bottom: 1px solid green;
+}
+
+
+.footerEmpresa {
+    margin-top: 30em;
+}
+
+
+
+
+
+
+
+
+
+

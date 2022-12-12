@@ -1,115 +1,199 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrifit Living</title>
-    <meta name="Description" content="Bienvenido a una vida mas saludable">
     <link  rel="icon" href="../imagenes/LOGO NUTRIFIT LIVING_preview_rev_1.png" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
-<style>
-     
-.pie-pagina{
-    width: 100%;
-    background-color: rgba(75, 172, 63, 0.89);
-    position: absolute;
-    background-color: rgba(0, 122, 53, 0.89);
-    background-color: rgba(93, 170, 104. 0.89);
-    margin-top: 3%;
-  }
-</style>
-
-<link rel="stylesheet" href="../CSS/styles.css">
-<link rel="stylesheet" href="../CSS/style.css">
-<link rel="stylesheet" href="../CSS/styleheader.css">
-<link rel="stylesheet" href="../CSS/responsive.css">
-
-
-</head>
-
-<body>
-   
-    <header class="header ">
-      <nav class="nav">
-          <a href="#" class="logo ">
-              <img src="../imagenes/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">
-          </a>
-          <button class="toggle" aria-label="Abrir menú">
-              <i class="fa-solid fa-bars"></i>
-
-          </button>
-          <ul class="nav-menu ">
-              <li class="nav-menu-item  "><a href="../Page-Initial.php" class="nav-menu-link nav-link">Inicio</a></li>
-              <li class="nav-menu-item " ><a href="../LoginFuncionando/index.php " class="nav-menu-link nav-link">Ingresar</a></li>
-              <li class="nav-menu-item"><a href="../dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
-              <li class="nav-menu-item "><a href="../recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
-          </ul>
-      </nav>
-  </header>
-    <!-- menu desplegable -->
-       
-<div class="container">
-    <nav class="menu">
-        <ul>
-            <li><a href="../equivalencias.php"><p class="nombreDEpaginadondeseencuantra"> ▼     Mapa de equivalencias</p></a>
-            <ul class="submenu"></li>
-            <li><a href="../dieta.php">Dietas</a></li>
-            <li><a href="../lugares.php">Lugares Recomendados</a></li>
-            <li><a href="../productos.php">Productos recomendados</a></li>
-        </ul>
-        </ul>
-    </nav>
-</div>
-
-<!-- menu desplegable -->
-       
-<div class="containerSECCIONES">
-    <nav class="menuSECCIONES">
-        <ul>
-            <li><a href="leguminosas.php"><p class="nombreDEpaginadondeseencuantraSECCIONES"> ▼  Leguminosas</p></a>
-            <ul class="submenuSECCIONES"></li>
-            <li><a href="lacteos.php"> Lacteos</a></li>
-            <li><a href="frutas.php">Frutas</a></li>
-            <li><a href="Carbohidratos.php"> Carbohidratos </a></li>
-            <li><a href="grasas.php">Grasas</a></li>
-            <li><a href="../equivalencias.php">Verduras</a></li>
-        </ul>
-        </ul>
-    </nav>
-</div>
-
-<pre class="titulo_de_equivalencias">Admin</pre>
-<br>
-
-
-<br><br>
-    <footer class="containerfooter">
-        <div class="item-1">
-            <div class="imagen">
-                <figure>
-                    <a href="../Page-Initial.php">
-                        <img class="imagenfooter" src="../imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" width="50%">
-                    </a>
-                </figure>
-            </div>
-            
-               
-       <a class="item-2" href="../Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <style>
     
-          
+    </style>
+    <title>Admin-NutriFit_Living</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>NutriFit Living</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="busque aqui">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <form action="../Login_register/cerrar-sesion.php" method="POST" >
+                    <button type="submit" > <img src="../imagenes/icons8-salir-redondeado-100.png" alt="admin" class="logOut"> </button>
+                </form>
+            </div>
         </div>
-        <div class="item-3">
-            <small>&copy; 2022  - Todos los Derechos Reservados.</small>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>Pacientes</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div>Nutriologos</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-users"></i>
+                        <div>Empresas</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>Analisis</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <div>Ganancias</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-cog"></i>
+                        <div>Ajustes</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover">
+                        <i class="fas fa-question"></i>
+                        <div>Ayuda</div>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </footer>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">1217</div>
+                        <div class="card-name">Pacientes</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">4 </div>
+                        <div class="card-name">Nutriologos</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">27</div>
+                        <div class="card-name">Empresas</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">$17,500</div>
+                        <div class="card-name">Ganancias</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Ganancias (ultimos 7 meses)</h2>
+                    
+                    <canvas id="myChart"></canvas>
+                    
+                      
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                      
+                    <script>
+                        const ctx = document.getElementById('myChart');
+                      
+                        new Chart(ctx, {
+                          type: 'line',
+                          data: {
+                            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+                            datasets: [{
+                              label: ' $ MXN',
+                              data: [12, 3, 10, 4, 8, 14, 17],
+                              borderWidth: 1
+                            }]
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                    </script>
+                      
+                </div>
+                <div class="chart">
+                    <h2>Empresas</h2>
+                    
+                    <canvas id="empresas"></canvas>
+                    
+                      
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                      
+                    <script>
+                        const ctx1 = document.getElementById('empresas');
+                      
+                        new Chart(ctx1, {
+                          type: 'doughnut',
+                          data: {
+                            labels: ['Sietetallos', 'Bamboo', 'DivinoVerde', 'PuntoSalad', 'LaPaniera', 'GreenandBlack'],
+                            datasets: [{
+                              label: '% de Participación',
+                              data:[4,7,3,5,2,3],
+                              borderWidth: 1
+                            }]
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                    </script>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
-    <script defer src="../Prueba7/java.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+   
 
 </body>
 </html>

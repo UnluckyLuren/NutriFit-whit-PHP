@@ -29,7 +29,7 @@ if ($privilegio == 0) {
         <title>Nutrifit Living</title>
         <meta name="Description" content="Bienvenido a una vida mas saludable">
         <link  rel="icon" href="../imagenes/LOGO NUTRIFIT LIVING_preview_rev_1.png" >
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="../CSS/responsive.css">
@@ -103,12 +103,6 @@ if ($privilegio == 0) {
                 </ul>
             </nav>
         </div> 
-
-        <div class="cerrarMenu" >
-
-            <button id="closePreparation" >Cerrar</button>
-            
-        </div>
 
         <div id="container" >
 
@@ -460,13 +454,42 @@ if ($privilegio == 0) {
         </div>
 </div>
 
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-<footer class="containerfooter">
+    
+<div class="recetarioPreparation">
+
+<div class="videoIngredientes disNone" id="containerVideoIngredientes">
+
+          <div class="cerrarMenu" > <button id="closePreparation" >Cerrar</button> <h1 id="nameReceta" >Crepas</h1> </div>
+
+    <iframe id="videoPreparation" width="560" height="315" src="https://www.youtube.com/embed/xzLqzwvXh_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <h2>Ingredientes</h2>
+
+    <ul class="listIngredientes" id="listIngredientes">
+        <li class="ingredientesLi" > <input type="checkbox"> jsdhjkashda</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sadsdasdas</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sdasdasda</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sdasdasdsadsa</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sdasdasdsadsa</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sadasdsadaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+    </ul> 
+
+</div>
+
+<div class="preparationInfo " id="containerPreparation" >
+
+        <h2 id="titlePreparation" >Preparación</h2>
+
+        <p id="textPreparation" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ea a, qui similique ipsum tenetur quia sapiente porro hic totam dolor molestiae, provident distinctio voluptate aspernatur. Alias libero dolores quam.</p>
+
+        <img id="imgReceta" src="../imagenes/Hot Cakes hulk.jpg">
+    </div>
+
+</div>
+
+
+
+<footer class="containerfooter footerRecetario">
     <div class="item-1">
         <div class="imagen">
             <figure>

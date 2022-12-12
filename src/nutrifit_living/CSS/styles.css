@@ -1335,4 +1335,216 @@ color: rgb(255, 255, 255);
 
 .acomodoBienvenida {
   margin-left: 25%;
+}
+
+.subirOpn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 25em;
+  padding: 2em;
+  border: 1px solid var(--Color4nutri);
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.225);
+}
+
+.subirBtnOpn {
+  background: transparent;
+  border: 2px solid green;
+  border-radius: 100px;
+  padding: 0.2em 3em;
+  color: var(--Colorformularios2);
+  text-align: center;
+  font-size: large;
+  text-decoration: none;
+}
+
+.subirBtnOpn:hover {
+  transition: all 0.2s;
+  color: white;
+  background-color: var(--Color4nutri);
+}
+
+.ventanaOpinion {
+  position: absolute;
+  top: 58.5em;
+  left: 40em;
+  width: 55em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: white;
+  border-radius: 0.5em;
+  border: 1px solid var(--Color4nutri);
+  transition: all 0.3s;
+}
+
+.ventanaOpinion form {
+  width: inherit;
+  height: inherit;
+  background-color: transparent;
+  margin: 0;
+  padding: 3em;
+}
+
+.opcCero {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.divisionFormOpn {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+}
+
+.divisionFormOpn input {
+  width: 10em;
+  margin-bottom: 1em;
+  border: transparent;
+  border-bottom: 1px solid green;
+}
+
+.divisionFormOpn button {
+  margin: 1em 0 0 -5em;
+  width: 15em;
+  padding: 0.2em;
+  align-self: center;
+  background: transparent;
+  border: 2px solid green;
+  border-radius: 100px;
+  padding: 0.2em 3em;
+  color: var(--Colorformularios2);
+  text-align: center;
+  font-size: large;
+  text-decoration: none;
+}
+
+.descripcionOpn {
+  width: 40em;
+  height: 5em;
+  margin-bottom: 1em;
+  font-size: large;
+  border: 1px solid green;
+  border-radius: 0.5em;
+  resize: none;
+}
+
+.divisionFormOpn button:hover {
+  transition: all 0.2s;
+  color: white;
+  background-color: var(--Color4nutri);
+}
+
+.fileOpn {
+  position: absolute;
+  top: 19em;
+  left: 2em;
+  opacity: 0;
+  height: 2.5em;
+  color: var(--Color2nutri);
+  border: 1px solid green;
+  border-radius: 0.5em;
+  background-color: transparent;
+}
+
+.fileOpnText {
+  border: 1px solid green;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 1em;
+}
+
+.recetarioPreparation {
+  display: flex;
+  margin: 10em 0 0 5em;
+}
+
+.videoIngredientes div h1 {
+  margin: 0 1em;
+}
+
+.videoIngredientes h2 {
+  margin: 1em 0 1em 0;
+}
+
+.videoIngredientes iframe {
+  width: 60em;
+  height: 35em;
+}
+
+.preparationInfo {
+  position: relative;
+  left: 5em;
+  margin: 4em 0 0 0;
+  padding: 1em;
+  width: 30em;
+  border-radius: 0.5em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.575);
+}
+
+.preparationInfo h2 {
+  margin: 0 0 1em 0;
+}
+
+.preparationInfo p {
+  width: 15em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: justify;
+  font-size: x-large;
+}
+
+.preparationInfo img {
+  width: 20em;
+  height: 15em;
+  padding: 0.5em;
+  margin: 1em 0 3em 0;
+  border: 1px solid green;
+  border-radius: 0.5em;
+  background-color: rgba(128, 128, 128, 0.658);
+}
+
+.listIngredientes {
+  background-color: rgba(255, 255, 255, 0.575);
+  padding: 1em;
+  font-size: large;
+  border-radius: 0.5em;
+  list-style: none;
+}
+
+.listIngredientes li {
+  color: var(--Colorformularios2);
+  border-bottom: 1px solid green;
+  margin: 0 0 1em 0;
+  display: flex;
+  align-items: center;
+}
+
+.listIngredientes li input {
+  width: 2em;
+  height: 2em;
+  margin: 0 1em 0 0;
+  border: 1px solid var(--Color4nutri);
+}
+
+.preterms {
+  font-size: large;
+  margin: 2em 0 0 0;
+  text-align: justify !important;
 }/*# sourceMappingURL=styles.css.map */

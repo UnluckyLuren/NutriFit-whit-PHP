@@ -15,12 +15,6 @@ const subirImagen = document.getElementById('btnEnviarImg'),
 	btnCerrarSesión= document.getElementById('btnCerrarSesión'),
 	FormImagenUser = document.getElementById('FormImagenUser');
 
-
-	console.log(FormImagenUser);
-	console.log(btnCerrarSesión);
-
-
-
 // Añadir imagen al usuario
 
 
@@ -69,7 +63,10 @@ changebtnImg.addEventListener('click', () => {
 });
 
 
+const btnSubirOpn = document.getElementById('btnSubirOpn'),
+ventanaSubirOpn = document.getElementById('ventanaSubirOpn');
 
-
-
-
+btnSubirOpn.addEventListener('click', () => { 
+	ventanaSubirOpn.classList.toggle('opcCero');
+	
+});

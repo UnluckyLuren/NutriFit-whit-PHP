@@ -7,20 +7,22 @@ const containerPrincipal =document.getElementById('displayPreparation'),
     linkBebidas = document.getElementById('linkBebidas');
 
     const titleJugo = document.getElementById('imgChangeTitle'),
-          titleSmotthie = document.getElementById('titleBebRep');
+          titleSmotthie = document.getElementById('titleBebRep'),
+          mostrarVideo = document.getElementById('videoPreparation'),
+          containerVideoIngredientes = document.getElementById('containerVideoIngredientes'),
+          containerPreparation = document.getElementById('containerPreparation');
 
   
 // Funciones 
 
 
 const divCreation = () => {
-
-    containerPrincipal.style.display="none";
-    closePreparation.style.display="inline";
-
-    const div = document.createElement('div');
-
-    return div;
+  containerPrincipal.style.display="none";
+  closePreparation.style.display="inline"
+  
+  containerPreparation.style.display="flex";
+  containerVideoIngredientes.classList.remove('disNone');
+  titlePreparation.style.marginRight="0";
 }
 
 
@@ -30,37 +32,55 @@ const divCreation = () => {
     // Cerrar preparación
 closePreparation.addEventListener('click', () => {
     
-    const last_Child = container.lastChild;
-    container.removeChild(last_Child);
-
-    containerPrincipal.style.display="flex";
-    closePreparation.style.display="none";
+  containerPrincipal.style.display="flex";
+  closePreparation.style.display="none";
+  containerPreparation.style.display="none";
+  containerVideoIngredientes.classList.add('disNone');
 
 });
+
+
+// Textos
+
+const listIngredientes = document.getElementById('listIngredientes'),
+      textPreparation = document.getElementById('textPreparation'),
+      imgReceta = document.getElementById('imgReceta'),
+      nameReceta = document.getElementById('nameReceta'),
+      titlePreparation = document.getElementById('titlePreparation');
+
+      
+const ingredientesLi = document.querySelectorAll('.ingredientesLi');
 
 
 // Club Sandwich
 
 linkPreparation[0].addEventListener('click', () => {
     
-    const div = divCreation();
+  divCreation();
 
-      div.innerHTML= ` 
-      
-      <h1 class="ingredientes">Preparación</h1>
-      <pre class="textoI">
-          <br>
-          - Licua todos los ingredientes
-      
-          - verter la mezcla en un sarten con un poco de aceite
-      
-          - voltear cada 2 minutos
-      
-          - Agregar decoraciones al gusto
-      
-          </pre>`;
+  nameReceta.textContent="Club Sandwich";
 
-          container.append( div );
+  ingredientesLi[0].textContent = "• Jamon";
+  ingredientesLi[1].textContent = "• Queso";
+  ingredientesLi[2].textContent = "• Tocino";
+  ingredientesLi[3].textContent = "• Tomate";
+  ingredientesLi[4].textContent = "• Aguacate";
+  ingredientesLi[5].textContent = "• Lechuga";
+
+  textPreparation.innerHTML = `
+    <pre>
+- Licua todos los ingredientes
+  
+- verter la mezcla en un sarten 
+con un poco de aceite
+  
+- voltear cada 2 minutos
+  
+- Agregar decoraciones al gusto
+    </pre>
+  `;
+
+  imgReceta.src = "../imagenes/recetario/keto/KETO CLUB SANDWICH.jpg";
 
 });
 
@@ -68,29 +88,31 @@ linkPreparation[0].addEventListener('click', () => {
 
 linkPreparation[1].addEventListener('click', () => {
 
-    const div = divCreation();
+  divCreation();
 
-    div.innerHTML= ` 
-   
-    <h1 class="ingredientes">Preparación</h1>
-    <pre class="textoI">
-        <br>
-        - Pela y corta las manzanas y 
-          mételas al micro 3-5 minutos para asarlas
+  nameReceta.textContent="Nidos de calabaza";
 
-        -  mezcla y bate todos los ingredientes
-          (menos la manzana para decorar)
-        
-        -  Pon en un molde de horno
-           añade una manzana encima en láminas con canela
-        
-        - Hornea a 200 grados 30 minutos (calor arriba y abajo)
-    
-        </pre>
-    `;
+  ingredientesLi[0].textContent = "• 30 gramos de spaghetti squash";
+  ingredientesLi[1].textContent = "• 1 huevo entero";
+  ingredientesLi[2].textContent = "• 1 cucharada de parmesano";
+  ingredientesLi[3].textContent = "• 1 cucharada de mozzarella rallada";
+  ingredientesLi[4].textContent = "• perejil picado si gustan";
+  ingredientesLi[5].textContent = "---";
 
+  textPreparation.innerHTML = `
+    <pre>
+- Licua todos los ingredientes
+  
+- verter la mezcla en un sarten 
+con un poco de aceite
+  
+- voltear cada 2 minutos
+  
+- Agregar decoraciones al gusto
+    </pre>
+  `;
 
-        container.append( div );
+  imgReceta.src = "../imagenes/recetario/keto/Nidos de calabaza squash.jpg";
 
 });
 
@@ -98,25 +120,31 @@ linkPreparation[1].addEventListener('click', () => {
 
 linkPreparation[2].addEventListener('click', () => {
 
-    const div = divCreation();
-    
-    div.innerHTML= ` 
-    
-    <h1 class="ingredientes">Preparación</h1>
-    <pre class="textoI">
-        <br>
-        - Licua todos los ingredientes
-    
-        - verter la mezcla en un sarten con un poco de aceite
-    
-        - voltear cada 2 minutos
-    
-        - Agregar decoraciones al gusto
-    
-        </pre>`;
+  divCreation();
 
-        container.append( div );
+  nameReceta.textContent="Pizza borde queso";
 
+  ingredientesLi[0].textContent = "• 75g de harina de almendra";
+  ingredientesLi[1].textContent = "• 10g de psyllium en polvo @nkdliving";
+  ingredientesLi[2].textContent = "• 5g de levadura en polvo";
+  ingredientesLi[3].textContent = "• 2 huevos";
+  ingredientesLi[4].textContent = "• Queso provolone";
+  ingredientesLi[5].textContent = "• Pizca de sal";
+
+  textPreparation.innerHTML = `
+    <pre>
+- Licua todos los ingredientes
+  
+- verter la mezcla en un sarten 
+con un poco de aceite
+  
+- voltear cada 2 minutos
+  
+- Agregar decoraciones al gusto
+    </pre>
+  `;
+
+  imgReceta.src = "../imagenes/recetario/keto/PIZZA CON BORDES DE QUESO.JPG";
 
 });
 
@@ -124,28 +152,31 @@ linkPreparation[2].addEventListener('click', () => {
 
 linkPreparation[3].addEventListener('click', () => {
 
-    const div = divCreation();
-        
-    div.innerHTML= ` 
-        
-    <h1 class="ingredientes">Preparación</h1>
-    <pre class="textoI">
-        <br>
-        - Licua todos los ingredientes
+  divCreation();
 
-        - Extender en sartén precalentado y engrasado
+  nameReceta.textContent="Rollo Hulk";
 
-        - Rellenarla con yogurt griego 
-          (con esencia vainilla y endulzante a tu gusto) 
-          y crema de avellana o la crema que tengas en casa.
+  ingredientesLi[0].textContent = "• 200gr de espinaca precocida";
+  ingredientesLi[1].textContent = "• 3 huevos";
+  ingredientesLi[2].textContent = "• 3 cdas de harina de coco";
+  ingredientesLi[3].textContent = "• 1 cda de Polvo de hornear";
+  ingredientesLi[4].textContent = "• 4 cdas de queso crema";
+  ingredientesLi[5].textContent = "• 1 puñado de queso rallado";
 
-        - Le cortamos en forma de RADIO 
-          para poder doblarla en 4
-        </pre>
+  textPreparation.innerHTML = `
+    <pre>
+- Licua todos los ingredientes
+  
+- verter la mezcla en un sarten 
+con un poco de aceite
+  
+- voltear cada 2 minutos
+  
+- Agregar decoraciones al gusto
+    </pre>
+  `;
 
-    `;
-    
-        container.append( div );
+  imgReceta.src = "../imagenes/recetario/keto/Rollitos Hulk de espinaca.jpg";
 
     });
 
@@ -153,21 +184,31 @@ linkPreparation[3].addEventListener('click', () => {
 
     linkPreparation[4].addEventListener('click', () => {
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            -  Mezclar todos los ingredientes 
-               y meter al microondas por 1 minuto 
-               (puede ser un poco más según tu micro)
-        
-            </pre>
-        `;
+      divCreation();
+
+      nameReceta.textContent="Bolitas Sorpresa";
     
-            container.append( div );
+      ingredientesLi[0].textContent = "• Carne picada previamente especiada";
+      ingredientesLi[1].textContent = "• Tú queso favorito cortado de cubitos";
+      ingredientesLi[2].textContent = "• Bacon";
+      ingredientesLi[3].textContent = "• Palillos para asegurar";
+      ingredientesLi[4].textContent = "• salsa picante de trufa";
+      ingredientesLi[5].textContent = "---";
     
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
+    
+      imgReceta.src = "../imagenes/recetario/keto/Keto Bolitas de carne.jpg";
     
     });
 
@@ -176,21 +217,31 @@ linkPreparation[3].addEventListener('click', () => {
 
     linkPreparation[5].addEventListener('click', () => {
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            -  Llevar los frutos rojos al microondas
-               por 30 segundos
-            
-            - Revuelva la chia
-            </pre>
-       `;
+      divCreation();
+
+      nameReceta.textContent="Fettuccini de Espinaca";
     
-            container.append( div );
+      ingredientesLi[0].textContent = "• Un paquete de pasta fettuccini espinaca";
+      ingredientesLi[1].textContent = "• 1 taza de crema de leche";
+      ingredientesLi[2].textContent = "• 150 gr de queso parmesano";
+      ingredientesLi[3].textContent = "• champiñones en láminas";
+      ingredientesLi[4].textContent = "• pechuga de pollo";
+      ingredientesLi[5].textContent = "• sal y pimienta";
     
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
+    
+      imgReceta.src = "../imagenes/recetario/keto/FETTUCCINI DE ESPINACA A LA CREMA CON POLLO Y CHAMPI¥ONES.jpg";
     
     });
 
@@ -198,27 +249,32 @@ linkPreparation[3].addEventListener('click', () => {
 
 
     linkPreparation[6].addEventListener('click', () => {
+    
+      divCreation();
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            - Empieza formando capas
+      nameReceta.textContent="Huevos Keto";
     
-               •GALLETA MARÍA SIN AZÚCAR
-               •YOGURT GRIEGO
-               •FRUTOS ROJOS MACHACADOS
+      ingredientesLi[0].textContent = "• 1 manojo de espárragos trigueros";
+      ingredientesLi[1].textContent = "• 150g gambas";
+      ingredientesLi[2].textContent = "• 4 huevos";
+      ingredientesLi[3].textContent = "• 1 diente de ajo";
+      ingredientesLi[4].textContent = "• Sal";
+      ingredientesLi[5].textContent = "• AOVE";
     
-            - Baña todo en chocolate Turin 70% cacao
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
     
-            - Congelador mínimo 2 horas
-            </pre>
-        `;
-    
-            container.append( div );
-    
+      imgReceta.src = "../imagenes/recetario/keto/huevos.JPG";
     
     });
 
@@ -227,31 +283,31 @@ linkPreparation[3].addEventListener('click', () => {
 
     linkPreparation[7].addEventListener('click', () => {
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            - LICUA:
+      divCreation();
+
+      nameReceta.textContent="Tuna Waffle";
     
-              1/2 tza de harina de avena
-              2 claras o 1 huevo
-              Canela al gusto
-              1 tapa de Vainilla
-              Monk fruit
-              1/2 tza de betabel
-              1/4 tza de leche vegetal
+      ingredientesLi[0].textContent = "• 2 cucharas de queso crema";
+      ingredientesLi[1].textContent = "• 2 huevos";
+      ingredientesLi[2].textContent = "• 2 cucharadas (de postre) de harina de almendra";
+      ingredientesLi[3].textContent = "• 1 cucharadita de polvo de hornear, Sal & pimienta";
+      ingredientesLi[4].textContent = "• 2 latas de atún";
+      ingredientesLi[5].textContent = "• 1/4 taza de cilantro picadito";
     
-            - Pasa todo a un sartén con FUEGO BAJO!!! 
-              Cocina por ambos lados y agrega el topping 
-              de tu preferencia 
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
     
-            </pre>
-        `;
-    
-            container.append( div );
-    
+      imgReceta.src = "../imagenes/recetario/keto/Tuna Waffle.jpg";
     
     });
 
@@ -260,28 +316,32 @@ linkPreparation[3].addEventListener('click', () => {
 
     linkPreparation[8].addEventListener('click', () => {
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            - Prepara un recipiente de vidrio
+      
+      divCreation();
+
+      nameReceta.textContent="Wrap De Salmón";
     
-            - Forma capas:
-            
-              •Galletas maria sin azúcar 
-              •Mezcla de yogurt
-              •Nueces
-              •Plátano
-              •Cajeta sin azúcar 
+      ingredientesLi[0].textContent = "• Salmón";
+      ingredientesLi[1].textContent = "• Queso";
+      ingredientesLi[2].textContent = "• Aguacate";
+      ingredientesLi[3].textContent = "• Huevo duro";
+      ingredientesLi[4].textContent = "• Tomate";
+      ingredientesLi[5].textContent = "• Hojas de lechuga";
     
-            - Metelo al refrigerador o al congelador  por 10 minutos
-            </pre> 
-       `;
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
     
-            container.append( div );
-    
+      imgReceta.src = "../imagenes/recetario/keto/WRAP DE SALMàN.jpg";
     
     });
 
@@ -289,36 +349,32 @@ linkPreparation[3].addEventListener('click', () => {
 
 
     linkPreparation[9].addEventListener('click', () => {
+       
+      divCreation();
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            - LICUA:
+      nameReceta.textContent="Crema fría de pepino y aguacate";
     
-              •1 tza de yogurt griego
-              •1/4 tza de leche de coco con vainilla
-              •10 limones (depende de lo ácido que te guste a ti)
-              •2 cdas de monk fruit
-              •1 tapa de vainilla
-              •1 sobre de grenetina previamente hidratado
+      ingredientesLi[0].textContent = "• Crema fría";
+      ingredientesLi[1].textContent = "• Pepino";
+      ingredientesLi[2].textContent = "---";
+      ingredientesLi[3].textContent = "---";
+      ingredientesLi[4].textContent = "---";
+      ingredientesLi[5].textContent = "---";
     
-            - Forma la base
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
     
-              •1 tza de harina de avena
-              •1/2 tza de ghee
-              •1 cda de monk fruit
-            
-    
-            - Junta la base con el relleno y al refrigerador 
-              mínimo 4 horas  
-            </pre>
-        `;
-    
-            container.append( div );
-    
+      imgReceta.src = "../imagenes/recetario/keto/Crema fr¡a de pepino y aguacate.jpg";
     
     });
 
@@ -326,31 +382,32 @@ linkPreparation[3].addEventListener('click', () => {
 
 
     linkPreparation[10].addEventListener('click', () => {
+  
+      divCreation();
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            - Mezclar:
-               
-              1 huevo
-              Vainilla
-              Monkfruit
-              Leche de almendras sin azucar
+      nameReceta.textContent="Empanadillas";
     
-            - Partir el pan a la mitad
+      ingredientesLi[0].textContent = "• 150gr de Mozzarella rallada";
+      ingredientesLi[1].textContent = "• 60gr de Harina de Almendras";
+      ingredientesLi[2].textContent = "• 1gr de Psyllium en polvo";
+      ingredientesLi[3].textContent = "• 3gr de Harina de Bambú";
+      ingredientesLi[4].textContent = "• 1 huevo";
+      ingredientesLi[5].textContent = "---";
     
-            - Pasar las medias noches cero cero 
-              por la mezcla y llevar al sarten
-            
-            - Reyenar con chocolate 
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
     
-            </pre>
-        `;
-    
-            container.append( div );
+      imgReceta.src = "../imagenes/recetario/keto/Empanadillas.JPG";
     
     });
 
@@ -359,116 +416,33 @@ linkPreparation[3].addEventListener('click', () => {
 
     linkPreparation[11].addEventListener('click', () => {
 
-        const div = divCreation();
-        
-        div.innerHTML= ` 
-        <h1 class="ingredientes">Preparación</h1>
-        <pre class="textoI">
-            <br>
-            - En un recipiente redondo para microondas 
-              agregamos 1cda de ghee y llevamos 
-              por 10 seg al micro.
-              Engrasar con este ghee todo el recipiente y 
-              lo que sobre lo dejamos dentro.
+      divCreation();
+
+      nameReceta.textContent="Pizza Keto";
     
-            - En otro recipiente trituramos las galletas y
-              las agregamos al recipiente donde esta el 
-              ghee derretido, mezclamos todo muy bien y 
-              con ayuda de una cuchara aplastamos hasta 
-              formar una capa de galletas muy comprimidas 
-              (esta será la base de nuestro cheese cake).
+      ingredientesLi[0].textContent = "• 250gr de pechuga de pollo ";
+      ingredientesLi[1].textContent = "• Queso";
+      ingredientesLi[2].textContent = "• Masa";
+      ingredientesLi[3].textContent = "• Especias";
+      ingredientesLi[4].textContent = "• 3 huevos";
+      ingredientesLi[5].textContent = "---";
     
-            - En otro recipiente agregar el queso crema,
-              extracto de vainilla, monk fruit granulado y
-              extracto de vainilla, esta mezcla agregarla al 
-              recipiente donde esta la capa de galletas.
-              Llevamos al microondas por 3 min a potencia
-              media pero en intervalos de 20 seg, abrimos el
-              micro dejamos que se ventile unos segundo y 
-              volvemos a poner 20 seg hasta tener los 3 min. 
-              (es para que el queso no se derrame ).
-               No olvides que sea a potencia media
-            
-            - Una vez que se cocine el cheesecake, 
-              dejarlo enfriar y después llevarlo 30 min 
-              al refrigerador, desmoldar con cuidado y 
-              decorar como se ve en el video.
-              Puedes comerlo directamente del recipiente 
-              sin desmoldar
+      textPreparation.innerHTML = `
+        <pre>
+    - Licua todos los ingredientes
+      
+    - verter la mezcla en un sarten 
+    con un poco de aceite
+      
+    - voltear cada 2 minutos
+      
+    - Agregar decoraciones al gusto
+        </pre>
+      `;
     
-            </pre>
-        `;
-    
-            container.append( div );
+      imgReceta.src = "../imagenes/recetario/keto/PIZZA KETO.JPG";
+       
     });
-
-
-    // Cuando dan click en bebidas
-
-
-
-    linkBebidas.addEventListener('click', () => {
-
-      // Declaraciones de enlace con html de los textos de atras
-
-      const textJugo = document.getElementById('textBebJugoVerde'),
-      textSmotthie = document.getElementById('textSmotthie');
-
-      const img = document.getElementById('imgChangeBeb'),
-            imgRep = document.getElementById('imgBebRep');
-
-      // Acomodo Jugo verde información e imagen
-
-      img.src="/recetario/bebidas/Jugo verde.jpg";
-      titleJugo.textContent = "Jugo verde";
-
-      textJugo.innerHTML=`  
-      • 1 taza de agua
-      <br> 
-      •½ pepino
-      <br> 
-      •1 hoja de acelga
-      <br>
-      •2 rebanadas de piña
-      <br>
-      • ½ taza de agua de coco
-      <br>
-      •½ pieza de apio
-      <br>
-      •1 taza de jugo de manzana
-      <br>
-      •1 manzana
-      <br>
-      •3 hojitas de menta`;
-
-      // Acomodo Smotthie
-
-      imgRep.src="/recetario/bebidas/smotthies de fresa.jpg";
-      titleSmotthie.textContent = "Smotthie de fresa";
-
-      textSmotthie.innerHTML= `
-      •1 yogur griego
-      <br>
-      •3 huevos
-      <br>
-      • 2 manzanas amarillas para el relleno
-      <br>
-      •1 manzana (de la que más te guste) para decorar
-      <br>
-      •170 gr de harina de avena
-      <br>
-      •1 cucharada de aceite de coco
-      <br>
-      •canela al gusto
-      <br>
-      •Esencia de vainilla (opcional)`;
-
-
-    });
-
-
-
-
 
 
 

@@ -424,7 +424,7 @@ a, #co {
                     </a>
                 </figure>
             </div>   
-            <a class="item-2" href="../nutrifit living/Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
+            <a class="item-2" href="Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
         </div>
 
             <div class="item-3">

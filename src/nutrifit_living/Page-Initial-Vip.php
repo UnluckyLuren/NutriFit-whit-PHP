@@ -184,10 +184,10 @@ a, #co {
                                 <img src="imagenes/img/testimonial-1.jpg" alt="">
                             </div>
                             <div class="review-content">
-                                <h3>Customer Name</h3>
-                                <h4>Profession</h4>
+                                <h3>Jessica</h3>
+                                <h4>Secretaria</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    Es una gran experiencia que todos deberian vivir
                                 </p>
                             </div>
                         </div>
@@ -196,10 +196,10 @@ a, #co {
                                 <img src="imagenes/img/testimonial-2.jpg" alt="">
                             </div>
                             <div class="review-content">
-                                <h3>Customer Name</h3>
-                                <h4>Profession</h4>
+                                <h3>Carlos</h3>
+                                <h4>Entrenador</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    Una gran experiencia por vivir
                                 </p>
                             </div>
                         </div>
@@ -208,10 +208,10 @@ a, #co {
                                 <img src="imagenes/img/testimonial-3.jpg" alt="">
                             </div>
                             <div class="review-content">
-                                <h3>Customer Name</h3>
-                                <h4>Profession</h4>
+                                <h3>Celina</h3>
+                                <h4>Emprendedora</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    Un sitio muy didáctico y útil
                                 </p>
                             </div>
                         </div>
@@ -220,24 +220,53 @@ a, #co {
                                 <img src="imagenes/img/testimonial-4.jpg" alt="">
                             </div>
                             <div class="review-content">
-                                <h3>Customer Name</h3>
-                                <h4>Profession</h4>
+                                <h3>Karen</h3>
+                                <h4>Enfermera</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    Tiene muy buenas herramientas y servicios
                                 </p>
                             </div>
                         </div>
+                    
                     </div>
+                    <div class="subirOpn">
+                            <!-- <form class="enviarOpn" action="./cards_planes/subir-opinion-vip.php" method="Post"> -->
+                                <h2>Sube tú Opinion</h2>
+                                <button class="subirBtnOpn" id="btnSubirOpn" >Subir</button>
+                            <!-- </form> -->
+                        </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Review End -->
 
+    <!-- Ventana subida de opinion -->
+
+    <div class="ventanaOpinion opcCero" id="ventanaSubirOpn">
+        <form action="./cards_planes/subir-opinion-vip.php" method="POST" enctype="multipart/form-data">
+            <h2>Sube tú opinion</h2>
+
+            <div class="divisionFormOpn">
+
+                    <label> Ocupación: </label>
+                    <input type="text" name="ocupacion">
+
+                    <label> Descripción de tú experiencia: </label>
+                    <textarea cols="30" rows="10" class="descripcionOpn" name="descripcionOpn"></textarea>
+               
+                    <p class="fileOpnText" >Añadir Imagen</p>
+                    <input type="file" class="fileOpn" name="imagenOpn">
+
+                <button>Enviar</button>
+            </div>
+
+        </form>
+    </div>
 
 
     <!-- FAQs Start -->
-    <div class="faq faqIntermedium" id="faq">
+    <div class="faq faqVip" id="faq">
         <div class="container">
 
             <h2 class="faqTitle faqTitleIntermedium" >Preguntas Frecuentes</h2>
@@ -249,12 +278,12 @@ a, #co {
                             <div class="card-header">
                                 <span>1</span>
                                 <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                                    Lorem ipsum dolor sit amet?
+                                    Donde conseguir una dieta?
                                 </a>
                             </div>
                             <div id="collapseOne" class="collapse" data-parent="#accordion">
                                 <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac dolor ac purus tincidunt congue et eget mauris. Pellentesque porta nisi a eros sodales pretium. Mauris vel metus ex. Ut scelerisque odio ut orci vulputate auctor
+                                   Accediendo a la sección de servicios en el formulario personalizado al cual tendras acceso si eres un usuario experience o vip.
                                 </div>
                             </div>
                         </div>
@@ -262,12 +291,12 @@ a, #co {
                             <div class="card-header">
                                 <span>2</span>
                                 <a class="card-link" data-toggle="collapse" href="#collapseTwo">
-                                    Donec suscipit faucibus porta integer bibendum?
+                                    Cuál es el mejor tipo de cuenta?
                                 </a>
                             </div>
                             <div id="collapseTwo" class="collapse" data-parent="#accordion">
                                 <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac dolor ac purus tincidunt congue et eget mauris. Pellentesque porta nisi a eros sodales pretium. Mauris vel metus ex. Ut scelerisque odio ut orci vulputate auctor
+                                    Todas nuestras cuentas son acordes a nuestros diferentes tipos de usuarios, ya que pensamos en todos, y si quieres una experiencia completa puedes adquirir una cuenta nutrifit living Vip.
                                 </div>
                             </div>
                         </div>
@@ -275,12 +304,12 @@ a, #co {
                             <div class="card-header">
                                 <span>3</span>
                                 <a class="card-link" data-toggle="collapse" href="#collapseThree">
-                                    Nam metus odio, pulvinar nec ex vel?
+                                    Donde puedo ver mi progreso?
                                 </a>
                             </div>
                             <div id="collapseThree" class="collapse" data-parent="#accordion">
                                 <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac dolor ac purus tincidunt congue et eget mauris. Pellentesque porta nisi a eros sodales pretium. Mauris vel metus ex. Ut scelerisque odio ut orci vulputate auctor
+                                    Dentro de la página inicial en la esquina superior izquierda se encuentra un icono con tu imagen que al dar click te mostrará información  sobre ti y te dara el acceso al apartado de progresos
                                 </div>
                             </div>
                         </div>
@@ -288,12 +317,12 @@ a, #co {
                             <div class="card-header">
                                 <span>4</span>
                                 <a class="card-link" data-toggle="collapse" href="#collapseFour">
-                                    Vestibulum eget mauris varius, vehicula diam ut?
+                                    Como puedo contactar a un nutriólogo?
                                 </a>
                             </div>
-                            <div id="collapseFour" class="collapse" data-parent="#accordion">
+                             <div id="collapseFour" class="collapse" data-parent="#accordion">
                                 <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac dolor ac purus tincidunt congue et eget mauris. Pellentesque porta nisi a eros sodales pretium. Mauris vel metus ex. Ut scelerisque odio ut orci vulputate auctor
+                                    Etá es una función unica para un usuario VIP y se encuentra en está misma página.
                                 </div>
                             </div>
                         </div>
@@ -301,12 +330,12 @@ a, #co {
                             <div class="card-header">
                                 <span>5</span>
                                 <a class="card-link" data-toggle="collapse" href="#collapseFive">
-                                    Nullam viverra at quam nec pretium?
+                                    Cómo utilizar la función de nutrifit living express?
                                 </a>
                             </div>
                             <div id="collapseFive" class="collapse" data-parent="#accordion">
                                 <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac dolor ac purus tincidunt congue et eget mauris. Pellentesque porta nisi a eros sodales pretium. Mauris vel metus ex. Ut scelerisque odio ut orci vulputate auctor
+                                    Este apartado se encuentra en la página de progreso, en la cuál encontraras un formulario para agendar el envio de las comidas de tú dieta.
                                 </div>
                             </div>
                         </div> 
@@ -417,7 +446,7 @@ a, #co {
         <!-- <iframe class="video positionVideo" width="560" height="315" src="https://www.youtube.com/embed/EWb4pKu-bkc" title="YouTube video player"  rel=0&amp;controls=0&amp;showinfo=0″ frameborder=»0″ autoplay muted loop></iframe> -->
 
 
-    <footer class="containerfooter objDisplay footerPageInitialIntermedium" id="footerDieta" >
+    <footer class="containerfooter objDisplay footerPageInitialVip" id="footerDieta" >
         <div class="item-1">
             <div class="imagen">
                 <figure>
@@ -426,7 +455,7 @@ a, #co {
                     </a>
                 </figure>
             </div>   
-            <a class="item-2" href="../nutrifit living/Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
+            <a class="item-2" href="Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
         </div>
 
             <div class="item-3">

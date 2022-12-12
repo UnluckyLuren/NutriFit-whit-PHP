@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     //VALIDAR CREDENCIALES
     if(empty($email_err) && empty($password_err)){
         
-        $sql = "SELECT id, usuario, email, clave, privilegio, imagen FROM usuarios WHERE email = ?";
+        $sql = "SELECT id, usuario, email, clave, privilegio, imagen, pdf_dieta FROM usuarios WHERE email = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             }
             
             if(mysqli_stmt_num_rows($stmt) == 1){
-                mysqli_stmt_bind_result($stmt, $id, $usuario, $email, $hashed_password, $privilegios, $imagen);
+                mysqli_stmt_bind_result($stmt, $id, $usuario, $email, $hashed_password, $privilegios, $imagen, $pdfUser);
                 if(mysqli_stmt_fetch($stmt)){
                     if(password_verify($password, $hashed_password)){
 
@@ -91,6 +91,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
+                            $_SESSION["pdf"] = $pdfUser;
                             $_SESSION["imagen"] = $imagen;
                             
                             header("location: ../Page-Initial-Intermedium.php");
@@ -106,6 +107,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
                             $_SESSION["imagen"] = $imagen;
+                            $_SESSION["pdf"] = $pdfUser;
                             
                             header("location: ../Page-Initial-Vip.php");
                             exit;
@@ -120,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
                             
-                            header("location: ../Admin-Nutri/Nutriologo-base.php");
+                            header("location: ../Nutriologo-Nutri/nutriologo-base.php");
                             exit;
 
                         } else if ( $privilegios == 4 ) {
@@ -134,6 +136,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["privilegio"] = $privilegios;
                             
                             header("location: ../Admin-Nutri/Administrador.php");
+                            exit;
+
+                        } else if ( $privilegios == 5 ) {
+                            
+                            session_start();
+    
+                            $_SESSION["user"] = $usuario;
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["email"] = $email;
+                            $_SESSION["privilegio"] = $privilegios;
+                            
+                            header("location: ../empresas-nutri/empresarial.php");
                             exit;
                         }
 
@@ -151,7 +166,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 }
     }
 
-    
+
     mysqli_close($link);
     
 }

@@ -92,7 +92,7 @@
 
 		<!-- Formulario -->
 
-		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+		<form action="./cards_planes/redireccionar-pago.php" id="formulario-tarjeta" class="formulario-tarjeta">
 			<label class="grupo">Seleccione su Metodo de Pago</label>
 			<div class="logos">
 				<button id="1"><img src="imagenes/img-pago/logos/visa.png" alt=""></button>
@@ -134,7 +134,7 @@
 				</div>
 			</div>
 
-				<a href="Page-Initial.php" id="open" > <button class="btn-enviar" >Pagar</button> </a> 
+			<button type="submit" class="btn-enviar">Pagar</button>
 
 		</form>
 	</div>
@@ -239,7 +239,7 @@
 
 	<script src="js/Scripts-Ventana-de-pago-procesado.js"></script>
 	<script src="js/main-pago.js"></script>
-    <script src="whatss.js"></script>
+    <!-- <script src="whatss.js"></script> -->
     <script src="Prueba7/java.js"></script>
 
     </body>        

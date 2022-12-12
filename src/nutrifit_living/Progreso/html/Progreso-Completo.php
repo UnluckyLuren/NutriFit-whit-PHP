@@ -6,7 +6,21 @@ session_start();
 $nombre = $_SESSION["user"];
 $privilegio = $_SESSION["privilegio"];
 $imageUser = $_SESSION["imagen"];
+$pdf = $_SESSION['pdf'];
+$email = $_SESSION["email"];
 
+if ( $privilegio === 1 ) {
+  $cuenta = "NutriFit Living Experience";
+} else if ( $privilegio === 2 ) {
+  $cuenta = "VIP NutriFit Living PASS";
+}
+
+
+if ( !empty($_SESSION['pdf']) ) {
+  $pdf = $_SESSION['pdf'];
+} else {
+  $pdf = "./dietas-pdfs/DAFNE HANNEF- PLAN FEB.pdf";
+}
 
 ?>
 
@@ -493,6 +507,77 @@ $imageUser = $_SESSION["imagen"];
             </div>
             <!-- / Content -->
 
+            <div class="allContainersInfo">
+              <div class="infoUserProg">
+                <h3>Información del usuario:</h3>
+                <u class="containerinfoUserProg" >
+                  <li>Nombre: <span> <?php echo $nombre; ?> </span></li>
+                  <li>Email: <span> <?php echo $email; ?> </span></li>
+                  <li>Tipo de cuenta: <span> <?php echo $cuenta; ?> </span></li>
+                </u>
+                <div class="pdfAbrir">
+                  <button id="pdfAbrir">Ver pdf de tú dieta</button>
+                </div>
+              </div>
+
+              <div class="containerTipoCuenta">
+                <h3>NutriFit Express</h3>
+                <p>Pide y recibe tu comida a domicilio</p>
+                  <div class="formExpress">
+                    <form action="../../cards_planes/subir-nutri-express.php" method="POST">
+
+                    <label class="labelDiasForm" >Dias que deseo consumir</label>
+
+                    <div class="containerSecForm">
+
+                      <div class="secdias1">
+                            <label><input type="checkbox" value="Lunes" name="check[]"> Lunes</label>
+                              <br>
+                              <label><input type="checkbox"  value="Martes" name="check[]"> Martes</label>
+                              <br>
+                        </div>
+                          
+                        <div class="secdias2">
+                          <label><input type="checkbox"  value="Miércoles" name="check[]"> Miércoles</label>
+                          <br>
+                          <label><input type="checkbox"  value="Jueves" name="check[]"> Jueves</label>
+                          <br> 
+                        </div>
+                        
+                        <div class="secdias3">
+                            <label><input type="checkbox"  value="Viernes" name="check[]"> Viernes</label>
+                            <br>
+                            <label><input type="checkbox"  value="Sábado" name="check[]"> Sábado</label>
+                        </div>
+                    </div>
+
+                    <div class="horario">
+                      <label> Horario de entrega: </label>
+                      <input type="text" name="horario" class="textFormExpress">
+                    </div>
+
+                    <div class="domicilio">
+                      <label> Domicilio: </label>
+                      <input type="text" name="domicilio" class="textFormExpress">
+                    </div>
+
+                    <button class="btnPedido">Realizar Pedido</button>
+
+                    </form>
+                  </div>
+              </div>
+            </div>
+
+            <div class="mostradorExpress">
+              <img src="../../imagenes/Hot Cakes hulk.jpg"> 
+              <img src="../../imagenes\nutri-express.png" class="comidaExpressimg">
+            </div>
+
+            <div class="containerIframe disNone" id="containerIframe">
+              <img src="../../imagenes/x-png.png" id="imgClosePdf" class="btnOcultPdf">
+              <iframe src="<?php echo "../.".$pdf; ?>" frameborder="0"></iframe>
+            </div>
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <!-- <script src="../js/jquery.js"></script> -->
@@ -505,6 +590,7 @@ $imageUser = $_SESSION["imagen"];
     <!-- Vendors JS ---->
     <script src="../js/apexcharts.js"></script>
     <script src="../../Prueba7/java.js"></script>
+    <script src="../js/ventana-pdf.js"></script>
 
     <!-- Main JS -->
     <!-- <script src="../js/main.js"></script> -->
@@ -516,3 +602,4 @@ $imageUser = $_SESSION["imagen"];
 
   </body>
 </html>
+;

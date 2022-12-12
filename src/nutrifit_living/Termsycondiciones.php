@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="imagenes/logo11_preview_rev_1.png">
 
@@ -27,23 +28,72 @@
             </button>
             <ul class="nav-menu ">
                 <li class="nav-menu-item  "><a href="Page-Initial.php" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item " ><a href="LoginFuncionando/index.php " class="nav-menu-link nav-link">Ingresar</a></li>
+                <li class="nav-menu-item " ><a href="productos.php" class="nav-menu-link nav-link">Productos</a></li>
                 <li class="nav-menu-item"><a href="dieta.php" class="nav-menu-link nav-link">Servicios</a></li>
                 <li class="nav-menu-item "><a href="recetarios/recetarios.php" class="nav-menu-link nav-link">Recetario</a></li>
             </ul>
         </nav>
     </header>
-        <!-- <svg class="rec" width="1904" height="155" > 
-            
-            <rect x="2" y="2" width="1515" height="100" rx="10" ry="10" lx="10" 
-             style="fill: #a5f55a; opacity:0.6; stroke-width:5" />
-        </svg>
-        <a href="https://www.instagram.com/nutrifit__living/?hl=es" target="ba_blank"> <img  class="im" src="/imagenes/logo11_preview_rev_1.png" alt="logo nutrifit living" ></a>
-        <a class="button" href="/nutrifit living/dieta.php"  >Servicios</a>
-        <a class="button2" href="/nutrifit living/recetarios/recetarios.php" >Rectarios</a>
-        <a class="button3" href="/nutrifit living/index (1).php">Inicio</a> -->
-        <script src="whatss.js"></script>
-      <script src="FinalPrueba/java.js"></script>
+      <pre class="preterms">
+      Términos y Condiciones
+ 
+ Todos los contenidos, textos, imágenes, y códigos fuente son propiedad de Nutrifit Living y están protegidos por los derechos de Propiedad Intelectual e Industrial.
+ El usuario únicamente tiene derecho a un uso privado de los mismos y necesita autorización expresa para modificarlos, reproducirlos, explotarlos, 
+ distribuirlos o ejercer cualquier derecho perteneciente a su propiedad.
+ Nutrifit Living es una marca original, y está prohibida su reproducción, imitación, utilización o inserción de estas marcas sin nuestra debida autorización. 
+ El simple hecho de establecer un enlace a nuestra página web no da derecho a otorgarse la categoría de colaborador o socio.
+ Nutrifit Living queda exonerado de responsabilidad por cualquier reclamación respecto a los derechos de propiedad intelectual de los artículos e imágenes publicadas.
+ Está absolutamente prohibida la imitación ya sea total o parcial de nuestro portal.
+  
+ POLÍTICA DE PRIVACIDAD
+  
+ La confidencialidad y la seguridad son valores primordiales de Nutrifit Living, en consecuencia, asumimos el compromiso de garantizar la privacidad del Usuario 
+ en todo momento y de no recabar información innecesaria.
+ El USUARIO asume toda la responsabilidad derivada del uso de nuestra página web, siendo el único responsable de todo efecto directo o indirecto que sobre 
+ la página web se derive, incluyendo, de forma enunciativa y no limitativa, todo resultado económico, técnico y/o jurídico adverso, así como la defraudación 
+ de las expectativas generadas por nuestro portal, obligándose el usuario a mantener indemne a NUTRIFT LIVING sin afectarla.
+ El suministro de datos personales a través de nuestro portal requiere una edad mínima de 14 años.
+ 
+ . Garantía
+
+ En NUTRIFIT LIVING nos esforzamos por facilitar servicios de la máxima calidad, aunque, dada la naturaleza de los mismos, no podemos ofrecer una garantía de satisfacción, 
+ ni hacernos responsables del resultado final de la dieta.
+ 
+ . Devoluciones
+  
+ Dada la naturaleza del servicio objeto del presente contrato no es posible efectuar devoluciones.
+  
+ Compromiso y validez del sitio web
+  
+ El CLIENTE reconoce haber leído y aceptado todo lo anterior Y poco más abajo y la política del sitio web.
+ El CLIENTE reconoce que ha entendido toda la información respecto a los productos y servicios ofrecidos en nuestra página web, así como todas las condiciones y 
+ estipulaciones recogidas en el presente contrato electrónico, por lo que afirma que son suficientes para la exclusión del error en el consentimiento del presente 
+ contrato y, por lo tanto, las acepta integra y expresamente.
+ El CLIENTE es plenamente consciente de que la aceptación y ejecución del presente contrato tendrá lugar por medio del suministro de sus datos y la pulsación 
+ del botón “Comprar” indicado en nuestro sitio web y que se perfeccionará con el pago del servicio.
+  
+ Datos personales
+  
+ El proceso de contratación requiere que cumplimente formularios de datos personales con la finalidad de tramitar y gestionar los pedidos y para remitirle información 
+ comercial sobre nuestros productos y servicios.
+  
+ Obligaciones de las partes
+  
+ NUTRIFIT LIVING se compromete a proporcionar al CLIENTE los productos y servicios que hayan sido contratados aplicando la máxima diligencia en la prestación del servicio.
+ El CLIENTE se compromete a:
+ Proporcionar datos exactos, completos y fidedignos para la confección de su dieta.
+ Al pago del producto seleccionado en el tiempo y forma fijado en las presentes condiciones de venta.
+  
+ NUTRIFIT LIVING no garantiza que la disponibilidad del servicio objeto de este contrato sea continua e ininterrumpida, por circunstancias originadas por problemas 
+ en la red de Internet, averías en los dispositivos informáticos y otras circunstancias imprevisibles. 
+ De manera que el CLIENTE acepta soportar dentro de unos límites razonables estas circunstancias, por lo que renuncia expresamente a reclamar a NUTRIFIT LIVING 
+ cualquier responsabilidad contractual o extracontractual por los posibles fallos, errores y uso del servicio contratado.
+  
+ Aplicaciones Móviles Y Servicios
+ Si bien nos esforzamos por hacer que nuestro sitio web esté disponible en muchas plataformas, no podemos garantizar que nuestro sitio sea compatible con su dispositivo.
+ 
+      </pre>
+      <script src="Prueba7/java.js"></script>
 
     </body>        
 </html>    

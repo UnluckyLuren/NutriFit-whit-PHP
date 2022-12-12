@@ -585,6 +585,10 @@ h2 {
     left: -5em;
 }
 
+.faqVip {
+    top:90em;
+    left: -5em;
+}
 
 .col-lg-5 {
     margin: 0;
@@ -684,6 +688,10 @@ h2 {
     margin: 0;
 }
 
+.footerPageInitialVip {
+    top: 130em !important;
+    margin: 0;
+}
 
 
 

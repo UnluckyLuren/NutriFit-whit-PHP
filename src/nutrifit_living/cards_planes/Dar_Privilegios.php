@@ -22,7 +22,7 @@ if (isset( $_POST["freePlan"])) {
 
     $sql = " UPDATE usuarios SET privilegio = 1 WHERE id = $id ";
     $link->query( $sql );
-    header("location: ../Page-Initial-Intermedium.php");
+    header("location: ../metodo_de_pago.php");
 
 
 }  else if (isset( $_POST["vipPlan"])) {
@@ -31,7 +31,7 @@ if (isset( $_POST["freePlan"])) {
 
     $sql = " UPDATE usuarios SET privilegio = 2 WHERE id = $id ";
     $link->query( $sql );
-    header("location: ../Page-Initial-Vip.php");
+    header("location: ../metodo_de_pago.php");
 
 }
 

@@ -2,6 +2,12 @@
 
 require "./cards_planes/Verificacion-Privilegios.php";
 
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: Login_register/index.php");
+    exit;
+}
+
 $nombre = $_SESSION["user"];
 $privilegio = $_SESSION["privilegio"];
 $imageUser = $_SESSION["imagen"];
@@ -359,7 +365,7 @@ a, #co {
                     </a>
                 </figure>
             </div>   
-            <a class="item-2" href="../nutrifit living/Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
+            <a class="item-2" href="Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
         </div>
 
             <div class="item-3">

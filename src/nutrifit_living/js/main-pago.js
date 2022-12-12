@@ -125,9 +125,9 @@ formulario.inputCCV.addEventListener('keyup', () => {
 
 // const form = document.getElementById('formulario-tarjeta');
 
-formulario.addEventListener('submit', function(event) {
-	event.preventDefault()
-})
+// formulario.addEventListener('submit', function(event) {
+// 	event.preventDefault()
+// })
 
 /* Cambiar las imagenes de la targeta */
 const visa    = document.getElementById('1'),

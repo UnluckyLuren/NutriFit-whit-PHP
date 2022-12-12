@@ -96,9 +96,6 @@ $imageUser = $_SESSION["imagen"];
             </nav>
         </div>
      
-        <div class="cerrarMenu" >
-            <button id="closePreparation">Cerrar</button>
-        </div>
 
         <div id="container" >
 
@@ -443,12 +440,40 @@ $imageUser = $_SESSION["imagen"];
 </div>
 
 
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
+<div class="recetarioPreparation">
+
+<div class="videoIngredientes disNone" id="containerVideoIngredientes">
+
+          <div class="cerrarMenu" > <button id="closePreparation" >Cerrar</button> <h1 id="nameReceta" >Crepas</h1> </div>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_3t4hP0EFmI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <h2>Ingredientes</h2>
+
+    <ul class="listIngredientes" id="listIngredientes">
+        <li class="ingredientesLi" > <input type="checkbox"> jsdhjkashda</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sadsdasdas</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sdasdasda</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sdasdasdsadsa</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sdasdasdsadsa</li>
+        <li class="ingredientesLi" > <input type="checkbox"> sadasdsadaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+    </ul> 
+
+</div>
+
+<div class="preparationInfo " id="containerPreparation" >
+
+        <h2 id="titlePreparation" >Preparación</h2>
+
+        <p id="textPreparation" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ea a, qui similique ipsum tenetur quia sapiente porro hic totam dolor molestiae, provident distinctio voluptate aspernatur. Alias libero dolores quam.</p>
+
+        <img id="imgReceta" src="../imagenes/Hot Cakes hulk.jpg">
+    </div>
+
+</div>
+
+
+    
 <footer class="containerfooter">
     <div class="item-1">
         <div class="imagen">
