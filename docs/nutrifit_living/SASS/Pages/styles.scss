@@ -1,0 +1,1690 @@
+/* Padding */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --Colornutrifit: hsl(86, 54%, 51%);
+  --ColorTitulo: hsl(88, 55%, 60%);
+  --ColorSubTitulos: ; 
+  --ColorBotones: hsl(88, 60%, 49%) ;
+  --FondoHoverBotons: hsl(88, 59%, 61%) ;
+  --Color2nutri: #84c837;
+  --Color3nutri: #86CE34;
+  --Color4nutri:#89C644;
+  --Color5nutri: #8AC53F;
+  --Color6nutri:#68C53F;
+  --Color7nutri:#99CC57;
+  --Color8nutri:#89BC47;
+  --Sobras3:#87B44F;
+  --Sobras: #79AC37;
+  --Sobras2:#68942F;
+  --Colorletras: #3F8AC5;
+  --Colorformularios: #4577B3;
+  --Colorformularios2: #4592B3;
+  --skills-bar-length: 0%;
+  --Color-container-BG: rgba(227, 222, 222, 0.589);
+  --Color-BG-Modal: #00000054;
+}
+body{
+  min-height: 100vh;
+  background-color: rgb(238, 239, 230);
+  width: 100%;
+  position: relative; 
+  background-size: cover;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /*  */
+  // background: url(../imagenes/Fondosi2.jpg) 
+  background-size: cover;
+  position: relative;
+}
+/* Scroll bar */
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width:11px;
+}
+
+body:-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+//  Clase para ocultar el scroll en body
+
+.ocultScroll {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+ 
+// Vídeo Nutrifit Living
+.video {
+
+  position: relative;
+  width: 640px;
+  height: 350px;
+
+
+}
+
+.video {
+  margin: 50px;
+  width: 700px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+
+}
+
+
+
+/* Formulario Dieta */
+form {
+  font-family: 'Open Sans', sans-serif;
+  color: #7FCC1A;
+  font-weight: 550;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -0px;
+  padding: 30px 50px;
+}
+form {
+  background: white;
+  width: 400px;
+  border-radius: 5px;
+  opacity: .85;
+  /* box-shadow: 0px 0px 3px #31a30b;; */
+}
+.different{
+  color: black;
+}
+
+
+
+
+.main-section{
+  width: 500px;
+  margin: auto;
+  margin-top:15%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+.modal-content{
+  background-color: #e9f5e5;
+  opacity: .99;
+  padding: 0 20px;
+  box-shadow: 7px 13px 37px rgb(91, 122, 69);
+  border-color: #8ac441;
+}
+.user-img{
+  margin-top: -20px;
+  margin-bottom: 35px;
+}
+
+.user-img img{
+  width: 170xp;
+  height: 130px;
+}
+
+.form-group input{
+  height: 42px;
+  font-size: 18px;
+  border:0;
+  padding-left: 54px;
+  border-radius: 10px;
+  
+}
+
+.form-group::before{
+  font-family: "Font Awesome\ 5 Free";
+  position: absolute;
+  left: 28px;
+  font-size: 22px;
+  padding-top:4px;
+  height: 50px;
+}
+
+
+/* Recetarios */
+.ingredientes {
+  color: #004AAD;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 10%;
+}
+.textoI {
+color: #008037;
+text-align: justify;
+font:          normal bold 26px/1 "Roboto", sans-serif;
+background-color: #EAFFD0 ;
+width: 800px;
+margin: 1% 23%;
+font-family: 'Open Sans', sans-serif;
+}
+
+/* Menu desplegable */
+
+.container{
+  max-width: 1100px;
+  margin: auto;
+  }
+  
+  .menu {
+    float: right;
+    margin-right: -7%;
+    margin-top: 2%;
+    background: white;
+    border: 3px solid #008037;
+    border-radius: 8px;
+  }
+  .menu:hover{
+    box-shadow: 7px 13px 37px rgb(91, 122, 69);
+  }
+  .menu ul{
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu a{
+    display: block;
+    padding: 0px 5px;
+    text-decoration: none;
+    color: #008037 ;
+    transition: all 500ms ease;
+    font-family:'DM Serif Text', serif ;
+    font-size: 1rem;
+  }
+  
+  .menu a:hover {
+    background: #EAFFD0;
+    padding: 0;
+  }
+  
+  .menu .submenu {
+    background: white;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0,0.2);
+    display: none;
+  }
+  
+  .menu .submenu li a {
+    line-height: 50px;
+  }
+  
+  .menu ul li a:hover + ul, .menu .submenu:hover {
+  display: block;
+  padding: 0%;
+  }
+  
+  .nombreDEpaginadondeseencuantra{
+    margin: 0%;
+  }
+
+
+  
+
+/* Menu desplegable recetarios */
+
+.containerre {
+  max-width: 1100px;
+  margin: auto;
+  }
+  
+  .menure {
+    float: right;
+    margin-right: -15%;
+    margin-top: 5%;
+    background: white;
+    border: 3px solid #008037;
+    border-radius: 8px;
+  
+  }
+  .menure:hover{
+    box-shadow: 7px 13px 37px rgb(91, 122, 69);
+  }
+  .menure ul{
+    display: flex;
+    list-style: none;
+  }
+  
+  .menure a{
+    display: block;
+    padding: 0px 5px;
+    text-decoration: none;
+    color: #008037 ;
+    transition: all 500ms ease;
+    font-family:'DM Serif Text', serif ;
+    font-size: 1rem;
+  }
+  
+  .menure a:hover {
+    background: #EAFFD0;
+    padding: 0;
+  }
+  
+  .menure .submenure {
+    background: white;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0,0.2);
+    display: none;
+  }
+  
+  .menure .submenure li a {
+    line-height: 50px;
+  }
+  
+  .menure ul li a:hover + ul, .menure .submenure:hover {
+  display: block;
+  padding: 0%;
+  }
+
+
+
+  /* Lugares recomendados */
+  
+  .titulo_de_servicios {
+    margin-top: 5%;
+    margin-left: 50%;
+   margin-right: 50%;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 2rem;
+   font-weight: 700;
+   color:#008037;
+  }
+  .titulo_de_servicios  {
+    margin-top: 3%;
+    margin-left: 41%;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 2rem;
+   font-weight: bold;
+   color:#008037;
+  }
+  
+  .contenedorservicios {
+    display: inline-flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    left: 6em;
+  }
+  
+  .fexcajas{
+   background: white; 
+   border: 1.5px solid rgb(216, 216, 216);
+   margin: 1rem;
+   width: 200px;
+   height: 200px;
+   border-radius: 1.5%;
+  }
+  .contenedorservicios .fexcajas:hover{
+    box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
+  }
+  
+  /* Productos recomendados */
+  
+  .contenedorserviciosPRODUCTOS {
+    display: inline-flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5%;
+  }
+  
+  .fexcajasPR{
+   background: white; 
+   border: 1.5px solid rgb(216, 216, 216);
+   border-radius: 1.5%;
+   margin: 1rem;
+   width: 280px;
+   height: 280px;
+  }
+  .contenedorserviciosPRODUCTOS .fexcajasPR:hover{
+    box-shadow: 3px 10px 10px rgba(100, 128, 55,0.4);
+  }
+  
+  .boton_walmart{
+    background:    #0072ce;
+    border:        2px solid  #003087;
+      border-radius: 10px;
+      padding:       7px 19px;
+      color:         white;
+      font:       normal bold 26px/1 "Roboto", sans-serif;
+      text-align:    center;
+      font-size: 0.65rem;
+      position:absolute;
+      margin: 5px;
+      margin-top: -1.2%;
+      float: left;
+      text-decoration: none;
+      font-family: 'Archivo Black', sans-serif;
+      margin-left: 150px;
+  }
+
+  .boton_walmart:hover{
+    background:    #003087;
+    border:        2px solid  #0072ce;
+  }
+
+  .boton_soriana{
+    background:    #FF6B09;
+    border:        2px solid  #F53D00;
+      border-radius: 10px;
+      padding:       7px 19px;
+      color:         white;
+      font:       normal bold 26px/1 "Roboto", sans-serif;
+      text-align:    center;
+      font-size: 0.65rem;
+      position:absolute;
+      margin: 10px;
+      margin-top: -1.2%;
+    
+      text-decoration: none;
+      font-family: 'Archivo Black', sans-serif;
+  }
+  .boton_soriana:hover{
+    background:    #F53D00;
+    border:        2px solid  #FF6B09;
+    
+  }
+
+ 
+
+  /* .dieta{
+    width: 400px;
+    background: #e9f5e5;
+    opacity: .99;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    font-family: 'DM Serif Text', serif;
+    text-align: justify;
+    color: rgb(8, 8, 8);
+    box-shadow: 7px 13px 37px rgb(91, 122, 69);
+    border: 3px  solid green ;
+    margin-top: 30px;
+  } */
+  /* .dieta{
+    position : relative;
+    width  : 740px;
+    height : 668px;
+    margin : 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background : #FFF url(background.jpg);
+  
+    display  : grid;
+    grid-gap : 10px;
+    grid-template-columns : repeat(2, 1fr);
+    box-sizing: border-box;
+    display:-moz-inline-grid;
+  } */
+  .dieta{
+    // position: fixed;
+    // position : relative;
+    width  : 740px;
+    height : 720px;
+    margin : 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    // background-color: rgb(162, 28, 28);
+    // background-size: cover;
+    // position: relative;
+    // display: block;
+
+    // display  : grid;
+    // grid-gap : 10px;
+    // grid-template-columns : repeat(2, 1fr);
+    // box-sizing: border-box;
+    // display:-moz-inline-grid;
+  }
+
+ /* MENU DE SECCIONES DE PRODUCTOS */
+
+ .containerSECCIONES {
+  max-width: 1100px;
+  margin: auto;
+  }
+  
+  .menuSECCIONES {
+    float: right;
+    margin-right: 3%;
+    margin: 4px solid black;
+    background: white;
+    border: 3px solid #008037;
+    border-radius: 10px;
+    margin-top: 2%;
+  }
+
+  .menuSECCIONES:hover{
+    box-shadow: 7px 13px 37px rgb(91, 122, 69);
+  }
+
+  .menuSECCIONES ul{
+    display: flex;
+    list-style: none;
+  }
+  
+  .menuSECCIONES a{
+    display: block;
+    padding: 0px 5px;
+    text-decoration: none;
+    color: #008037 ;
+    transition: all 500ms ease;
+    font-family:'DM Serif Text', serif ;
+    font-size: 1rem;
+  }
+  
+  .menuSECCIONES a:hover {
+    background: #EAFFD0;
+    padding: 0;
+  }
+  
+  .menuSECCIONES .submenuSECCIONES {
+    background: white;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0,0.2);
+    display: none;
+  }
+  
+  .menuSECCIONES .submenuSECCIONES li a {
+    line-height: 50px;
+  }
+  
+  .menuSECCIONES ul li a:hover + ul, .menuSECCIONES .submenuSECCIONES:hover {
+  display: block;
+  padding: 0%;
+  }
+  
+  .nombreDEpaginadondeseencuantraSECCIONES{
+    margin: 0%;
+    font-family: 'DM Serif Text', serif;
+  }
+
+/* equivalecias */
+.titulo_de_equivalencias  {
+  margin-top: 5%;
+  margin-left:30% ;
+  margin-right: 50%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color:#004AAD;
+}
+.titulo_de_equivalencias2  {
+  margin-top: 0%;
+  margin-left:30% ;
+  margin-right: 85%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color:#004AAD;
+}
+
+/* HEADER---- */
+
+
+
+/* Botón Enviar/Crear Dieta */
+.buttonenviar {
+  /* color: #0099CC;
+  background: transparent;
+  border-radius: 6px;         
+  border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase; */
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 15px;
+    /* border-radius: 10px; */
+    font-family: 'DM Serif Text', serif;
+}
+.buttonenviar {
+  background:    linear-gradient(#0b5394, #1b4e99);
+border-radius: 11px;
+padding:       20px 45px;
+/* color:         #ffffff; */
+display:       inline-block;
+font:          normal bold 26px/1 "Open Sans", sans-serif;
+text-align:    center;
+border-color: none;
+width: 150px;
+height: 40px;
+font-size: 15px;
+padding: 12px;
+font-weight: bold;
+// margin-left: 290px;
+margin-top: 20px;
+  }
+  .buttonenviar:hover {
+    background:    linear-gradient(#0666f3, #0f6bbd);
+    color:white;
+    font-size: 18px;
+    box-shadow:    0 4px #127ab8;
+  }
+
+  .dieta{
+    border-radius:10px;
+  }
+
+.btnRedirectPago {
+  display: flex;
+  justify-content: center;
+  margin: 5em 20em 10em 0;
+}
+  
+  /* Vídeo Nutrifit Living */
+.video {
+
+  position: relative;
+  width: 720px;
+  height: 350px;
+text-align: center;
+   margin-top: 6%;
+   margin-left: 28.3%;
+}
+
+
+.video {
+ 
+  width: 700px;
+  
+}
+
+
+/* lugares recomendadois */
+.imga{
+  width: 190px;
+  margin: 2%;
+  
+}
+
+
+/* Acomodo del menu de usuario */
+
+.userMenuDiv {
+  display: flex;
+  position: absolute;
+  left: 3em;
+  top: 1.5em;
+  z-index: 1000;
+}
+
+.userMenuDiv p {
+  margin: 1em 0 0 1em;
+  padding: 0;
+}
+
+.userMenuImg {
+  background-color: white;
+  border: 3px solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-color: #82c832;
+  margin: 0;
+}
+
+
+.userMenuDiv a img:hover {
+  border-color: #5a586d;
+}
+
+
+
+/* Ventana emergente */
+
+.modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.329);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1001;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  border: 1px solid green;
+  width: 60em;
+  height: 70%;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modalVentInitial {
+  display: flex;
+  position: absolute;
+  top: 17vh;
+  left: 21vw;
+  justify-content: flex-start;
+  background-color: white;
+  border: 1px solid green;
+  width: 60em;
+  height: 70%;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.compra {
+  display: flex;
+}
+
+.info-user-page {
+  width: 100%;
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+
+.info-user-page div img {
+  width: 15em;
+  height: 15em;
+  margin:0;
+  padding: 0.5em;
+  background-color: var(--Color-Menu);
+  border-radius: 1em;
+}
+
+.info-user-page p, .info-text p {
+  color: var(--Color7nutri);
+  font-size: larger;
+  margin:0.5em;
+  padding: 0;
+  // padding-bottom: 1em;
+  border-bottom: 1px solid var(--Color-hover);
+}
+
+.info-text p:not(.sepr-border) {
+  border: transparent;
+  padding: 0;
+}
+
+
+// estilizado input file
+
+.inputFile {
+  opacity: 0;
+  padding: 8em 0 8.4em 0;
+  width: 18em;
+  z-index: 1000;
+  background-color: #002e01;
+}
+
+.insertImg {
+  width:15em;
+  height: 15em;
+  margin: 2em 0 2em 0;
+  background-color: rgba(0, 0, 0, 0.355);
+  border-radius: 1em;
+}
+
+.insertImg p {
+  color: black;
+  position: absolute;
+  margin: 5.5em 0 0 3.8em;
+}
+
+// .info-text p:first-child {
+//   margin-top: 2em;
+// }
+
+.botonVerProgreso{
+  background:    #0DB02B;
+  border:        2px solid  #317f43;
+  border-radius: 10px;
+  padding:       7px 19px;
+  color:         white;
+  text-align:    center;
+  font-size: large;  
+  text-decoration: none;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.botonVerProgreso:hover{
+  background:    #317f43;
+  border:        2px solid  #0DB02B;
+}
+
+
+//  Acomodo progresos
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--Color-container-BG);
+  margin: 0 0 0 2em;
+  padding: 2em 38.9em 2em 2em ;
+  width:30em;
+  border-radius: 0.5em;
+}
+
+.titleProgreso {
+  width: 20em;
+  margin-left: 6.5em;
+  font-size: large;
+  color: var(--Color4nutri);
+}
+
+.titleProgreso p {
+  width: inherit;
+}
+
+.containProgreso {
+  background-color: var(--Color2nutri);
+  width: 25em;
+  height: 12em;
+  margin: 2.5em 0 0 6em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.containProgreso p {
+  color: white;
+}
+
+.partesProgreso {
+  display: flex;
+  margin: 0 0 0 1em ;
+}
+
+.barEjercicio {
+  width: 8em;
+  height: 0.5em;
+  margin-left: 4em;
+  background-color: rgba(223, 223, 223, 0.802);
+  border-radius: 100em 100em;
+}
+
+.barEjercicioLast {
+  margin-left: 1.3em;
+}
+
+.barEjercicio2 {
+  margin-left: 2.6em;
+}
+
+.barDieta {
+  width: 8em;
+  height: 0.5em;
+  margin-left: 4em;
+  background-color: rgba(223, 223, 223, 0.802);
+  border-radius: 100em 100em;
+}
+
+.barDieta2 {
+  margin-left: 2.1em;
+}
+
+.barDieta3 {
+  margin-left: 2.5em;
+}
+
+// Barras de aumento de progreso
+
+.barEjercicioAumento {
+  width: 8em;
+  height: 0.5em;
+  margin-left: 4em;
+  border-radius: 100em 100em;
+  position: absolute;
+  margin-left: 5em;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #0666ff;
+  animation: skills-bar-fill 2s ease-in-out forwards;
+}
+
+
+@keyframes skills-bar-fill {
+  to {
+    transform: translateX(103%);
+    opacity: 100%;
+  }
+
+}
+
+
+// Close y terminaciones de la ventana
+
+#close {
+  border-radius: 100px 100px 100px 100px;
+  background-color: var(--Color2nutri);
+  width: 3em;
+  height: 3em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#close img {
+  margin: 0;
+  width:2em;
+  height:2.4em;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+
+     /* Mapa de equivalencias */
+
+     .centarcontentEquivalencias{
+      display: flex;
+     justify-content: center;
+  }
+  
+    .containerEquivalencias {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 30px;
+      padding-top: 10px;
+      width: 1200px;
+      background-color: #cfffca;
+      border: green 5px solid;
+      border-radius: .5%;
+    }
+  
+    .itemsEquvalencias{
+      width: 430px;
+      margin-top: 15px;
+      font-size: 1.4em;
+      justify-self: center;
+    }
+  
+    .itemsEquvalencias > a{
+   color: #008037;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+  }
+  .containerEquivalencias .itemsEquvalencias:hover {
+    font-size: 1.8rem;
+    color: green;
+    font-weight: bold;
+    transition: all 800ms ease;
+  }
+
+
+
+
+  
+/*Aquí debajo va el FOOTER*/
+
+
+/*:::::Pie de Pagina*/
+/* .containerfooter{
+    width: 100%;
+    background-color: rgba(75, 172, 63, 0.89);
+    background-color: rgba(0, 122, 53, 0.89);
+    background-color: rgba(93, 170, 104. 0.89);
+  }
+ 
+.containerfooter .grupo-1{
+    width: 100%;
+    height: 100px;
+    display:grid;
+    grid-gap:50px;
+    padding: 0px 500px;
+}
+.tycondiciones{
+text-decoration: none;
+color: white;
+font-weight: bold;
+margin-left: 5%;
+margin-top: 22%;
+font-size: 10px;
+color: rgb(255, 255, 255);
+}
+.tycondiciones:hover{
+  font-size: 11px;
+}
+.containerfooter .grupo-1 .box figure img{
+    width: 180px;
+  left:0;
+  margin-top: 1%;
+}
+.containerfooter .grupo-1 .box figure img:hover{
+  width: 190px;
+}
+.containerfooter .grupo-2{
+    background-color: #002e01;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:30px;
+        padding: 5px 10px;
+    }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.containerfooter{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 122, 53, 0.89);
+}
+
+.item-1{
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.imagen > a{
+  display: inline-block;
+  position: relative;
+  margin-top: 3%;
+}
+
+
+.item-2{
+width: 50%;
+padding: 0%;
+margin: 0%;
+font-weight: bold;
+}
+
+.item-3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  color: white;
+  background-color: #002e01;
+}
+
+.item-2:hover{
+ color: rgb(241, 227, 227);
+}
+
+
+.imagenfooter{
+  width: 221px;
+  margin: 10%;
+  margin-top: 10%;
+  height: auto;
+}
+
+.ImagenFooterOpccion2{
+  width: 221px;
+  margin: 10%;
+  margin-top: 2%;
+  height: auto;
+}
+
+
+
+/* productos recomendados */
+
+
+.titulo_de_servicios_productos {
+  margin-top: 6%;
+  margin-left: 0%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #008037;
+}
+
+
+.positionVideo {
+  position: absolute;
+  top: 7em;
+}
+
+
+.moverbtnPago {
+  position: absolute;
+  top: 92em;
+  right: 18em;
+}
+
+
+.disNone{
+  display: none;
+}
+
+// Estilizado mapa Productos
+
+.mapDirectionLugares {
+  position: fixed;
+  top: 15vh;
+  left: 17vw;
+  width: 70em;
+  height: 40em;
+  padding: 3em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid green;
+  z-index: 1001;
+}
+
+.infoProductMap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Color-BG-Modal);
+  z-index: 1000;
+}
+
+.infoPrincipalProduct {
+  position: absolute;
+  top: 0;
+  right:0;
+  background-color: var(--Color-container-BG);
+  height:inherit;
+  width:25em;
+  padding: 4em 1em 1em 1em;
+  border-radius: 0 1em 1em 0;
+  text-align: center;
+}
+
+.titleInfoProduct {
+  color: var(--Color4nutri);
+}
+
+.imgLugaresDisponibles {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.imgLugaresDisponibles img{
+  width: 6em;
+  height: 4em;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.imgSelectLugar{
+  border: 2px solid var(--Color4nutri);
+  transition: all 0.2s ease;
+}
+
+.imgProductSelect{
+  width: 12em;
+  height: 12em;
+  padding: 0.3em;
+  background-color:var(--Color4nutri);
+  border-radius: 1em;
+}
+
+.verProductOnline {
+  margin: 1em 0;
+}
+
+.btnIrUrlProduct {
+  margin: 0;
+  position: absolute;
+  width: 50em;
+  left: -21em;
+}
+
+.logo {
+  margin:0;
+}
+
+// Buscador en general estilos
+
+.buscador {
+  position: absolute;
+  top: 2em;
+  left: 10em;
+}
+
+.buscador button img {
+  width: 3em;
+  height: 4em;
+  margin: 0;
+}
+
+.buscador button {
+  width: 5em;
+  height: 5em;
+  border: 1px solid var(--Color4nutri);
+  border-radius: 50% 50%;
+  position: absolute;
+  margin: 0;
+  top: -1em;
+  left: -6em;
+}
+
+.buscador input {
+  width: 20em;
+  height: 2.5em;
+  font-size: large;
+  border-radius:5em 5em;
+  border: 2px solid var(--Color3nutri);
+}
+
+
+.buscador button:hover, .buscador input:hover {
+  border: 2px solid #002e01;
+}
+
+.buscador button:hover img {
+  width: 2.8em;
+  height:3.8em;
+}
+
+
+// Para mostrar la ventana emergente de dietas
+
+
+.mostrarVentanaDietaCalculos {
+  opacity: 100;
+  pointer-events: all;
+  position: fixed;
+}
+
+.containerVentanaDieta {
+  flex-direction: column;
+  margin: 0;
+}
+
+.PorcentajesGrasasEjemplos {
+  width: 50%;
+  display: flex;
+  padding-left: 8%;
+}
+
+.PorcentajesGrasasEjemplos img {
+  width: 25em;
+  height: 18em;
+  margin: 0;
+}
+
+.textMejorarSalud {
+  display: flex;
+  flex-direction: column;
+  width:25em;
+  height: inherit;
+  margin: 0 0 0 2em;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid green;
+  padding: 1em 0 0.2em 0;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.textMejorarSalud div {
+  font-size: small;
+  width: inherit;
+  height: min-content;
+  margin: 0;
+}
+
+.textMejorarSalud div h2 {
+ color: var(--Color2nutri);
+}
+
+.textMejorarSalud div p {
+  // color: var(--Color4nutri);
+  margin: 0;
+  margin: 0.5em 0;
+  font-size: larger;
+ }
+
+.EscalasResults img{
+  width: 90%;
+  height: 5em;
+  margin-top: 3em;
+}
+
+// Indicador del peso
+
+.indicePeso {
+  position: relative;
+  width: 12em;
+  left: 5em;
+  margin: 0;
+  top: 2.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--Color4nutri);
+
+  transition: all 1s ease-in-out;
+}
+
+.indicePeso h2, .indicePeso p {
+  font-size: large;
+}
+
+
+
+  // Hover en pagina inicial
+
+  .navMenuLink a:hover{
+    background-color: var(--Color4nutri);
+    width:min-content;
+    height:min-content;
+    color: white;
+    transition: .5s;
+    opacity: 85%;
+    border-radius: 20px;
+  }
+
+
+  // Estilizado del form para subida de imagen
+
+
+  .formImage {
+    position: absolute;
+    width: 0;
+    height:0;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .formCerrarSesión {
+    width:min-content;
+    height: min-content;
+    padding: 0;
+  }
+
+
+  // Estilizado boto de cambiar imagen del usuario
+
+  .btnUsuarioControl {
+    display: flex;
+    width: max-content;
+  }
+
+  .changeImageUser {
+    border-color: var(--Color4nutri);
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid;
+    padding: 0.3em;
+    margin: 0 0.2em;
+    width: 8em;
+  }
+
+  .changeImageUser:hover {
+
+    border: 1px solid green;
+    transition: all 0.2s;
+    border-radius: 1em;
+
+  }
+
+  
+
+  #textAnadir {
+
+    width:max-content;
+    padding:0;
+    margin-left: 2.7em ;
+
+  }
+
+  .updateImageUserGratis {
+    margin-top: 2em;
+  }
+
+
+  .textUpdateGratis {
+    position: relative;
+    top: 1.5em;
+  }
+
+
+  .updateUnlock {
+    width: 20em;
+    height: 10em;
+    z-index: 2000;
+  }
+
+
+  .changeImageUserMove {
+    position: relative;
+    top: -3em;
+    left: 3.2em;
+}
+
+
+//  Acomodo Bienvenida 
+
+.acomodoBienvenida {
+  margin-left: 25%;
+}
+
+//  Acomodo subida de opinion Vips
+
+
+.subirOpn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height:25em;
+  padding: 2em;
+  border: 1px solid var(--Color4nutri);
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.225);
+}
+    
+.subirBtnOpn {
+  background: transparent;
+  border:        2px solid green;
+  border-radius: 100px;
+  padding:       0.2em 3em;
+  color:         var(--Colorformularios2);
+  text-align:    center;
+  font-size: large;  
+  text-decoration: none;
+}
+
+.subirBtnOpn:hover {
+  transition: all 0.2s;
+  color: white;
+  background-color: var(--Color4nutri);
+}
+
+// .ventanaOpinion {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: inherit;
+//   height:inherit;
+//   background-color: transparent;
+//   margin: -2em 0 0 0;
+//   padding: 0;
+// }
+
+
+
+.ventanaOpinion {
+  position: absolute;
+  top: 58.5em;
+  left: 40em;
+
+  width: 55em;
+  height: max-content;
+  background-color: white;
+  border-radius: 0.5em;
+  border: 1px solid var(--Color4nutri);
+  transition: all 0.3s;
+}
+
+.ventanaOpinion form {
+  width: inherit;
+  height:inherit;
+  background-color: transparent;
+  margin: 0;
+  padding: 3em;
+}
+
+.opcCero {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.divisionFormOpn {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+}
+
+.divisionFormOpn input {
+  width: 10em;
+  margin-bottom: 1em;
+  border: transparent;
+  border-bottom: 1px solid green;
+}
+
+.divisionFormOpn button {
+  margin: 1em 0 0 -5em;
+  width: 15em;
+  padding: 0.2em;
+  align-self: center;
+
+  background: transparent;
+  border:        2px solid green;
+  border-radius: 100px;
+  padding:       0.2em 3em;
+  color:         var(--Colorformularios2);
+  text-align:    center;
+  font-size: large;  
+  text-decoration: none;
+}
+
+.descripcionOpn {
+  width: 40em;
+  height: 5em;
+  margin-bottom: 1em;
+  font-size: large;
+  border: 1px solid green;
+  border-radius: 0.5em;
+  resize: none;
+}
+
+.divisionFormOpn button:hover {
+  transition: all 0.2s;
+  color: white;
+  background-color: var(--Color4nutri);
+}
+
+
+.fileOpn {
+  position: absolute;
+  top: 19em;
+  left: 2em;
+  opacity: 0;
+  height: 2.5em;
+  color: var(--Color2nutri);
+  border: 1px solid green;
+  border-radius: 0.5em;
+  background-color: transparent;
+}
+
+
+.fileOpnText {
+  border: 1px solid green;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  width: max-content;
+  font-size:1em;
+}
+
+
+// Recetario estilos
+
+
+.recetarioPreparation {
+  display: flex;
+  margin: 10em 0 0 5em;
+}
+
+// .videoIngredientes {
+//   border: 1px solid green;
+//   border-radius: 0.5em;
+//   height: max-content;
+//   padding: 0.5em;
+//   background-color: rgba(255, 255, 255, 0.575);
+// }
+
+.videoIngredientes div h1 {
+  margin: 0 1em;
+}
+
+.videoIngredientes h2 {
+  margin: 1em 0 1em 0;
+}
+
+.videoIngredientes iframe {
+  width: 60em;
+  height: 35em;
+}
+
+.preparationInfo {
+  position: relative;
+  left: 5em;
+  margin: 4em 0 0 0;
+  padding: 1em;
+  width: 30em;
+  border-radius: 0.5em;
+  height: max-content;
+  // display: flex;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.575);
+}
+
+.preparationInfo h2 {
+  margin: 0 0 1em 0;
+}
+
+.preparationInfo p {
+  // font-size: large;
+  width: 15em;
+  height: max-content;
+  text-align: justify;
+  font-size: x-large;
+}
+
+.preparationInfo img {
+  width: 20em;
+  height: 15em;
+  padding: 0.5em;
+  margin: 1em 0 3em 0;
+  border: 1px solid green;
+  border-radius: 0.5em;
+  background-color:rgba(128, 128, 128, 0.658);
+}
+
+.listIngredientes {
+  background-color: rgba(255, 255, 255, 0.575);
+  padding: 1em;
+  font-size: large;
+  border-radius: 0.5em;
+  list-style: none;
+}
+
+.listIngredientes li{
+  color: var(--Colorformularios2);
+  border-bottom: 1px solid green;
+  margin: 0 0 1em 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.listIngredientes li input {
+  width: 2em;
+  height: 2em;
+  margin: 0 1em 0 0;
+  border: 1px solid var(--Color4nutri);
+}
+
+.preterms {
+  font-size: large;
+  margin: 2em 0 0 0 ;
+  text-align: justify !important;
+}
+
+.OpCero {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+

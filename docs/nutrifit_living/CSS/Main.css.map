@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../../docs/nutrifit_living/sass/Main.scss"
+    ],
+    "names": [],
+    "file": "Main.css"
+}
