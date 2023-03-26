@@ -84,7 +84,61 @@ ContainerProdHTML.addEventListener('click', e => {
             telefonoContent.textContent = "Teléfono:  351 185 46 16";
             horarioContent.textContent = "Horario:   Lunes-Viernes: 9:00-20:00   Sábado: 9:00-15:00";
 
-        } 
+        } else if (e.target.alt === "La Zanahoria del Sol") {
+            let iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.5630078532176!2d-102.28899527680078!3d19.9848717850412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e88cf5b7f07f1%3A0xb5e401f7b199081d!2sLa%20Zanahoria%20Del%20Sol!5e0!3m2!1ses-419!2smx!4v1678315572005!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+            mapIframe.innerHTML = iframe;
+
+            leyendaContent.textContent = "DISFRUTA PLATILLOS DE COMIDA VEGETARIANA";
+            serviciosContent.textContent = "Opciones de servicio: Consumo en el lugar · Para llevar";
+            telefonoContent.textContent = "Teléfono:  351 512 2671";
+            horarioContent.textContent = "Horario:   Lunes-Viernes: 8:30- 16:30   Sábado: 9:00-16:00";
+
+        } else if (e.target.alt === "Club de Nutricion Brisa") {
+            let iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957251.6405937542!2d-103.41450568379413!3d20.413205327603663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e893534bf9585%3A0x9ca305aa054d0466!2sClub%20de%20Nutricion%20Brisa!5e0!3m2!1ses-419!2smx!4v1678316820275!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+            mapIframe.innerHTML = iframe;
+
+            leyendaContent.textContent = "ALIMENTOS NUTRICIONALES";
+            serviciosContent.textContent = "Opciones de servicio: Consumo en el lugar · Para llevar";
+            telefonoContent.textContent = "Teléfono:  351 150 4207";
+            horarioContent.textContent = "Horario:   Lunes-Viernes: 8:30- 16:30   Sábado: 9:00-16:00";
+
+        } else if (e.target.alt === "Food's Garden's") {
+            let iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.880638254331!2d-102.28926208549672!3d19.971521386580537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e89e914a9ba83%3A0xf3ad915a8dd8c974!2sFood&#39;s%20Garden&#39;s!5e0!3m2!1ses-419!2smx!4v1678316846665!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+            mapIframe.innerHTML = iframe;
+
+            leyendaContent.textContent = "UN LUGAR RECOMENDADO, 100% SALUDABLE";
+            serviciosContent.textContent = "Opciones de servicio: Consumo en el lugar · Para llevar";
+            telefonoContent.textContent = "Teléfono:  351 500 1902";
+            horarioContent.textContent = "Horario:   Lunes-Viernes: 8:30- 16:30   Sábado: 9:00-16:00";
+
+        } else if (e.target.alt === "Punto Salad Zamora") {
+            let iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.656131094051!2d-102.29389388549659!3d19.980958586575195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e89cb1b841c75%3A0x3b05f5ef7767f4c5!2sPunto%20Salad%20Zamora!5e0!3m2!1ses-419!2smx!4v1678317366209!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+            mapIframe.innerHTML = iframe;
+
+            leyendaContent.textContent = "BAR DE ENSALADAS";
+            serviciosContent.textContent = "Opciones de servicio: Consumo en el lugar · Retiros en la puerta · Entrega a domicilio";
+            telefonoContent.textContent = "Teléfono:  351 180 2516";
+            horarioContent.textContent = "Horario:   Lunes-Viernes: 10:00- 18:00   Sábado: 10:00- 15:00";
+
+        } else if (e.target.alt === "Punto Verde") {
+            let iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.727987758886!2d-102.29203587876914!3d19.977938543642978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e89a6ffffffff%3A0x4c74b6f9e9d6759b!2sPunto%20Verde!5e0!3m2!1ses-419!2smx!4v1678317665974!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+            mapIframe.innerHTML = iframe;
+
+            leyendaContent.textContent = "EL FIN MAS ESPERADO LLEGO A PUNTO VERDE";
+            serviciosContent.textContent = "Opciones de servicio: Consumo en el lugar · Para llevar";
+            telefonoContent.textContent = "Teléfono:  351 115 2368";
+            horarioContent.textContent = "Horario:   Lunes-Viernes: 9:00- 13:30    Sábado: 9:00- 13:00";
+
+        } else if (e.target.alt === "Herbalife House") {
+            let iframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.747255126704!2d-102.28955748549657!3d19.977128686577377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e89d3f2ad1ff5%3A0xbe812c6b6bdcbd65!2sHerbalife%20House!5e0!3m2!1ses-419!2smx!4v1678317821054!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+            mapIframe.innerHTML = iframe;
+
+            leyendaContent.textContent = "CONOCE LOS PRODUCTOS, AMA LOS PRODUCTOS";
+            serviciosContent.textContent = "Opciones de servicio: Consumo en el lugar · Para llevar · Entrega a domicilio";
+            telefonoContent.textContent = "Teléfono:  351 163 0038";
+            horarioContent.textContent = "Horario:   Lunes-Viernes: 8:00- 13:00   Sábado: 8:00- 13:00";
+
+        }
         
         // else if (e.target.alt === "Agranel") {
         //     let iframe = ` `;

@@ -74,7 +74,6 @@ body {
   line-height: 80px;
   text-transform: uppercase;
   text-decoration: none;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin: 0 30px;
@@ -160,7 +159,7 @@ body {
     line-height: 70px;
   }
   .nav-menu-link:hover,
-.nav-menu-link_active {
+  .nav-menu-link_active {
     background: none;
     color: #8AC53F;
   }

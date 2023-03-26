@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 :root{
   --Colornutrifit: hsl(86, 54%, 51%);
   --ColorTitulo: hsl(88, 55%, 60%);
@@ -1685,6 +1686,486 @@ font-weight: bold;
   opacity: 0;
   pointer-events: none;
 }
+
+
+// Acomodo sub menu prog completo
+
+.ejemploProgCompleto {
+  position: absolute;
+  top: 8em;
+  right: 1em;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.layout-container {
+  margin-top: 10em;
+}
+
+.subMenuProg{
+  background-color: white;
+  box-shadow: none !important;
+}
+
+.pagProgSubMenu {
+  margin: 0 1.5em -0.5em 0;
+}
+
+
+
+/* Diseño visualizar pdf */
+
+
+.titleProgViews {
+  margin-left: 2em;
+  color: var(--Color4nutri);
+}
+
+/* Estilo PDF Viewer */
+
+.top-bar-User-Slc {
+  /* background: #333; */
+  position: absolute;
+  left: 4.5em;
+  color: #fff;
+  margin-top: 5em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: min-content;
+  text-align: center;
+}
+
+.btnSlcUser {
+  background: var(--Color4nutri);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em 2rem;
+  width: max-content;
+  margin-left:-1em;
+}
+
+.btnSlcUser:hover {
+  opacity: 0.9;
+}
+
+.page-info-PDF-User-Slc {
+  margin-left: 1em;
+  font-size: 1.2em;
+  width: max-content;
+  color: black;
+}
+
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 1rem;
+}
+
+.h2InfoUserSlc {
+  // position: absolute;
+  width: max-content;
+  margin-left: 2em;
+}
+
+.canvaPDFSlc {
+  width: 60em;
+  height:45em;
+  position: absolute;
+  top: 8em;
+  right: 15em;
+}
+
+
+/* Sección de ms */
+
+.comentsInfoPrint {
+  display: flex;
+  align-items: center;
+}
+
+.comentsInfoPrint img{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 4px solid var(--bgVentContPend);
+  margin-right: 2em;
+}
+
+.comments-container {
+  content: "";
+	margin:0;
+  position: fixed;
+  top: 7em;
+  right: 7em;
+	width: 55em !important;
+  height: 40em !important;
+  overflow-y: scroll;
+  text-align: center;
+
+}
+
+.comments-container h1 {
+	font-size: 36px;
+	color: #283035;
+	font-weight: 400;
+}
+
+.comments-container h1 a {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.comments-list {
+	margin-top: 30px;
+	position: relative;
+}
+
+.MSInfoUl {
+  margin-bottom: 7em;
+}
+
+/**
+ * Lineas / Detalles
+ -----------------------*/
+.comments-list:before {
+	content: '';
+	width: 2px;
+	height: 100%;
+	background: #c7cacb;
+	position: absolute;
+	left: 32px;
+	top: 0;
+}
+
+.comments-list:after {
+	content: '';
+	position: absolute;
+	background: #c7cacb;
+	bottom: 0;
+	left: 27px;
+	width: 7px;
+	height: 7px;
+	border: 3px solid #dee1e3;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.reply-list:before, .reply-list:after {display: none;}
+.reply-list li:before {
+	content: '';
+	width: 60px;
+	height: 2px;
+	background: #c7cacb;
+	position: absolute;
+	top: 25px;
+	left: -55px;
+}
+
+
+.comments-list li {
+	margin-bottom: 15px;
+	display: block;
+	position: relative;
+  text-align: left;
+}
+
+.comments-list li:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+}
+
+.reply-list {
+	padding-left: 88px;
+	clear: both;
+	margin-top: 15px;
+}
+/**
+ * Avatar
+ ---------------------------*/
+.comments-list .comment-avatar {
+	width: 65px;
+	height: 65px;
+	position: relative;
+	z-index: 99;
+	float: left;
+	border: 3px solid #FFF;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+
+.comments-list .comment-avatar img {
+	width: 100%;
+	height: 100%;
+}
+
+.reply-list .comment-avatar {
+	width: 50px;
+	height: 50px;
+}
+
+.comment-main-level:after {
+	content: '';
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+/**
+ * Caja del Comentario
+ ---------------------------*/
+.comments-list .comment-box {
+	width: 680px;
+	float: right;
+	position: relative;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+
+.comments-list .comment-box:before, .comments-list .comment-box:after {
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	display: block;
+	border-width: 10px 12px 10px 0;
+	border-style: solid;
+	border-color: transparent #FCFCFC;
+	top: 8px;
+	left: -11px;
+}
+
+.comments-list .comment-box:before {
+	border-width: 11px 13px 11px 0;
+	border-color: transparent rgba(0,0,0,0.05);
+	left: -12px;
+}
+
+.reply-list .comment-box {
+	width: 610px;
+}
+.comment-box .comment-head {
+	background: #FCFCFC;
+	padding: 10px 12px;
+	border-bottom: 1px solid #E5E5E5;
+	overflow: hidden;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.comment-box .comment-head i {
+	float: right;
+	margin-left: 14px;
+	position: relative;
+	top: 2px;
+	color: #A6A6A6;
+	cursor: pointer;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+	color: #03658c;
+}
+
+.comment-box .comment-name {
+	color: #283035;
+	font-size: 14px;
+	font-weight: 700;
+	float: left;
+	margin-right: 10px;
+}
+
+.comment-box .comment-name a {
+	color: #283035;
+}
+
+.comment-box .comment-head span {
+	float: left;
+	color: #999;
+	font-size: 13px;
+	position: relative;
+	top: 1px;
+}
+
+.comment-box .comment-content {
+	background: #FFF;
+	padding: 12px;
+	font-size: 15px;
+	color: #595959;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: #03658c;}
+.comment-box .comment-name.by-author:after {
+	content: 'autor';
+	background: #03658c;
+	color: #FFF;
+	font-size: 12px;
+	padding: 3px 5px;
+	font-weight: 700;
+	margin-left: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/** =====================
+ * Responsive
+ ========================*/
+@media only screen and (max-width: 766px) {
+	.comments-container {
+		width: 480px;
+	}
+
+	.comments-list .comment-box {
+		width: 390px;
+	}
+
+	.reply-list .comment-box {
+		width: 320px;
+	}
+}
+
+
+/* Estilizado Tabla Pacientes */
+
+.TableContainer{
+  position: absolute;
+	width: 400px;
+  font-size:medium;
+  display:inline;
+  z-index: 2;
+}
+
+.contTable{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 80%;
+  box-shadow: 3px 3px rgba(128, 128, 128, 0.382);
+}
+
+.contTable tr th, .contTable td{
+	padding: 20px;
+}
+
+.headTable {
+	background-color: var(--bgSidebarBlue);
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+.contTable tr:nth-child(even){
+	background-color: #ddd;
+}
+
+.contTable tr:hover td{
+    transition: all 0.2s ease-in;
+	background-color: var(--hoverTable);
+	color: white;
+}
+
+/* Caja para responder el ms*/
+
+.comments-container {
+  background-image: url(../imagenes/Fondo-ms.jpg);
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 2em;
+  width: max-content;
+  height: max-content;
+  border-radius: 1em;
+  border: 1px solid var(--Color-Menu);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.41);
+  overflow-x: hidden;
+}
+
+.responseNutri {
+  background-color:#d1d7db;
+  width: 50em;
+  height: 4em;
+  border: 2px solid var(--Color-Menu);
+  border-radius: 1em;
+  margin:0 0 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  bottom: 5em;
+}
+
+.responseNutri input {
+  width: 36em;
+  height: 2.3em;
+  margin: 0;
+  border: transparent;
+  border-radius: 0.3em;
+  font-size: larger;
+}
+
+.clNombreUsuarioChat {
+  color: white !important;
+  /* position: fixed;
+  top: 3.1em;
+  right: 3.1em;
+  text-align: left;
+  z-index: 100;
+  background-color: var(--bgVentContPend);
+  margin: 0;
+  width:inherit;
+  height: 1.5em;
+  padding: 0;
+  border-radius: 0.5em 0.5em 0 0; */
+}
+
+.imgEnvioMs {
+  width: 3em;
+  height: 3em;
+  margin: 0 0 0 0.5em;
+}
+
+.imgEnvioMs:hover {
+  transition: all 0.1s 0.1s ease-in;
+  padding: 0.2em;
+}
+
+.textDefectoComments {
+  color: white;
+}
+
+.defaultInfoComments img{
+  width: 15em;
+  height: 15em;
+  margin-top: 5em;
+}
+
+
+
+
+
+
+
 
 
 

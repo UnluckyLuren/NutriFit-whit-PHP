@@ -4,7 +4,7 @@
 session_start();
 
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../Login_register/index.php");
+    header("location: ../Login_register/index.html");
     exit;
 }
 
@@ -14,7 +14,7 @@ $imageUser = $_SESSION["imagen"];
 
 
 if ($privilegio == 0) {
-    header("location: ../Page-Initial.php");
+    header("location: ../Page-Initial.html");
 } 
 
 ?>
@@ -92,14 +92,13 @@ if ($privilegio == 0) {
                 <ul>
                     <li><a href="recetarios.php"><p class="nombreDEpaginadondeseencuantra">Postres</p></a>
                     <ul class="submenure">
-                    <li><a href="#" id="linkBebidas" >Bebidas</a></li>
-                    <li><a href="recetarios.php">cenas</a></li>
-                    <li><a href="recetarios.php">Comidas</a></li>
-                    <li><a href="recetarios.php">Desayunos</a></li>
-                    <li><a href="keto.php">keto</a></li>
-                    <li><a href="recetarios.php">Snaks</a></li>
-                    <li><a href="recetarios.php">Vegano</a></li>
-                </ul>
+                        <li><a href="Almuerzos.php"> Almuerzos</a></li>
+                        <li><a href="Bebidas.php" >  Bebidas</a></li>
+                        <li><a href="Cenas.php">     Cenas</a></li>
+                        <li><a href="Desayunos.php"> Desayunos</a></li>
+                        <li><a href="keto.php">      Keto</a></li>
+                        <li><a href="Snaks.php">     Snaks</a></li>
+                    </ul>
                 </ul>
             </nav>
         </div> 
@@ -493,7 +492,7 @@ if ($privilegio == 0) {
     <div class="item-1">
         <div class="imagen">
             <figure>
-                <a href="../Page-Initial.php">
+                <a href="../Page-Initial.html">
                     <img class="imagenfooter" src="../imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" >
                 </a>
 
@@ -501,7 +500,7 @@ if ($privilegio == 0) {
         </div>
         
            
-   <a class="item-2" href="../Termsycondiciones.php">TERMINOS Y CONDICIONES</a>
+   <a class="item-2" href="../Termsycondiciones.html">TERMINOS Y CONDICIONES</a>
 
       
     </div>

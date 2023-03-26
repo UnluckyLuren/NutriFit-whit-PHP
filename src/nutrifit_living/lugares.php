@@ -49,9 +49,9 @@ $imageUser = $_SESSION["imagen"];
     </svg>
     <div class="Menu">
         <a  href="https://www.instagram.com/nutrifit__living/?hl=es" target="ba_blank"> <img  class="im" src="/imagenes/logo11_preview_rev_1.png" alt="logo nutrifit living" ></a>
-        <a class="button" href="/nutrifit living/dieta.php"  >Servicios</a>
-        <a class="button2" href="/nutrifit living/recetarios/recetarios.php" >Recetarios</a>
-        <a class="button4" href="/nutrifit living/index (1).php">Inicio</a>
+        <a class="button" href="/nutrifit living/dieta.html"  >Servicios</a>
+        <a class="button2" href="/nutrifit living/recetarios/recetarios.html" >Recetarios</a>
+        <a class="button4" href="/nutrifit living/index (1).html">Inicio</a>
     </div> -->
     <header class="header ">
 
@@ -95,12 +95,19 @@ $imageUser = $_SESSION["imagen"];
 
 <pre class="titulo_de_servicios">Lugares recomendados</pre>
     <div class="contenedorservicios" id="containerLugares" >
-        <div class="fexcajas"><a href="#"><img class="imga"  src="imagenes/Azucardecoco.jpg" alt="Azucar de coco"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Divinoverde.jpg"  alt="Divino Verde"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Dristritosaludable.jpg" alt="Distrito Saludable"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Bamb£.jpg" alt="Bambú"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Nutriclinicbar.jpg" alt="Nutrilab clinic"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Sietetallos.jpg" alt="Siete Tallos"></a></a></div>
+        <div class="fexcajas"><a href="#"><img class="imga"  src="imagenes/Azucardecoco.jpg"        alt="Azucar de coco"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Divinoverde.jpg"         alt="Divino Verde"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Dristritosaludable.jpg"  alt="Distrito Saludable"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/bambu.png"               alt="Bambú"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Nutriclinicbar.jpg"      alt="Nutrilab clinic"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/tallos.jpg"         alt="Siete Tallos"></a></a></div>
+
+        <div class="fexcajas"><a href="#"><img class="imga"  src="./imagenes/img_lugares_extras/zanahoria.jpg"  alt="La Zanahoria del Sol"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/brisa.png"    alt="Club de Nutricion Brisa"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/garden.jpg"  alt="Food's Garden's"></a></a></div>
+        <div class="fexcajas"><a href="#"><img class="imga"  src="./imagenes/img_lugares_extras/salad.png"  alt="Punto Salad Zamora"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/verde.jpg"  alt="Punto Verde"></a></a></div>
+        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/herbalife.png"  alt="Herbalife House"></a></a></div>
     </div>
 
 
@@ -132,7 +139,7 @@ $imageUser = $_SESSION["imagen"];
         <div class="item-1">
             <div class="imagen">
                 <figure>
-                    <a href="Page-Initial.php">
+                    <a href="Page-Initial.html">
                         <img class="imagenfooter" src="imagenes/Nuevo proyecto.png" alt="Logo de nutrifit living" width="40%">
                     </a>
                 </figure>

@@ -1,0 +1,1141 @@
+*{
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif ;
+}
+
+:root {
+    --bgSidebarBlue: rgb(50, 98, 180);
+    --hoverTable: rgba(128, 128, 128, 0.756);
+    --bgVentContPend: rgb(146, 146, 146);
+}
+
+.topbar{
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.08);
+    width: 100%;
+    height: 60px ;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.logo h2 {
+    color: var(--bgSidebarBlue);
+}
+
+.searc h{
+    position: relative;
+    width: 60%;
+    justify-self: center;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    padding: 0 35px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+.search i {
+    position: absolute;
+    right: 3em;
+    top: 1.4em;
+    cursor: pointer;
+}
+
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+}
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Código del sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: var(--bgSidebarBlue);
+    overflow-x: hidden;
+
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+
+
+}
+
+a:hover {
+    padding: 1em;
+    font-size: 20px;
+}
+
+
+.logOut {
+    width: 2em !important;
+    height: 2em !important;
+    margin-top: 1em;
+}
+
+/* Acomodo del menu de usuario */
+.userMenuDiv {
+    display: flex;
+    flex-direction: row;
+}
+  
+.userMenuDiv p {
+    margin:1em 6em 0 0;
+    padding: 0;
+    color: white;
+}
+  
+.userMenuImg {
+    background-color: white;
+    border: 3px solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: white;
+    margin: 0 0 1em 1em;
+}
+  
+.userMenuDiv a img:hover {
+    border-color: #5a586d;
+}
+
+/* Estilos del main */
+
+body {
+    background-image: url(../imagenes/Fondosi.jpg);
+    background-size:cover;
+    overflow-x: hidden;
+}
+  
+.main {
+    position: relative;
+    top: 10em;
+    left: 20em;
+    width: min-content;
+    height: min-content;
+}
+
+.titlePageSlc {
+    color: var(--bgSidebarBlue);
+    position: relative;
+    bottom: 2em;
+    width:max-content;
+}
+
+.titlePendCom {
+  color: var(--Color-hover);
+  width: max-content;
+  border: 5px solid var(--bgSidebarBlue);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgSinPend {
+  margin: 2em 0 0 0;
+  width: 15em;
+  height: 15em;
+}
+
+/* Acomodo mostrar info usuarios */
+
+.infoVer {
+    display: flex;
+    margin: 10em 0 0 5em;
+}
+
+.containerFlexcolumn {
+    margin: 0 0 1em 0;
+}
+
+.mainUl {
+    font-size: x-large;
+    margin:0;
+    background-color: rgba(128, 128, 128, 0.636);
+    border: 1px solid grey;
+    list-style-type: none;
+    padding: 1em;
+    width: max-content;
+    height: max-content;
+}
+.mainUl li {
+    margin: 0.5em 0;
+    /* padding: 0.5em; */
+    width: inherit;
+    border-bottom: 1px solid grey;
+    padding: 0.3em;
+}
+
+.containerInfoUser {
+    background-color: grey;
+    width: 20em;
+    height: 35em;
+    margin: 0 0 0 10em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerInfoUserPend {
+    position: fixed;
+    right: 1em;
+}
+
+.containerInfoUser h3 {
+    margin: 1em 0;
+    color: white;
+}
+
+.containerInfoUser p {
+    color: white;
+}
+
+.styleWidthImg{
+    width: 10em;
+    height: 10em;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.styleWidthImg img {
+    width: inherit;
+    height: inherit;
+    border-radius: 100% 100%;
+}
+
+.pdfDieta img {
+    width: 3em;
+    height: 3em;
+}
+
+.pdfDieta { 
+    display: flex;
+    align-items: center;
+    margin: -1.5em 0 0 0;
+    padding: 1em;
+    width: max-content;
+    height: max-content;
+}
+
+.close {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    background-color: grey;
+}
+
+.disNone {
+    display: none;
+}
+
+.pdfViewer {
+    position: absolute;
+    top: 10em;
+    right: 2em;
+}
+
+.pdfViewerIframe {
+    width: 35em;
+    height: 26em;
+    border: none;
+}
+
+.containerPdfPend {
+    font-size: x-large;
+    right: 8em;
+}
+
+.containerPdfPend input {
+    background-color: rgba(128, 128, 128, 0.55);
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    color: white;
+    font-size: large;
+    padding: 0.5em;
+    margin: 2em 0;
+}
+
+.containerPdfPend button {
+    background-color: rgba(128, 128, 128, 0.55);
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    color: white;
+    font-size: large;
+    padding: 0.5em;
+}
+
+.iframePend {
+    position: absolute;
+    width: 18em;
+    height: 10em;
+    margin: 1em  0 0 0;
+}
+
+/* Container de información de los pacientes */
+
+.contPacientes {
+    display: flex;
+    width: min-content;
+}
+
+/* Estilizado Tabla Pacientes */
+
+.TableContainer{
+  position: absolute;
+	width: 400px;
+  font-size:medium;
+  display:inline;
+  z-index: 2;
+}
+
+.contTable{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 80%;
+  box-shadow: 3px 3px rgba(128, 128, 128, 0.382);
+}
+
+.contTable tr th, .contTable td{
+	padding: 20px;
+}
+
+.headTable {
+	background-color: var(--bgSidebarBlue);
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+.contTable tr:nth-child(even){
+	background-color: #ddd;
+}
+
+.contTable tr:hover td{
+    transition: all 0.2s ease-in;
+	background-color: var(--hoverTable);
+	color: white;
+}
+
+/* Ventana emergente */
+
+
+.modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.329);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1001;
+    transition: all 0.2s ease-in;
+  }
+  
+  .modal {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    border: 1px solid var(--bgSidebarBlue);
+    width: 60em;
+    height: 70%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .modalVentInitial {
+    display: flex;
+    position: absolute;
+    top: 17vh;
+    left: 21vw;
+    justify-content: flex-start;
+    background-color: white;
+    border: 1px solid green;
+    width: 60em;
+    height: 70%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .compra {
+    display: flex;
+  }
+  
+  .info-user-page {
+    width: 100%;
+    margin: 0 0 0 2em;
+    padding: 0;
+  }
+  
+  .info-user-page div img {
+    width: 15em;
+    height: 15em;
+    margin: 0;
+    padding: 0.5em;
+    background-color: var(--Color-Menu);
+    border-radius: 1em;
+  }
+  
+  .info-user-page p, .info-text p {
+    color: var(--Color7nutri);
+    font-size: larger;
+    margin: 1em 0.5em;
+    padding: 0;
+    border-bottom: 1px solid var(--Color-hover);
+  }
+  
+  .info-text p:not(.sepr-border) {
+    border: transparent;
+    padding: 0;
+  }
+  
+  .inputFile {
+    opacity: 0;
+    padding: 8em 0 8.4em 0;
+    width: 18em;
+    z-index: 1000;
+    background-color: #002e01;
+  }
+  
+  .insertImg {
+    width: 15em;
+    height: 15em;
+    margin: 2em 0 2em 0;
+    background-color: rgba(0, 0, 0, 0.355);
+    border-radius: 1em;
+  }
+  
+  .insertImg p {
+    color: black;
+    position: absolute;
+    margin: 5.5em 0 0 3.8em;
+  }
+  
+  .botonVerProgreso {
+    background: #0DB02B;
+    border: 2px solid #317f43;
+    border-radius: 10px;
+    padding: 7px 19px;
+    color: white;
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+    font-family: "Archivo Black", sans-serif;
+  }
+  
+  .botonVerProgreso:hover {
+    background: #317f43;
+    border: 2px solid #0DB02B;
+  }
+  
+  .skills {
+    display: flex;
+    background-color:white;
+    margin: 0 0 0 2em;
+    padding: 2em 38.9em 2em 2em;
+    width: 30em;
+    border-radius: 0.5em;
+    border: 1px solid black;
+  }
+  
+  .skills h2 {
+    color: var(--bgSidebarBlue);
+  }
+
+  .titleProgreso {
+    width: 20em;
+    margin-left: 6.5em;
+    font-size: large;
+    color: var(--Color4nutri);
+  }
+  
+  .titleProgreso p {
+    width: inherit;
+  }
+  
+  .containProgreso {
+    background-color: var(--Color2nutri);
+    width: 25em;
+    height: 12em;
+    margin: 2.5em 0 0 6em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+  }
+  
+  .containProgreso p {
+    color: white;
+  }
+  
+  .partesProgreso {
+    display: flex;
+    margin: 0 0 0 1em;
+  }
+  
+  .barEjercicio {
+    width: 8em;
+    height: 0.5em;
+    margin-left: 4em;
+    background-color: rgba(223, 223, 223, 0.802);
+    border-radius: 100em 100em;
+  }
+  
+  .barEjercicioLast {
+    margin-left: 1.3em;
+  }
+  
+  .barEjercicio2 {
+    margin-left: 2.6em;
+  }
+  
+  .barDieta {
+    width: 8em;
+    height: 0.5em;
+    margin-left: 4em;
+    background-color: rgba(223, 223, 223, 0.802);
+    border-radius: 100em 100em;
+  }
+  
+  .barDieta2 {
+    margin-left: 2.1em;
+  }
+  
+  .barDieta3 {
+    margin-left: 2.5em;
+  }
+  
+  .barEjercicioAumento {
+    width: 8em;
+    height: 0.5em;
+    margin-left: 4em;
+    border-radius: 100em 100em;
+    position: absolute;
+    margin-left: 5em;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #0666ff;
+    -webkit-animation: skills-bar-fill 2s ease-in-out forwards;
+            animation: skills-bar-fill 2s ease-in-out forwards;
+  }
+  
+  @-webkit-keyframes skills-bar-fill {
+    to {
+      transform: translateX(103%);
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes skills-bar-fill {
+    to {
+      transform: translateX(103%);
+      opacity: 100%;
+    }
+  }
+  #close {
+    border-radius: 100px 100px 100px 100px;
+    background-color: var(--Color2nutri);
+    width: 3em;
+    height: 3em;
+    align-self: flex-end;
+    margin: 1em;
+    transition: 0.2s;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  #close img {
+    margin: 0;
+    width: 2em;
+    height: 2.4em;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  /* Ventana emergente pacientes */
+
+
+  .modal-pacientes {
+    background-color: transparent;
+    position: fixed;
+    top: 32em;
+    left: 20em;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .cont-Pacientes {
+    position: relative;
+    left: 0;
+    top: -30em;
+  }
+
+
+/* Estilizado Información en ventana emergente UL */
+
+
+.InfoPendSelect {
+    list-style: none;
+    color: black;
+    text-align: left;
+    margin: 1.5em 0 0 0 ;
+    width: 60em;
+    height: max-content;
+    position: relative;
+    top: 1em;
+    right: 8.5em;
+}
+
+.InfoPendSelect li {
+    margin: 0.6em 0;
+    font-size: 1em;
+}
+
+
+/* Estilos Form Ventana emergente de Pendientes */
+
+.formEnvioDieta {
+  margin: -1em 5em 0 0;
+}
+
+.formEnvioDieta form div{
+  margin: 1em 0;
+}
+
+.formEnvioDieta form div input {
+  color: var(--bgSidebarBlue);
+  border: none;
+  border-bottom: 1px solid var(--bgSidebarBlue);
+  text-align: center;
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+.formEnvioDieta form div select {
+  color: var(--bgSidebarBlue);
+  text-align: center;
+  font-size: 1em;
+  margin: 1em 0;
+  border: none;
+  border-bottom: 1px solid var(--bgSidebarBlue);
+}
+
+.formEnvioDieta form div p {
+  color: var(--hoverTable);
+}
+
+.filePDFPend {
+  position: absolute;
+  bottom: 5.5em;
+  right: 7em;
+  height: 2em;
+  width: 13em;
+  border: none;
+  padding: 0;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.pdfUserPend label img {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 0 0 0.5em;
+}
+
+.pdfUserPend label {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formEnvioDieta form button {
+  padding: 0.5em;
+  border-color: var(--bgSidebarBlue);
+  background-color: #0DB02B;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 1em;
+}
+
+/* Ocultar datos */
+
+.infoOP0Pend, #contPend {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+
+
+
+
+/* Sección de ms */
+
+.comentsInfoPrint {
+  display: flex;
+  align-items: center;
+}
+
+.comentsInfoPrint img{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 4px solid var(--bgVentContPend);
+  margin-right: 2em;
+}
+
+.comments-container {
+  content: "";
+	margin:0;
+  position: fixed;
+  top: 7em;
+  right: 7em;
+	width: 55em !important;
+  height: 40em !important;
+  overflow-y: scroll;
+  text-align: center;
+
+}
+
+.comments-container h1 {
+	font-size: 36px;
+	color: #283035;
+	font-weight: 400;
+}
+
+.comments-container h1 a {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.comments-list {
+	margin-top: 30px;
+	position: relative;
+}
+
+.MSInfoUl {
+  margin-bottom: 7em;
+}
+
+/**
+ * Lineas / Detalles
+ -----------------------*/
+.comments-list:before {
+	content: '';
+	width: 2px;
+	height: 100%;
+	background: #c7cacb;
+	position: absolute;
+	left: 32px;
+	top: 0;
+}
+
+.comments-list:after {
+	content: '';
+	position: absolute;
+	background: #c7cacb;
+	bottom: 0;
+	left: 27px;
+	width: 7px;
+	height: 7px;
+	border: 3px solid #dee1e3;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.reply-list:before, .reply-list:after {display: none;}
+.reply-list li:before {
+	content: '';
+	width: 60px;
+	height: 2px;
+	background: #c7cacb;
+	position: absolute;
+	top: 25px;
+	left: -55px;
+}
+
+
+.comments-list li {
+	margin-bottom: 15px;
+	display: block;
+	position: relative;
+  text-align: left;
+}
+
+.comments-list li:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+}
+
+.reply-list {
+	padding-left: 88px;
+	clear: both;
+	margin-top: 15px;
+}
+/**
+ * Avatar
+ ---------------------------*/
+.comments-list .comment-avatar {
+	width: 65px;
+	height: 65px;
+	position: relative;
+	z-index: 99;
+	float: left;
+	border: 3px solid #FFF;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+
+.comments-list .comment-avatar img {
+	width: 100%;
+	height: 100%;
+}
+
+.reply-list .comment-avatar {
+	width: 50px;
+	height: 50px;
+}
+
+.comment-main-level:after {
+	content: '';
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+/**
+ * Caja del Comentario
+ ---------------------------*/
+.comments-list .comment-box {
+	width: 680px;
+	float: right;
+	position: relative;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+
+.comments-list .comment-box:before, .comments-list .comment-box:after {
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	display: block;
+	border-width: 10px 12px 10px 0;
+	border-style: solid;
+	border-color: transparent #FCFCFC;
+	top: 8px;
+	left: -11px;
+}
+
+.comments-list .comment-box:before {
+	border-width: 11px 13px 11px 0;
+	border-color: transparent rgba(0,0,0,0.05);
+	left: -12px;
+}
+
+.reply-list .comment-box {
+	width: 610px;
+}
+.comment-box .comment-head {
+	background: #FCFCFC;
+	padding: 10px 12px;
+	border-bottom: 1px solid #E5E5E5;
+	overflow: hidden;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.comment-box .comment-head i {
+	float: right;
+	margin-left: 14px;
+	position: relative;
+	top: 2px;
+	color: #A6A6A6;
+	cursor: pointer;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+	color: #03658c;
+}
+
+.comment-box .comment-name {
+	color: #283035;
+	font-size: 14px;
+	font-weight: 700;
+	float: left;
+	margin-right: 10px;
+}
+
+.comment-box .comment-name a {
+	color: #283035;
+}
+
+.comment-box .comment-head span {
+	float: left;
+	color: #999;
+	font-size: 13px;
+	position: relative;
+	top: 1px;
+}
+
+.comment-box .comment-content {
+	background: #FFF;
+	padding: 12px;
+	font-size: 15px;
+	color: #595959;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: #03658c;}
+.comment-box .comment-name.by-author:after {
+	content: 'autor';
+	background: #03658c;
+	color: #FFF;
+	font-size: 12px;
+	padding: 3px 5px;
+	font-weight: 700;
+	margin-left: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/** =====================
+ * Responsive
+ ========================*/
+@media only screen and (max-width: 766px) {
+	.comments-container {
+		width: 480px;
+	}
+
+	.comments-list .comment-box {
+		width: 390px;
+	}
+
+	.reply-list .comment-box {
+		width: 320px;
+	}
+}
+
+
+/* Caja para responder el ms*/
+
+.comments-container {
+  background-image: url(../imagenes/Fondo-ms.jpg);
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 2em;
+  width: max-content;
+  height: max-content;
+  border-radius: 1em;
+  border: 1px solid var(--Color-Menu);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.41);
+  overflow-x: hidden;
+}
+
+.responseNutri {
+  background-color:#d1d7db;
+  width: 50em;
+  height: 4em;
+  border: 2px solid var(--Color-Menu);
+  border-radius: 1em;
+  margin:0 0 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  bottom: 5em;
+}
+
+.responseNutri input {
+  width: 36em;
+  height: 2.3em;
+  margin: 0;
+  border: transparent;
+  border-radius: 0.3em;
+  font-size: larger;
+}
+
+.clNombreUsuarioChat {
+  color: white !important;
+  /* position: fixed;
+  top: 3.1em;
+  right: 3.1em;
+  text-align: left;
+  z-index: 100;
+  background-color: var(--bgVentContPend);
+  margin: 0;
+  width:inherit;
+  height: 1.5em;
+  padding: 0;
+  border-radius: 0.5em 0.5em 0 0; */
+}
+
+.imgEnvioMs {
+  width: 3em;
+  height: 3em;
+  margin: 0 0 0 0.5em;
+}
+
+.imgEnvioMs:hover {
+  transition: all 0.1s 0.1s ease-in;
+  padding: 0.2em;
+}
+
+.textDefectoComments {
+  color: white;
+}
+
+.defaultInfoComments img{
+  width: 15em;
+  height: 15em;
+  margin-top: 5em;
+}
+
+/* Información de pacientes estilizado */
+
+.infoPacientSlc {
+  width: max-content;
+  font-size: 1.1em;
+}
+
+.infoPacientSlc li {
+  width: max-content;
+  padding: 0.25em 0;
+}
+
+/* Estilo PDF Viewer */
+
+.top-bar-User-Slc {
+  /* background: #333; */
+  color: #fff;
+  margin-top: 2.5em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: min-content;
+  text-align: center;
+}
+
+.btnSlcUser {
+  background: var(--bgSidebarBlue);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em 2rem;
+  width: max-content;
+  margin-left:-1em;
+}
+
+.btnSlcUser:hover {
+  opacity: 0.9;
+}
+
+.page-info-PDF-User-Slc {
+  margin-left: 1em;
+  font-size: 1.2em;
+  width: max-content;
+  color: black;
+}
+
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 1rem;
+}
+
+.h2InfoUserSlc {
+  position: absolute;
+  width: max-content;
+}
+
+.canvaPDFSlc {
+  width: max-content;
+  height:28em;
+  position: absolute;
+  top: 8em;
+  left: 21em;
+}
+
+
+
+

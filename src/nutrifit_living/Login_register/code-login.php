@@ -121,8 +121,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
+                            $_SESSION["imagen"] = $imagen;
                             
-                            header("location: ../Nutriologo-Nutri/nutriologo-base.php");
+                            header("location: ../Nutriologo-Nutri/nutriologo-page.php");
                             exit;
 
                         } else if ( $privilegios == 4 ) {

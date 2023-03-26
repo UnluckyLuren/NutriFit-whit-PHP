@@ -634,10 +634,8 @@ body {
   .infoFormPago {
     background-color: transparent;
     border: transparent;
-    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
     padding: 0;

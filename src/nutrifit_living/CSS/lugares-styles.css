@@ -1,5 +1,6 @@
 body {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .containerfooter {
@@ -12,4 +13,5 @@ body {
 
 .contenedorservicios {
   margin-left: 2.5em;
+  width: 85vw;
 }/*# sourceMappingURL=lugares-styles.css.map */

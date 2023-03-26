@@ -49,7 +49,6 @@ body {
 }
 
 .formDietaGratis {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 30em;
@@ -82,12 +81,6 @@ body {
 }
 
 .formDietaGratis div input::-moz-placeholder {
-  color: #1A759F;
-  text-decoration: double;
-  font-size: large;
-}
-
-.formDietaGratis div input:-ms-input-placeholder {
   color: #1A759F;
   text-decoration: double;
   font-size: large;

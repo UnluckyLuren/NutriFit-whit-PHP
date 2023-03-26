@@ -1,14 +1,11 @@
 <?php
 
-// require "../cards_planes/bajar-datos-progreso.php";
-
 
 session_start();
 
 $nombre = $_SESSION["user"];
 $privilegio = $_SESSION["privilegio"];
 $imageUser = $_SESSION["imagen"];
-$pdf = $_SESSION['pdf'];
 
 
 ?>
@@ -72,8 +69,8 @@ $pdf = $_SESSION['pdf'];
         </div>
 
       <nav class="nav">
-          <a href="#" class="logo">
-              <img src="../img/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo logoImgProg">
+          <a href="#" class="logo ">
+              <img src="../img/logo11_preview_rev_1.png" alt="Logo de NutrFit Living" class="logo">
           </a>
 
           <button class="toggle" aria-label="Abrir menú">
@@ -287,15 +284,6 @@ $pdf = $_SESSION['pdf'];
             </div>
             <!-- / Content -->
 
-            <div class="pdfAbrir">
-              <button id="pdfAbrir">Ver pdf de tú dieta</button>
-            </div>
-
-            <div class="containerIframe disNone" id="containerIframe">
-              <img src="../../imagenes/x-png.png" id="imgClosePdf" class="btnOcultPdf">
-              <iframe src="<?php echo "../.".$pdf; ?>" frameborder="0"></iframe>
-            </div>
-
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <!-- <script src="../js/jquery.js"></script> -->
@@ -312,8 +300,6 @@ $pdf = $_SESSION['pdf'];
     <!-- <script src="../js/main.js"></script> -->
 
     <script src="../js/dashboard-grafic.js"></script>
-    <script src="../../Prueba7/java.js"></script>
-    <script src="../js/ventana-pdf.js"></script>
 
     <!-- Page JS -->
     <script src="../js/dashboards-analytics.js"></script>

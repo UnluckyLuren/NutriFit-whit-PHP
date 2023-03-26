@@ -8,6 +8,9 @@
 }
 
 :root {
+  --bgSidebarBlue: rgb(50, 98, 180);
+  --hoverTable: rgba(128, 128, 128, 0.756);
+  --bgVentContPend: rgb(146, 146, 146);
   --Colornutrifit: hsl(86, 54%, 51%);
   --ColorTitulo: hsl(88, 55%, 60%);
   --ColorSubTitulos: ;
@@ -1169,5 +1172,11 @@ color: rgb(255, 255, 255);
 
   z-index: 3000;
 }
+
+
+
+
+
+
 
 
