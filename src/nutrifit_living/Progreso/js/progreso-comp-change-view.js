@@ -73,7 +73,7 @@ const metJXSubirMs = (docPedido, ID) => {
            commentsContainer.innerHTML+= mensaje;
         }
     }
-xmlhttp.open("GET", `./phpNutriologo/${docPedido}.php`+'?ID='+ID+'&Text='+texto, true);
+xmlhttp.open("GET", `../php-views/${docPedido}.php`+'?ID='+ID+'&Text='+texto, true);
 xmlhttp.send();
 }
 
@@ -104,6 +104,12 @@ sideMenuProg.addEventListener('click', e => {
 
 
     } else if (slcView === "Nutri Express" ) {
+        metPostJX('nutri-express');
+
+        setTimeout ( function () {   
+            mostrarCalendario (0);
+        }, 100);   
+
         sideProg[0].textContent = slcView;
         sideProg[1].textContent = 'Dieta Actual';
         sideProg[2].textContent='Mensajes';
@@ -251,12 +257,142 @@ function verPDFUserSlc (rutaPDF, content) {
 
 }
 
+// Código para la agenda
+
+function agregarEvento() {
+    var fecha = document.getElementById("fecha").value;
+    var hora = document.getElementById("hora").value;
+    var evento = document.getElementById("evento").value;
+    var eventoHtml = "<p>" + fecha + " a las " + hora + ": " + evento + "</p>";
+    document.getElementById("eventos").innerHTML += eventoHtml;
+    document.getElementById("fecha").value = "";
+    document.getElementById("hora").value = "";
+    document.getElementById("evento").value = "";
+}
+
+function changeFecha() {
+
+    // Evitar que se recargue la página con el envio de formularios
+    const formAgenda = document.getElementById("formAgenda"),
+          inputDate = document.getElementById("fecha");
+
+    const fecha = new Date(inputDate.value);
+    const numeroDia = fecha.getDate();
+
+    formAgenda.addEventListener("submit", function(event){
+        event.preventDefault(); // Evita la recarga de la página
+    });
+
+    metPostJX('nutri-express');
+    console.log(numeroDia);
+
+    setTimeout ( function () {   
+        mostrarCalendario (numeroDia+1);
+    }, 100);
+
+}
+
+// Función Calendario
+
+function mostrarCalendario (currentIf) {
+    let monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre', 'Noviembre', 'Diciembre'];
+
+let currentDate = new Date();
+let currentDay =  currentDate.getDate();
+let monthNumber = currentDate.getMonth();
+let currentYear = currentDate.getFullYear();
+
+if ( currentIf !== 0) {
+    currentDay = currentIf;
+}
+
+let dates = document.getElementById('dates');
+let month = document.getElementById('month');
+let year = document.getElementById('year');
+
+let prevMonthDOM = document.getElementById('prev-month');
+let nextMonthDOM = document.getElementById('next-month');
+
+month.textContent = monthNames[monthNumber];
+year.textContent = currentYear.toString();
+
+prevMonthDOM.addEventListener('click', ()=>lastMonth());
+nextMonthDOM.addEventListener('click', ()=>nextMonth());
 
 
-//  Funciones por defecto
 
+const writeMonth = (month) => {
 
+    for(let i = startDay(); i>0;i--){
+        dates.innerHTML += ` <div class="calendar__date calendar__item calendar__last-days">
+            ${getTotalDays(monthNumber-1)-(i-1)}
+        </div>`;
+    }
 
+    for(let i=1; i<=getTotalDays(month); i++){
+        if(i===currentDay) {
+            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today">${i}</div>`;
+        }else{
+            dates.innerHTML += ` <div class="calendar__date calendar__item">${i}</div>`;
+        }
+    }
+}
 
+const getTotalDays = month => {
+    if(month === -1) month = 11;
 
+    if (month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month == 9 || month == 11) {
+        return  31;
+
+    } else if (month == 3 || month == 5 || month == 8 || month == 10) {
+        return 30;
+
+    } else {
+
+        return isLeap() ? 29:28;
+    }
+}
+
+const isLeap = () => {
+    return ((currentYear % 100 !==0) && (currentYear % 4 === 0) || (currentYear % 400 === 0));
+}
+
+const startDay = () => {
+    let start = new Date(currentYear, monthNumber, 1);
+    return ((start.getDay()-1) === -1) ? 6 : start.getDay()-1;
+}
+
+const lastMonth = () => {
+    if(monthNumber !== 0){
+        monthNumber--;
+    }else{
+        monthNumber = 11;
+        currentYear--;
+    }
+
+    setNewDate();
+}
+
+const nextMonth = () => {
+    if(monthNumber !== 11){
+        monthNumber++;
+    }else{
+        monthNumber = 0;
+        currentYear++;
+    }
+
+    setNewDate();
+}
+
+const setNewDate = () => {
+    currentDate.setFullYear(currentYear,monthNumber,currentDay);
+    month.textContent = monthNames[monthNumber];
+    year.textContent = currentYear.toString();
+    dates.textContent = '';
+    writeMonth(monthNumber);
+}
+
+writeMonth(monthNumber);
+
+}
 

@@ -181,11 +181,11 @@ a, #co {
                     <div class="review-carousel owl-carousel visualizerPage">
                         <div class="review-item">
                             <div class="review-img">
-                                <img src="imagenes/img/testimonial-1.jpg" alt="">
+                                <img src="./imagenes/carrusel-img-5.png">
                             </div>
                             <div class="review-content">
-                                <h3>Jessica</h3>
-                                <h4>Secretaria</h4>
+                                <h3>Claudia</h3>
+                                <h4>Panadera</h4>
                                 <p>
                                     Es una gran experiencia que todos deberian vivir
                                 </p>
@@ -193,11 +193,11 @@ a, #co {
                         </div>
                         <div class="review-item">
                             <div class="review-img">
-                                <img src="imagenes/img/testimonial-2.jpg" alt="">
+                                <img src="./imagenes/User-Ejem-6.png" alt="">
                             </div>
                             <div class="review-content">
-                                <h3>Carlos</h3>
-                                <h4>Entrenador</h4>
+                                <h3>Mónica</h3>
+                                <h4>Entrenadora</h4>
                                 <p>
                                     Una gran experiencia por vivir
                                 </p>
@@ -205,11 +205,11 @@ a, #co {
                         </div>
                         <div class="review-item">
                             <div class="review-img">
-                                <img src="imagenes/img/testimonial-3.jpg" alt="">
+                                <img src="./imagenes/imagen carrusel 1.png " alt="">
                             </div>
                             <div class="review-content">
-                                <h3>Celina</h3>
-                                <h4>Emprendedora</h4>
+                                <h3>Carlos</h3>
+                                <h4>Emprendedor</h4>
                                 <p>
                                     Un sitio muy didáctico y útil
                                 </p>
@@ -217,7 +217,7 @@ a, #co {
                         </div>
                         <div class="review-item">
                             <div class="review-img">
-                                <img src="imagenes/img/testimonial-4.jpg" alt="">
+                                <img src="./imagenes/imagen carrusel 2.png" alt="">
                             </div>
                             <div class="review-content">
                                 <h3>Karen</h3>
@@ -229,12 +229,12 @@ a, #co {
                         </div>
                     
                     </div>
-                    <div class="subirOpn">
-                            <!-- <form class="enviarOpn" action="./cards_planes/subir-opinion-vip.php" method="Post"> -->
+                    <!-- <div class="subirOpn">
+                             <form class="enviarOpn" action="./cards_planes/subir-opinion-vip.php" method="Post">
                                 <h2>Sube tú Opinion</h2>
                                 <button class="subirBtnOpn" id="btnSubirOpn" >Subir</button>
-                            <!-- </form> -->
-                        </div>
+                            </form>
+                        </div> -->
                 </div>
             </div>
         </div>
@@ -243,7 +243,7 @@ a, #co {
 
     <!-- Ventana subida de opinion -->
 
-    <div class="ventanaOpinion opcCero" id="ventanaSubirOpn">
+    <!-- <div class="ventanaOpinion opcCero" id="ventanaSubirOpn">
         <form action="./cards_planes/subir-opinion-vip.php" method="POST" enctype="multipart/form-data">
             <h2>Sube tú opinion</h2>
 
@@ -262,7 +262,7 @@ a, #co {
             </div>
 
         </form>
-    </div>
+    </div> -->
 
 
     <!-- FAQs Start -->
@@ -377,9 +377,9 @@ a, #co {
                         <p><?php echo $nombre ?></p>
                         
                         <div class="info-text">
-                            <p> <small> Miembro desde 2017 </small> </p>
+                            <p> <small> Miembro desde 2023 </small> </p>
                             <p>Suscripción activa hasta: </p>
-                            <p class="sepr-border" >28/10/2022</p>
+                            <p class="sepr-border" >28/10/2024</p>
                         </div>
 
                         <a href="./Progreso/html/Progreso-Completo.php"> <button class="botonVerProgreso" >Ver progreso</button> </a>
@@ -396,19 +396,19 @@ a, #co {
                             <p>Ejercicios</p>
 
                             <div class="partesProgreso">
-                                <p>Entrenamiento diario </p>
+                                <p>Avance diario </p>
                                 <div class="barEjercicio"></div>
                                 <div class="barEjercicioAumento"></div>
                             </div>
 
                             <div class="partesProgreso">
-                                <p>Entrenamiento semanal </p>
+                                <p>Avance semanal </p>
                                 <div class="barEjercicio barEjercicio2 "></div>
                                 <div class="barEjercicioAumento"></div>
                             </div>
 
                             <div class="partesProgreso">
-                                <p>Entrenamiento completado </p>
+                                <p> Porcentaje Actual. </p>
                                 <div class="barEjercicio barEjercicioLast"></div>
                                 <div class="barEjercicioAumento"></div>
                             </div>                            

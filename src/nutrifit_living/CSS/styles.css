@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* Padding */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 * {
   margin: 0;
@@ -70,6 +72,18 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Montserrat", sans-serif !important;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.3px !important;
+}
+
+a, input[text] {
+  font-family: "Montserrat", sans-serif !important;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.3px !important;
 }
 
 .ocultScroll {
@@ -648,28 +662,25 @@ form {
 }
 
 .modal {
-  position: absolute;
   display: flex;
   justify-content: flex-start;
   background-color: white;
   border: 1px solid green;
   width: 60em;
-  height: 70%;
   border-radius: 0.5em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
 .modalVentInitial {
+  position: relative;
+  bottom: 3em;
   display: flex;
-  position: absolute;
-  top: 17vh;
-  left: 21vw;
   justify-content: flex-start;
   background-color: white;
   border: 1px solid green;
   width: 60em;
-  height: 70%;
+  height: 40em;
   border-radius: 0.5em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -681,6 +692,7 @@ form {
 
 .info-user-page {
   width: 100%;
+  height: 50em;
   margin: 0 0 0 2em;
   padding: 0;
 }
@@ -754,6 +766,7 @@ form {
   margin: 0 0 0 2em;
   padding: 2em 38.9em 2em 2em;
   width: 30em;
+  height: inherit;
   border-radius: 0.5em;
 }
 
@@ -1636,12 +1649,19 @@ color: rgb(255, 255, 255);
   margin-right: 2em;
 }
 
+.imgStartNutriConv {
+  position: relative;
+  bottom: 4em;
+  border-radius: 50%;
+  border: 0.5em solid white;
+}
+
 .comments-container {
   content: "";
   margin: 0;
   position: fixed;
-  top: 7em;
-  right: 7em;
+  top: 9.2em;
+  right: 15em;
   width: 55em !important;
   height: 40em !important;
   overflow-y: scroll;
@@ -1684,7 +1704,6 @@ color: rgb(255, 255, 255);
 .comments-list:after {
   content: "";
   position: absolute;
-  background: #c7cacb;
   bottom: 0;
   left: 27px;
   width: 7px;
@@ -1704,7 +1723,7 @@ color: rgb(255, 255, 255);
   background: #c7cacb;
   position: absolute;
   top: 25px;
-  left: -55px;
+  left: -5.8em;
 }
 
 .comments-list li {
@@ -1725,7 +1744,7 @@ color: rgb(255, 255, 255);
 .reply-list {
   padding-left: 88px;
   clear: both;
-  margin-top: 15px;
+  margin-top: 3em;
 }
 
 /**
@@ -1735,6 +1754,7 @@ color: rgb(255, 255, 255);
   width: 65px;
   height: 65px;
   position: relative;
+  right: 2em;
   z-index: 99;
   float: left;
   border: 3px solid #FFF;
@@ -1766,8 +1786,12 @@ color: rgb(255, 255, 255);
  ---------------------------*/
 .comments-list .comment-box {
   width: 680px;
+  height: 1em;
+  margin: 0 0 0.5em 0;
   float: right;
   position: relative;
+  bottom: 3.5em;
+  left: 2em;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1796,7 +1820,8 @@ color: rgb(255, 255, 255);
 
 .comment-box .comment-head {
   background: #FCFCFC;
-  padding: 10px 12px;
+  width: 42em;
+  padding: 10px 12px 0 12px;
   border-bottom: 1px solid #E5E5E5;
   overflow: hidden;
   border-radius: 4px 4px 0 0;
@@ -1838,6 +1863,7 @@ color: rgb(255, 255, 255);
 
 .comment-box .comment-content {
   background: #FFF;
+  width: 42em;
   padding: 12px;
   font-size: 15px;
   color: #595959;
@@ -1845,18 +1871,30 @@ color: rgb(255, 255, 255);
 }
 
 .comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {
-  color: #03658c;
+  color: green;
 }
 
 .comment-box .comment-name.by-author:after {
   content: "autor";
-  background: #03658c;
+  background: green;
   color: #FFF;
   font-size: 12px;
   padding: 3px 5px;
   font-weight: 700;
   margin-left: 10px;
   border-radius: 3px;
+}
+
+.comment-head-Nutri {
+  width: 37.5em !important;
+}
+
+.comment-cont-Nutri {
+  width: 37.5em !important;
+}
+
+.reply-list-nutri {
+  margin: 2em 0 2.5em 0;
 }
 
 /** =====================
@@ -1895,8 +1933,8 @@ color: rgb(255, 255, 255);
 }
 
 .headTable {
-  background-color: var(--bgSidebarBlue);
-  border-bottom: solid 5px #0F362D;
+  background-color: var(--Color8nutri);
+  border-bottom: solid 5px green;
   color: white;
 }
 
@@ -1908,6 +1946,12 @@ color: rgb(255, 255, 255);
   transition: all 0.2s ease-in;
   background-color: var(--hoverTable);
   color: white;
+}
+
+.conTablaProgComp {
+  position: absolute;
+  left: 10em;
+  margin: 0;
 }
 
 /* Caja para responder el ms*/
@@ -1933,13 +1977,13 @@ color: rgb(255, 255, 255);
   height: 4em;
   border: 2px solid var(--Color-Menu);
   border-radius: 1em;
-  margin: 0 0 2em 0;
+  margin: 0 0 3em 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
   position: fixed;
-  bottom: 5em;
+  bottom: 15em;
 }
 
 .responseNutri input {
@@ -1985,4 +2029,10 @@ color: rgb(255, 255, 255);
   width: 15em;
   height: 15em;
   margin-top: 5em;
+}
+
+.imgLeidoMs {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */

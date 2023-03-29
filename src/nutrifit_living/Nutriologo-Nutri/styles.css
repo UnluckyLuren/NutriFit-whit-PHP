@@ -6,7 +6,8 @@
 }
 
 :root {
-    --bgSidebarBlue: rgb(50, 98, 180);
+    /* --bgSidebarBlue: rgb(50, 98, 180); */
+    --bgSidebarBlue: #299B63;
     --hoverTable: rgba(128, 128, 128, 0.756);
     --bgVentContPend: rgb(146, 146, 146);
 }
@@ -1021,7 +1022,7 @@ body {
   align-items: center;
   z-index: 100;
   position: fixed;
-  bottom: 5em;
+  bottom: 15em;
 }
 
 .responseNutri input {

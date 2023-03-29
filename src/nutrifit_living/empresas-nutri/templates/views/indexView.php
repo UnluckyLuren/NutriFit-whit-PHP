@@ -1,8 +1,8 @@
   <?php require_once INCLUDES.'head.php'; ?>
-  <?php require_once INCLUDES.'navbar.php'; ?>
+
 
   <!-- content -->
-  <div class="container-fluid py-5">
+  <div class="container-fluid py-5" id="contCotizacion">
     <div class="row">
       <div class="col-12 wrapper_notifications">
       </div>
@@ -111,7 +111,7 @@
         </div>
 
         <div class="card">
-          <div class="card-header">Resumen de cotización <button class="btn btn-danger float-right restart_quote">Reiniciar</button></div>
+          <div class="card-header">Resumen de cotización <br> <button class="btn btn-danger float-right restart_quote">Reiniciar</button></div>
           <div class="card-body wrapper_quote">
             
           </div>
@@ -126,4 +126,6 @@
   </div>
   <!-- ends content -->
 
-  <?php require_once INCLUDES.'footer.php'; ?>
+
+  
+ 

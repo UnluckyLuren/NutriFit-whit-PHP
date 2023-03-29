@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Blogger Sans", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header ------------------------------------------------------------------- */
+
+.header {
+    background-image: url(images/fondo1.jpg);
+    
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fffDFC;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fffDFC;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #CE967B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Info Header ------------------------------------------------------------------- */
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content {
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+/* ------------------------ */
+
+.header-content p {
+    /* font-size: 16px; */
+    color: #C5C5C5;
+    PADDING: 0 25px;
+    margin-bottom: 25px
+}
+
+.btn-1 {
+    display: inline-block;
+    PADDING: 11px 35px;
+    background-color: #CE967B;
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: #ebad8d;
+}
+
+.coffee {
+    PADDING: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
+}
+
+.coffee-content {
+    text-align: center;
+}
+
+.coffee-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    PADDING: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: #414247;
+    PADDING: 0 250px;
+    margin-bottom: 35px;
+}
+
+.coffee-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.coffee-1 {
+    padding: 0 25px;
+}
+
+.coffee-1 img {
+    width: 200px;
+}
+
+.coffee-img {
+    position: absolute; 
+    top: 0;
+    right: 0;
+}
+
+.coffee-1 h3 {
+    color: #323337;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.btn-1 {
+    color: #fff;
+}
+
+/* ---------------------- */
+
+
+.services {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/bg22.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-attachment: fixed;
+    PADDING: 100px 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p {
+    font-size: 25px;
+    color: #C5C5C5;
+    margin-bottom: 50px;
+    PADDING: 0 100px;
+}
+
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1 {
+    padding: 0 100px;
+}
+
+.services-1 img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3 {
+    color: #EACCB3;
+    font-size: 18px;
+}
+
+/* ------------------------------ */
+
+.general {
+    display: flex;
+}
+
+.general-1 {
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #E1E2E6;
+}
+
+.general-2 {
+    background-image: url(https://images.tcdn.com.br/img/img_prod/743980/lista_de_compras_alimentos_saudaveis_colecao_slim_565_1_c7b8a9345360eaf99921d5ad66d89cd7.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-3 {
+    background-image: url(images/vege-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+
+/* ---------------------------- */
+
+
+h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+/* ---------------------------- */
+
+.blog {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1 {
+    padding: 15px 55px;
+}
+
+.blog-1 img {
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-1 h3 {
+    font-size: 25px;
+    color: #323337;
+}
+
+/* --------------------------- */
+
+.mover {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -330px;
+    margin-left: 250px;
+}
+
+.col-lg-7 {
+    padding: 0 0 10rem ;
+}
+
+.card-link {
+    color: black;
+    padding: 2rem;
+}
+
+/* ---------------------------- */
+
+.conoce{
+    
+    background:    linear-gradient(#aff581, #65aae9);
+    border-radius: 1000px;
+    width:         150px;
+    height:        40px;
+    color:         #ffffff;
+   font-size: 19px;
+    font: normal bold "Ubuntu", sans-serif;
+    text-align:    center;
+    border: none;
+   margin-top: 24%;
+   margin-left: 37%;
+   text-decoration: none;
+   position: absolute;
+
+}
+a, #co {
+    text-decoration: none;
+    color: white;
+    font: normal bold "Ubuntu", sans-serif;
+    font-weight: bold;
+    align-items: center;
+}
+.letter{
+    font: normal bold "Ubuntu", sans-serif;
+}
+.conoce2{
+    background:    linear-gradient(#aff581, #65aae9);
+    border-radius: 1000px;
+    width:         150px;
+    height:        40px;
+    color:         #ffffff;
+   font-size: 19px;
+    font:          normal bold "Ubuntu", sans-serif;
+    text-align:    center;
+    border: none;
+   margin-top: 24%;
+   margin-left: 52.5%;
+   text-decoration: none;
+   position: absolute;
+}
+.hover:hover{
+    background:    linear-gradient(#65aae9, #aff581);
+    font-size: 20px ;
+    box-shadow:    0 4px #96cd9b;
+    cursor: pointer;
+}
+
+/*  Footer */
+
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color:#5f9226;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    letter-spacing: 1.3px;
+    font-size: 15px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 14px;
+    background-color:#5f9226;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color:#5a8a23;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+
+
+
+
+

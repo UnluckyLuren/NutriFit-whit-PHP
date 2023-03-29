@@ -22,19 +22,12 @@ $DatosImagenes = $resultImagenes->fetch_all();
 
 // Datos Nutriologo
 
-$nameNutri = $_SESSION["user"];
-$imgNutri = $_SESSION["imagen"];
+// $nameNutri = $_SESSION["user"];
+// $imgNutri = $_SESSION["imagen"];
+$idUserActual =  $_SESSION["id"];
 
 
 $AllUsers=$resultIds->num_rows;
-
-
-// Evaluamos la existencia de un id después de un click
-
-// $idDeJS = $_GET['ID'];
-
-
-echo '<h2 class="titlePageSlc">Mensajes</h2>';
 
 ?>
 
@@ -43,7 +36,7 @@ echo '<h2 class="titlePageSlc">Mensajes</h2>';
 <!-- Tabla -->
 
 
-<div class="contPacientes">
+<div class="contPacientes conTablaProgComp">
         
         <div class="TableContainer">
             <table class="contTable">
@@ -55,10 +48,26 @@ echo '<h2 class="titlePageSlc">Mensajes</h2>';
 
                 <?php 
 
-                    for ($i=0; $i<$AllUsers; $i++) {
+                    // Evaluamos la existencia de un id después de un click
+
+                    $idExistente = "SELECT * FROM mensajes WHERE id = $idUserActual";
+                    $resultEvaluacionId = $link->query($idExistente);
+
+
+                    if ($resultEvaluacionId->num_rows > 0) {
+                        
+                        for ( $i=0; $i<$AllUsers; $i++ ) {
+                            if ($DatosIds[$i][0] == $idUserActual) { $idDeJs = $i; };
+                        }
+
+                        echo
+                        '<tr class="clmInfoSlc" onclick="bajarMS('.$idDeJs.')" >
+                            <td><div class="comentsInfoPrint"> <img src="../../imagenes/imgCardsDieta/Nutricionista.jfif">Nutriólogo</div> </td> <td><img class="imgLeidoMs" src="../../imagenes/Leido-ms.png"> </td>
+                        </tr>';
+                    } else {
                         echo 
-                        '<tr class="clmInfoSlc" onclick="bajarMS('.$i.')" >
-                            <td><div class="comentsInfoPrint"> <img src="'.'../.'.$DatosImagenes[$i][0].'"> '.$DatosNombres[$i][0].'</div> </td><td>Leido?</td>
+                        '<tr class="clmInfoSlc" onclick="bajarMS(-1)" >
+                            <td><div class="comentsInfoPrint"> <img src="../../imagenes/imgCardsDieta/Nutricionista.jfif">Nutriólogo</div> </td><td>?</td>
                         </tr>';
                     }
 

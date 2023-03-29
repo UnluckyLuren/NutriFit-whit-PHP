@@ -49,7 +49,7 @@ function evaluarCrearHtml($cont, $nombreSelect, $idSelect) {
             echo '
                 <li>
                 <div class="comment-main-level">
-                    <div class="comment-avatar"><img src="'.$cont[$i]['img'].'"></div>
+                    <div class="comment-avatar"><img src="'.'.'.$cont[$i]['img'].'"></div>
                     <div class="comment-box">
                         <div class="comment-head">
                             <h6 class="comment-name">'.$cont[$i]['user'].'</h6>

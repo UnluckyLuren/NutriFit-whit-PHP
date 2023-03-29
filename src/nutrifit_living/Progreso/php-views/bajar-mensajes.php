@@ -1,6 +1,7 @@
 <?php
 
 require_once "../../Login_register/conexion.php";
+session_start();
 
 // Array de objetos con ms
 
@@ -19,26 +20,45 @@ $DatosNombres = $resultNombres->fetch_all();
 $DatosImagenes = $resultImagenes->fetch_all();
 
 $idDeJS = $_GET['ID'];
+$AllUsers=$resultIds->num_rows;
 
 
-// Bajar mensajes actuales
-
-$mensajesUsers = "SELECT mensaje FROM mensajes";
-$resultMensajes = $link->query($mensajesUsers);
-$DatosMensajes = $resultMensajes->fetch_all();
-
-$contenidoMS = $DatosMensajes[$idDeJS][0];
-
-// Decodificar los ms
-
-$decodificaciónBase64 = base64_decode($contenidoMS);
-$decodificaciónJson = json_decode($decodificaciónBase64,true);
 
 
-function evaluarCrearHtml($cont, $nombreSelect, $idSelect) {
+function empConversartion ($idAct) {
+	echo '<h1 class="clNombreUsuarioChat">Nutriologo</h1>'.
+
+    '<ul id="comments-list" class="MSInfoUl">
+			<div class="defaultInfoComments">
+			<h2 class="textDefectoComments">Inicia tu conversación...</h2>		
+				<img src="../../imagenes/imgCardsDieta/Nutricionista.jfif" class="imgStartNutriConv"> 	
+			</div>
+
+	</ul>
+
+    <div class="responseNutri">
+        <input type="text" id="textMensajeSelect">
+        <img src="../../imagenes/Envio-ms-flecha.png" class="imgEnvioMs" onclick="subirMS('.$idAct.')">
+    </div>';
+}
+
+
+function evaluarCrearHtml($link, $idFinal) {
+
+	$mensajesUsers = "SELECT mensaje FROM mensajes";
+	$resultMensajes = $link->query($mensajesUsers);
+	$DatosMensajes = $resultMensajes->fetch_all();
+
+	$contenidoMS = $DatosMensajes[$idFinal][0];
+
+	// Decodificar los ms
+
+	$decodificaciónBase64 = base64_decode($contenidoMS);
+	$cont = json_decode($decodificaciónBase64,true);
+
     $i = 0;
 
-    echo '<h1 class="clNombreUsuarioChat">'.$nombreSelect.'</h1>'.
+    echo '<h1 class="clNombreUsuarioChat">Nutriólogo</h1>'.
 
     '<ul id="comments-list" class="comments-list MSInfoUl">';
 
@@ -49,7 +69,7 @@ function evaluarCrearHtml($cont, $nombreSelect, $idSelect) {
             echo '
                 <li>
                 <div class="comment-main-level">
-                    <div class="comment-avatar"><img src="'.'../'.$cont[$i]['img'].'"></div>
+                    <div class="comment-avatar"><img src="'.'../.'.$cont[$i]['img'].'"></div>
                     <div class="comment-box">
                         <div class="comment-head">
                             <h6 class="comment-name">'.$cont[$i]['user'].'</h6>
@@ -66,17 +86,17 @@ function evaluarCrearHtml($cont, $nombreSelect, $idSelect) {
 
         } else {
 
-            echo '<ul class="comments-list reply-list">
+            echo '<ul class="comments-list reply-list reply-list-nutri">
             <li>
-                <div class="comment-avatar"><img src="'.'../'.$cont[$i]['img'].'" ></div>
-                <div class="comment-box">
-                    <div class="comment-head">
+                <div class="comment-avatar"><img src="../../imagenes/imgCardsDieta/Nutricionista.jfif" ></div>
+                <div class="comment-box box-comment-nutri">
+                    <div class="comment-head comment-head-Nutri">
                         <h6 class="comment-name by-author">'.$cont[$i]['user'].'</h6>
                         <span>'.$cont[$i]['hora'].'</span>
                         <i class="fa fa-reply"></i>
                         <i class="fa fa-heart"></i>
                     </div>
-                    <div class="comment-content">
+                    <div class="comment-content comment-cont-Nutri">
                         '.$cont[$i]['mensaje'].'
                     </div>
                 </div>
@@ -92,13 +112,35 @@ function evaluarCrearHtml($cont, $nombreSelect, $idSelect) {
 
     <div class="responseNutri">
         <input type="text" id="textMensajeSelect">
-        <img src="../imagenes/Envio-ms-flecha.png" class="imgEnvioMs" onclick="subirMS('.$idSelect.')">
+        <img src="../../imagenes/Envio-ms-flecha.png" class="imgEnvioMs" onclick="subirMS('.$idFinal.')">
     </div>';
 
 }
 
 
-evaluarCrearHtml($decodificaciónJson, $DatosNombres[$idDeJS][0], $idDeJS);
+if ($idDeJS == -1) {
+
+	$idUserActual = $_SESSION['id'];
+	$idExistente = "SELECT * FROM mensajes WHERE id = $idUserActual";
+	$resultEvaluacionId = $link->query($idExistente);
+
+	if ($resultEvaluacionId->num_rows > 0) {
+
+		for ( $i=0; $i<$AllUsers; $i++ ) {
+			if ($DatosIds[$i][0] == $idUserActual) { $idEncontrado = $i; };
+		}
+
+		evaluarCrearHtml($link, $idEncontrado);
+
+	} else {
+		empConversartion($idDeJS);
+	}
+
+} else {
+	evaluarCrearHtml($link, $idDeJS);
+}
+
+
 
 
 ?>

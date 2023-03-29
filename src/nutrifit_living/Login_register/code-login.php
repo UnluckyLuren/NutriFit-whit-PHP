@@ -149,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["email"] = $email;
                             $_SESSION["privilegio"] = $privilegios;
                             
-                            header("location: ../empresas-nutri/index.php");
+                            header("location: ../empresas-nutri/empresarial.php");
                             exit;
                         }
 
