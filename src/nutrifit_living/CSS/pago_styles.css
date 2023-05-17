@@ -354,7 +354,6 @@ body {
   position: absolute;
   top: 0;
   transform: rotateY(180deg);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 

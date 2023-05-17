@@ -92,6 +92,8 @@ sideMenuProg.addEventListener('click', e => {
         sideProg[1].textContent = 'Gráficas';
         sideProg[2].textContent='Mensajes';
         sideProg[3].textContent='Nutri Express';
+        sideProg[4].textContent='Bitácora';
+
 
     } else if (slcView === "Mensajes" ) {
 
@@ -101,6 +103,7 @@ sideMenuProg.addEventListener('click', e => {
         sideProg[1].textContent = 'Dieta Actual';
         sideProg[2].textContent='Gráficas';
         sideProg[3].textContent='Nutri Express';
+        sideProg[4].textContent='Bitácora';
 
 
     } else if (slcView === "Nutri Express" ) {
@@ -114,7 +117,25 @@ sideMenuProg.addEventListener('click', e => {
         sideProg[1].textContent = 'Dieta Actual';
         sideProg[2].textContent='Mensajes';
         sideProg[3].textContent='Gráficas';
+        sideProg[4].textContent='Bitácora';
+        
   
+    } else if (slcView === "Bitácora" ) {
+
+        metPostJX('bitacora-pro-comp');
+
+        setTimeout ( function () {   
+            const modal_container = document.getElementById('modal_container');
+            modal_container.classList.add('show');
+        }, 100);   
+
+        sideProg[0].textContent = slcView;
+        sideProg[1].textContent = 'Dieta Actual';
+        sideProg[2].textContent='Mensajes';
+        sideProg[3].textContent='Nutri Express';
+        sideProg[4].textContent='Gráficas';
+
+
     } else if (slcView === "Gráficas" ) {
         location.reload();
     }

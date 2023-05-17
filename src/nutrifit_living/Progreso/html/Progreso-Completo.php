@@ -101,6 +101,7 @@ $pdfActual = $_SESSION["pdf"];
             <li><a href="#" class="sideProg" onclick="verPDFUserSlc('<?php echo '../.'.$pdfActual ?>', this.textContent)">Dieta Actual</a></li>
             <li><a href="#" class="sideProg" onclick="verPDFUserSlc('<?php echo '../.'.$pdfActual ?>', this.textContent)">Mensajes</a></li>
             <li><a href="#" class="sideProg" onclick="verPDFUserSlc('<?php echo '../.'.$pdfActual ?>', this.textContent)">Nutri Express</a></li>
+            <li><a href="#" class="sideProg" onclick="verPDFUserSlc('<?php echo '../.'.$pdfActual ?>', this.textContent)">Bitácora</a></li>
         </ul>
         </ul>
     </nav>                      

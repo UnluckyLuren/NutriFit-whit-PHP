@@ -841,6 +841,35 @@ form {
   transition: 0.2s;
 }
 
+/* VENTANA EMERGENTE BITÁCORA */
+
+.cont-modal-prog-comp .modal-container {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.cont-modal-prog-comp .modal-container .modalVentInitial .compra {
+  overflow-y: hidden;
+  pointer-events: all;
+  background-image: url("https://cdn.pixabay.com/photo/2016/08/18/18/40/salad-1603608_1280.jpg");
+  background-size: cover;
+}
+
+.cont-modal-prog-comp .modal-container .modalVentInitial .compra .skills {
+  background-color: rgb(232, 232, 232);
+}
+
+.cont-modal-prog-comp .modal-container .modalVentInitial .compra .skills .agenda{
+  height: min-content; 
+  margin: 0 0 2em 4em;
+}
+
+.titleCompraProg {
+  color:white !important;
+  font-size: x-large !important;
+}
+
+
 /* Mapa de equivalencias */
 .centarcontentEquivalencias {
   display: flex;

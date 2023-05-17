@@ -446,6 +446,23 @@ a, #co {
         <!-- <iframe class="video positionVideo" width="560" height="315" src="https://www.youtube.com/embed/EWb4pKu-bkc" title="YouTube video player"  rel=0&amp;controls=0&amp;showinfo=0″ frameborder=»0″ autoplay muted loop></iframe> -->
 
 
+    <!-- Prueba Asistente virtual -->
+
+    <div class="asimov">
+    
+            <div class="contAsimov" id="initAsimov">
+                <img src="./imagenes/asimov-IA-img/asimov-img.svg">
+            </div>
+
+            <h2 id="respAsimov" class="respAsimov"> </h2>
+
+    </div>
+
+
+
+
+
+<!-- Comienzo footer -->
     <footer class="containerfooter objDisplay footerPageInitialVip" id="footerDieta" >
         <div class="item-1">
             <div class="imagen">
@@ -506,6 +523,7 @@ if ( imagenToSrc.src.length === 81 ) {
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/app.js"></script>
+    <script src="./js/asimov-ia-config.js"></script>
 
     <!-- <script src="whatss.js"></script> -->
     <script src="Prueba7/java.js"></script>

@@ -2217,10 +2217,61 @@ font-weight: bold;
   margin: 0;
 }
 
+// Asimov IA Styles
 
+.asimov {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0.8em;
+  right: 1em;
+  z-index: 2000;
+}
 
+.contAsimov {
+  background-image: linear-gradient(180deg, #aef4c5 0, #9cedc1 16.67%, #87e4bc 33.33%, #6cd8b4 50%, #4dccad 66.67%, #24c3aa 83.33%, #00bba9 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.8em;
+  height: 3.8em;
+  border-radius: 50%;
+  border: 2px solid rgba(24, 136, 2, 0.697);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0;
+  padding: 0;
+}
 
+.contAsimov img {
+  width: 3em;
+  height: 3em;
+  margin:0;
+  padding: 0;
+}
 
+.respAsimov {
+  content: "";
+  margin-top: 1em;
+  font-size: larger;
+  text-align: center;
+  padding: 1em;
+  color: #003087;
+  width: 10em;
+  height: 10em;
+  transition: all 2s 2s;
+}
 
+.contAsimov img:hover {
+  padding: 0.1em;
+}
 
+.ulAsimovResp {
+  text-align: left;
+}
+
+.ulAsimovResp li {
+  margin-bottom: 1em;
+  font-size: medium;
+}
 
