@@ -1,3 +1,22 @@
+<?php 
+
+session_start();
+
+$nombre = $_SESSION["user"];
+$privilegio = $_SESSION["privilegio"];
+// $imageUser = $_SESSION["imagen"];
+
+
+if ($privilegio != 5 && $privilegio != 7) {
+
+    header("location: ../../index.html");
+
+} 
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +33,9 @@
     <style>
     
     </style>
-    <title>Admin-NutriFit_Living</title>
+    <title>NutriFit Living</title>
 </head>
-<body>
+<body id="bodyEmpresas">
     
     <div class="containerBoxMenus">
         <div class="topbar">
@@ -42,18 +61,42 @@
                         <div>Inicio</div>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="hover" id="sideMenuPedidos">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <div>Pedidos</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hover" id="sideMenuPedidos">
-                        <i class="fas fa-user"></i>
-                        <div>Completados</div>
-                    </a>
-                </li>
+
+                <?php 
+
+                if($privilegio == 5) {
+                    echo '
+                        <li>
+                            <a href="#" class="hover" id="sideMenuPedidos">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <div>Pedidos</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover" id="sideMenuPedidos">
+                                <i class="fas fa-user"></i>
+                                <div>Completados</div>
+                            </a>
+                        </li> ';
+                } else if ($privilegio == 7) {
+
+                    echo ' 
+                        <li>
+                            <a href="#" class="hover" id="dietas">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <div>Dietas</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover" id="diaActualPac">
+                                <i class="fas fa-user"></i>
+                                <div>Pacientes de hoy</div>
+                            </a>
+                        </li> 
+                        ';
+                }
+
+                ?>
             </ul>
         </div>
 
@@ -62,7 +105,7 @@
 
         <div class="contMain" id="mainChange">
             <?php
-                require_once 'app/config.php';
+                require_once './app/config.php';
 
                 // Renderizado de la vista
                 get_view('index');
@@ -79,6 +122,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="<?php echo 'assets/js/waitMe.min.js' ?>"></script>
     <script src="<?php echo 'assets/js/main.js'; ?>"></script>
+
+    <!-- PDF Visualizer -->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
    
 
 </body>

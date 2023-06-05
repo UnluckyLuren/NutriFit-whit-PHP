@@ -1,5 +1,5 @@
 <?php 
-require_once 'app/config.php';
+require_once './app/config.php';
 
 // Primero validar que existan cotizaciones y el parametro $_GET number
 if(!isset($_GET['number'])) {

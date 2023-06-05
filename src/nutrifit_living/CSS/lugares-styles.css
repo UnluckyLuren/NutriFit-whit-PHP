@@ -14,4 +14,106 @@ body {
 .contenedorservicios {
   margin-left: 3em;
   width: 82vw;
-}/*# sourceMappingURL=lugares-styles.css.map */
+}
+/* -------------------------------------------- */
+/* --------------------------------------------------- */
+.submenu button {
+  line-height: 50px;
+  display: block;
+  padding: 0px 5px;
+  text-decoration: none;
+  color: #008037;
+  transition: all 500ms ease;
+  font-family: "DM Serif Text", serif;
+  font-size: 20px;
+  background-color: #fff;
+  border-style: none;
+  cursor: pointer;
+  
+}
+
+.submenu button:hover {
+  padding: 0 5px;
+  background-color: #e4ffd2;
+}
+
+
+.container-1 {
+  position: absolute;
+  margin-right: 0em;
+
+  position: absolute;
+  right: 80em;
+  margin-top: 2em;
+  z-index: 999;
+
+  max-width: 1100px;
+}
+
+.menu-1 {
+  margin-right: -200%;
+  margin-top: 15%;
+  margin: 0;
+}
+
+.menu-1 {
+  float: right;
+  margin-right: -7%;
+  margin-top: 2%;
+  background: white;
+  border: 3px solid #008037;
+  border-radius: 8px;
+}
+
+.menu-1:hover {
+  box-shadow: 7px 13px 37px rgb(91, 122, 69);
+}
+
+.menu-1 ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu-1 a {
+  display: block;
+  padding: 0px 5px;
+  text-decoration: none;
+  color: #008037;
+  transition: all 500ms ease;
+  font-family: "DM Serif Text", serif;
+  font-size: 1rem;
+}
+
+.menu-1 a:hover {
+  background: #EAFFD0;
+  padding: 0;
+}
+
+.menu-1 .submenu {
+  background: white;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.menu-1 ul li a:hover + ul, .menu-1 .submenu:hover {
+  display: block;
+  padding: 0%;
+}
+
+.contenedorbotones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttonlugares {
+  flex: 1;
+  margin-bottom: 5px;
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-left: 10px; /* Añade un espacio interno a la izquierda del texto */
+}
+
+/* .special {
+  display: none;
+} */
+/*# sourceMappingURL=lugares-styles.css.map */

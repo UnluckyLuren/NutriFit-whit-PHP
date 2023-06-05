@@ -48,16 +48,15 @@ const cambiarAFormGratis = () => {
 
 btnCambiar.addEventListener('click', () => {
 
-    if (valForm) {
+    if (btnCambiar.value == "#") {
 
-        if ( btnCambiar.value === "#" ) {
-            cambiarAFormPago();
-            valForm= false;
-        }
+        cambiarAFormPago();
+        btnCambiar.value = "##";
 
-    } else {
+    } else if ( btnCambiar.value == "##" ) {
+
         cambiarAFormGratis();
-        valForm=true;
+        btnCambiar.value = "#";
 
     }
 });

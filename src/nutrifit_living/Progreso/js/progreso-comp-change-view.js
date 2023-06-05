@@ -77,6 +77,43 @@ xmlhttp.open("GET", `../php-views/${docPedido}.php`+'?ID='+ID+'&Text='+texto, tr
 xmlhttp.send();
 }
 
+const metGetJXPsicoanalisis = (anorexia, bulimia, depresion) => {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+           var mensaje = xmlhttp.responseText;
+
+           mainChange.innerHTML="";
+           mainChange.innerHTML= mensaje;
+
+           setTimeout(() => {
+                
+                const modal = document.querySelector('.modalPsico');
+                const closeModal = document.querySelector('.modal__close');
+
+                closeModal.addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    modal.classList.remove('modal--show');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000);
+                });
+                    
+            }, 100);
+
+        }
+    }
+xmlhttp.open("GET", `../php-views/subirPsicoanalisis.php`+'?anorexia='+anorexia+'&bulimia='+bulimia+'&depresion='+depresion, true);
+xmlhttp.send();
+}
+
 
 // Eventos
 
@@ -123,11 +160,8 @@ sideMenuProg.addEventListener('click', e => {
     } else if (slcView === "Bitácora" ) {
 
         metPostJX('bitacora-pro-comp');
-
-        setTimeout ( function () {   
-            const modal_container = document.getElementById('modal_container');
-            modal_container.classList.add('show');
-        }, 100);   
+        psicoAnalisis();
+        formPrincipalBitacora();
 
         sideProg[0].textContent = slcView;
         sideProg[1].textContent = 'Dieta Actual';
@@ -156,6 +190,159 @@ function subirMS (id) {
     metJXSubirMs("subir-ms",id);
     setTimeout ( function () { metJXConv("bajar-mensajes",id); }, 100);
 }
+
+// Funciones para la bitacora
+
+function formPrincipalBitacora() {
+
+    setTimeout(() => {
+        
+    var buttons = document.querySelectorAll(".new-form-wrapper .new-button");
+  
+    buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        var currentButton = this;
+        var currentSection = currentButton.closest(".new-section");
+        var currentSectionIndex = Array.prototype.indexOf.call(currentSection.parentNode.children, currentSection);
+        var headerSection = document.querySelectorAll('.new-steps li')[currentSectionIndex];
+  
+        currentSection.classList.remove("new-is-active");
+        currentSection.nextElementSibling.classList.add("new-is-active");
+        headerSection.classList.remove("new-is-active");
+        headerSection.nextElementSibling.classList.add("new-is-active");
+  
+        var formWrapper = document.querySelector(".new-form-wrapper");
+        formWrapper.addEventListener("submit", function(e) {
+          e.preventDefault();
+        });
+  
+        if (currentSectionIndex === 3) {
+          document.querySelector(".new-form-wrapper .new-section").classList.add("new-is-active");
+          document.querySelector(".new-teps li").classList.add("new-is-active");
+        }
+        });
+        });
+
+    }, 100);
+}
+
+// Segundo Formulario Bitacora
+
+const psicoAnalisis = function () {
+
+    setTimeout(() => {
+
+        const forms = document.querySelectorAll('.formAnalitic'),
+        btnsChange = document.querySelectorAll('.btnChangeForm'),
+        enviarFormPsico = document.getElementById('enviarFormPsico');
+
+        btnsChange[0].addEventListener('click', () => {
+            forms[0].classList.add('opCeroForms');
+            forms[1].classList.remove('opCeroForms');
+        });
+
+        btnsChange[1].addEventListener('click', () => {
+            forms[1].classList.add('opCeroForms');
+            forms[2].classList.remove('opCeroForms');
+        });
+
+        enviarFormPsico.addEventListener('click', () => {
+
+            const anorexiAfirm = document.querySelectorAll('.anorexiAfirm'),
+                bulimiAfirm = document.querySelectorAll('.bulimiAfirm'),
+                bulimiAfirmCheck = document.querySelectorAll('.bulimiAfirmCheck'),
+                depresion1a6 = document.querySelectorAll('.depresion1a6'),
+                depresionTotal = document.querySelectorAll('.depresionTotal');
+            let resultAnorexia = 0;
+            let resultBulimia = 0;
+            let resultDepresion1a6 = 0;
+
+            function resultBulimiaChecks() {
+
+                for (let i = 0; i < bulimiAfirm.length; i++) {
+                    if (bulimiAfirm[i].checked) {
+                        resultBulimia++;
+                    } 
+                }
+
+                let BulimiaChecks = 0;
+
+                for (let i = 0; i < bulimiAfirmCheck.length; i++) {
+                    if (bulimiAfirmCheck[i].checked) {
+                        BulimiaChecks++;
+                    }
+                }
+                return BulimiaChecks;
+            }
+
+            function resultDepresionTotal() {
+
+                let depresionTodasPregutas = 0;
+
+                for (let i = 0; i < depresion1a6.length; i++) {
+                    if (depresion1a6[i].checked) {
+                        resultDepresion1a6++;
+                    }
+                }
+
+                for (let i = 0; i < depresionTotal.length; i++) {
+                    if (depresionTotal[i].checked) {
+                        depresionTodasPregutas++;
+                    }
+                }
+
+                return depresionTodasPregutas;
+            }
+
+            for (let i = 0; i < anorexiAfirm.length; i++) {
+                if (anorexiAfirm[i].checked) {
+                    resultAnorexia++;
+                }
+            }
+
+                 
+            let BulimiaChecks = resultBulimiaChecks(),
+            depresionTodaslasPreguntasResult = resultDepresionTotal();
+
+            // Evaluación de resultados para saber sí tienden a algun padecimiento psicológico o no:
+
+            function resultsTendenciasPsicologicas() {
+           
+
+                let anorexiaValue = 'no',
+                    BulimiaValue = 'no',
+                    depresionValue = 'no';
+
+                if (resultAnorexia >= 5) {
+                    anorexiaValue = 'si';
+                }
+
+                if (resultBulimia >= 2 && BulimiaChecks === 4) {
+                    BulimiaValue = 'si';
+                }
+
+                if (resultDepresion1a6 === 6 && depresionTodaslasPreguntasResult >= 5) {
+                    depresionValue = 'si';
+                }
+
+                metGetJXPsicoanalisis(anorexiaValue, BulimiaValue, depresionValue);
+
+            }
+
+            resultsTendenciasPsicologicas();
+
+            // console.log('anorexia: '+resultAnorexia);
+            // console.log('Bulimia preguntas sin check: '+resultBulimia);
+            // console.log('Bulimia preguntas con check: '+BulimiaChecks);
+            // console.log('Depresión preguntas 1 a 6: '+resultDepresion1a6);
+            // console.log('Depresión resto de preguntas afirmativas: '+depresionTodaslasPreguntasResult);
+
+        });
+                
+    }, 100);
+
+}
+
 
 
 // Función para mostrar el pdf al ususario

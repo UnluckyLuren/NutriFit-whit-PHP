@@ -9,12 +9,21 @@ $nombre=$_POST['nombre'];
 $edad=$_POST['edad'];
 $peso=$_POST['peso'];
 $altura=$_POST['altura'];
-$sexo=$_POST['sexo'];
+$hombre=$_POST['hombre'];
+$mujer=$_POST['mujer'];
 $imagen = $_SESSION['imagen'];
+$sexo = '';
 
 
 $validacion = " SELECT * FROM free WHERE id = $id ";
 $resultValidacion = $link->query($validacion);
+
+
+if ( $hombre == "true" ) {
+    $sexo = "hombre";
+} else if ( $mujer == "true" ) {
+    $sexo = "mujer";
+}
 
 
 if ( $resultValidacion->num_rows > 0 ) {
@@ -42,8 +51,6 @@ if ( $resultValidacion->num_rows > 0 ) {
     $_SESSION['sexoFormGratis'] = $sexo;
 
 }
-
-$_SESSION['viewForm']  = "false";
 
 
 

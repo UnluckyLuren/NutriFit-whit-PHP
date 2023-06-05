@@ -63,10 +63,10 @@ changebtnImg.addEventListener('click', () => {
 });
 
 
-const btnSubirOpn = document.getElementById('btnSubirOpn'),
-ventanaSubirOpn = document.getElementById('ventanaSubirOpn');
+// const btnSubirOpn = document.getElementById('btnSubirOpn'),
+// ventanaSubirOpn = document.getElementById('ventanaSubirOpn');
 
-btnSubirOpn.addEventListener('click', () => { 
-	ventanaSubirOpn.classList.toggle('opcCero');
+// btnSubirOpn.addEventListener('click', () => { 
+// 	ventanaSubirOpn.classList.toggle('opcCero');
 	
-});
+// });

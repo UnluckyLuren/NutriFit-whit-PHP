@@ -139,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             header("location: ../Admin-Nutri/Administrador.php");
                             exit;
 
-                        } else if ( $privilegios == 5 ) {
+                        } else if ( $privilegios == 5 || $privilegios == 7 ) {
                             
                             session_start();
     
@@ -150,6 +150,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             $_SESSION["privilegio"] = $privilegios;
                             
                             header("location: ../empresas-nutri/empresarial.php");
+                            exit;
+                            
+                        } else if ( $privilegios == 6 ) {
+                            
+                            session_start();
+    
+                            $_SESSION["user"] = $usuario;
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["email"] = $email;
+                            $_SESSION["privilegio"] = $privilegios;
+                            
+                            header("location: ../nutri-clinic/nutri-clinic-page.php");
                             exit;
                         }
 

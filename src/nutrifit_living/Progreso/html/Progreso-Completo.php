@@ -37,10 +37,17 @@ $pdfActual = $_SESSION["pdf"];
     <link rel="stylesheet" href="../css/core.css" class="template-customizer-core-css" />
     <!-- Diseño iconos -->
     <link rel="stylesheet" href="../css/theme-default.css" class="template-customizer-theme-css" />
+
+    <!-- Bitácora -->
+
+    <link rel="stylesheet" href="../css/analisisE.css">
+    <link rel="stylesheet" href="../css/pruebaarchivo.css">
     
+    <!--Generales  -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="stylesheet" href="../css/styles-generales-prog.css">
+
     <link  rel="icon" href="../../imagenes/LOGO NUTRIFIT LIVING_preview_rev_1.png" >
     <!-- <link rel="stylesheet" href="../css/responsive.css"> -->
 
@@ -68,7 +75,7 @@ $pdfActual = $_SESSION["pdf"];
 
     <div class="userMenuDiv" >
                 <a href="#"><img src="<?php echo"../.".$imageUser; ?>" id="open"  class="userMenuImg"></a>
-                <p> <?php echo $nombre ?> </p>
+                <p class="nameUsuarioProg"> <?php echo $nombre ?> </p>
     </div>
 
       <nav class="nav">
@@ -151,8 +158,8 @@ $pdfActual = $_SESSION["pdf"];
                     <div class="col-lg-6 col-md-12 col-6 mb-4">
                       <div class="card">
                         <div class="card-body">
-                          <span class="fw-semibold d-block mb-1">Porciento de grasas</span>
-                          <svg width="110" height="110">
+                          <span class="fw-semibold d-block mb-1 porcentsSpan">Porciento de grasas</span>
+                          <svg width="110" height="110" class="contPerGrafic">
                             <circle r="43" cx="60" cy="60" class="progress2"></circle>
                             <circle r="43" cx="50" cy="60" class="progress" id="progress"></circle>
                           </svg>
@@ -165,8 +172,8 @@ $pdfActual = $_SESSION["pdf"];
                     <div class="col-lg-6 col-md-12 col-6 mb-4">
                       <div class="card">
                         <div class="card-body">
-                          <span>Porciento de azucar</span>
-                          <svg width="110" height="110">
+                          <span class="fw-semibold d-block mb-1 porcentsSpan">Porciento de azucar</span>
+                          <svg width="110" height="110" class="contPerGrafic">
                             <circle r="43" cx="60" cy="60" class="progress2"></circle>
                             <circle r="43" cx="50" cy="60" class="progress" id="progress1"></circle>
                           </svg>
@@ -244,8 +251,8 @@ $pdfActual = $_SESSION["pdf"];
                     <div class="col-6 mb-4">
                       <div class="card">
                         <div class="card-body">
-                          <span class="d-block mb-1">Porciento de calcio</span>
-                          <svg width="110" height="110">
+                          <span class="fw-semibold d-block mb-1 porcentsSpan">Porciento de calcio</span>
+                          <svg width="110" height="110" class="contPerGrafic">
                             <circle r="43" cx="60" cy="60" class="progress2"></circle>
                             <circle r="43" cx="50" cy="60" class="progress" id="progress2"></circle>
                           </svg>
@@ -258,8 +265,8 @@ $pdfActual = $_SESSION["pdf"];
                     <div class="col-6 mb-4">
                       <div class="card">
                         <div class="card-body">
-                          <span class="fw-semibold d-block mb-1">Por. de masa magna</span>
-                          <svg width="110" height="110">
+                          <span class="fw-semibold d-block mb-1 porcentsSpan">Por. de masa magna</span>
+                          <svg width="110" height="110" class="contPerGrafic">
                             <circle r="43" cx="60" cy="60" class="progress2"></circle>
                             <circle r="43" cx="50" cy="60" class="progress" id="progress3"></circle>
                           </svg>

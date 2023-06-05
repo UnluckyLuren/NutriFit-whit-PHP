@@ -10,8 +10,6 @@ $imageUser = $_SESSION["imagen"];
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,19 +25,17 @@ $imageUser = $_SESSION["imagen"];
     
 <style>
   
-
   p{
     font-family: 'DM Serif Text', serif;
   }
-  
 
 </style>    
 
-    <link rel="stylesheet" href="CSS/styleheader.css">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/Productos-style-extra.css">
-    <link rel="stylesheet" href="CSS/lugares-styles.css">
-    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="./CSS/styleheader.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/Productos-style-extra.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
+    <link rel="stylesheet" href="./CSS/lugares-styles.css">
 
 </head>
 <body>
@@ -93,21 +89,61 @@ $imageUser = $_SESSION["imagen"];
     </nav>
 </div>
 
-<pre class="titulo_de_servicios">Lugares recomendados</pre>
-    <div class="contenedorservicios" id="containerLugares" >
-        <div class="fexcajas"><a href="#"><img class="imga"  src="imagenes/Azucardecoco.jpg"        alt="Azucar de coco"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Divinoverde.jpg"         alt="Divino Verde"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Dristritosaludable.jpg"  alt="Distrito Saludable"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/bambu.png"               alt="Bambú"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="imagenes/Nutriclinicbar.jpg"      alt="Nutrilab clinic"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/tallos.jpg"         alt="Siete Tallos"></a></a></div>
+<div class="container-1">
+    <nav class="menu-1">
+        
+            <ul>
+            <li><a href="#" onclick="showAllRestaurants()"><p class="nombreDEpaginadondeseencuantra"> ▼     Mostrar todos los lugares</p></a>
+            <ul class="submenu"></li>
+                <div class="contenedorbotones">
+                <button class="buttonlugares" onclick="filterRestaurants('ciudad-mexico')">Ciudad de México</button>
+                <button class="buttonlugares" onclick="filterRestaurants('puebla')">Puebla</button> 
+                <button class="buttonlugares" onclick="filterRestaurants('monterrey')">Monterrey</button> 
+                <button class="buttonlugares" onclick="filterRestaurants('guadalajara')">Guadalajara</button> 
+                <button class="buttonlugares" onclick="filterRestaurants('mazatlan')">Mazatlán</button> 
+                <button class="buttonlugares" onclick="filterByLocation('puebla')">Restaurantes en tu ubicación</button>     
+            </ul>
+        </div>
+            </ul>
+    </nav>
+ 
+</div>
 
-        <div class="fexcajas"><a href="#"><img class="imga"  src="./imagenes/img_lugares_extras/zanahoria.jpg"  alt="La Zanahoria del Sol"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/brisa.png"    alt="Club de Nutricion Brisa"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/garden.jpg"  alt="Food's Garden's"></a></a></div>
-        <div class="fexcajas"><a href="#"><img class="imga"  src="./imagenes/img_lugares_extras/salad.png"  alt="Punto Salad Zamora"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/verde.jpg"  alt="Punto Verde"></a></a></div>
-        <div class="fexcajas"><a href="#" ><img class="imga" src="./imagenes/img_lugares_extras/herbalife.png"  alt="Herbalife House"></a></a></div>
+<pre class="titulo_de_servicios">Lugares recomendados</pre>
+
+    <div class="contenedorservicios" id="containerLugares" >
+        <div class="fexcajas restaurant ciudad-mexico guadalajara"> <a href="#" ><img class="imga" src="./imagenes/img_lugares/Azucardecoco.jpg"       alt="Azucar de coco"></a></a></div>
+        <div class="fexcajas restaurant monterrey">                 <a href="#" ><img class="imga" src="./imagenes/img_lugares/Divinoverde.jpg"        alt="Divino Verde"></a></a></div>
+        <div class="fexcajas restaurant ciudad-mexico">             <a href="#" ><img class="imga" src="./imagenes/img_lugares/Dristritosaludable.jpg" alt="Distrito Saludable"></a></a></div>
+        <div class="fexcajas restaurant guadalajara monterrey">     <a href="#" ><img class="imga" src="./imagenes/img_lugares/bambu.png"              alt="Bambú"></a></a></div>
+        <div class="fexcajas restaurant mazatlan ">                 <a href="#" ><img class="imga" src="./imagenes/img_lugares/Nutriclinicbar.jpg"     alt="Nutrilab clinic"></a></a></div>
+        <div class="fexcajas restaurant ciudad-mexico">             <a href="#" ><img class="imga" src="./imagenes/img_lugares/tallos.jpg"             alt="Siete Tallos"></a></a></div>
+
+        <div class="fexcajas restaurant puebla">                    <a href="#" ><img class="imga" src="./imagenes/img_lugares/zanahoria.jpg"          alt="La Zanahoria del Sol"></a></a></div>
+        <div class="fexcajas restaurant monterrey">                 <a href="#" ><img class="imga" src="./imagenes/img_lugares/brisa.png"              alt="Club de Nutricion Brisa"></a></a></div>
+        <div class="fexcajas restaurant guadalajara mazatlan">      <a href="#" ><img class="imga" src="./imagenes/img_lugares/garden.jpg"             alt="Food's Garden's"></a></a></div>
+        <div class="fexcajas restaurant mazatlan">                  <a href="#" ><img class="imga" src="./imagenes/img_lugares/salad.png"              alt="Punto Salad Zamora"></a></a></div>
+        <div class="fexcajas restaurant guadalajara">               <a href="#" ><img class="imga" src="./imagenes/img_lugares/verde.jpg"              alt="Punto Verde"></a></a></div>
+        <div class="fexcajas restaurant puebla monterrey">          <a href="#" ><img class="imga" src="./imagenes/img_lugares/herbalife.png"          alt="Herbalife House"></a></a></div>
+
+        <div class="fexcajas restaurant ciudad-mexico special">     <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/semillero.png"    alt="Semillero"></a></a></div>
+        <div class="fexcajas restaurant ciudad-mexico special">     <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/greenme.png"      alt="Green Me Río Hudson"></a></a></div>
+        <div class="fexcajas restaurant ciudad-mexico special">     <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/sanoynatural.jpg" alt="Sano y Natural"></a></a></div>
+
+        <div class="fexcajas restaurant puebla special">            <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/cieloverde.jpg"   alt="cielo verde"></a></a></div>
+        <div class="fexcajas restaurant puebla special">            <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/fitfood.jpg"      alt="Fitness Food"></a></a></div>
+        <div class="fexcajas restaurant puebla special">            <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/deliska.jpg"      alt="Deliska"></a></a></div>
+        <div class="fexcajas restaurant puebla special">            <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/vitality.jpg"     alt="Vitality Kitchen"></a></a></div>
+        
+        <div class="fexcajas restaurant monterrey special">         <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/foodnes.jpeg"      alt="Foodness Mty"></a></a></div>
+        <div class="fexcajas restaurant monterrey special">         <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/mentamaya.png"    alt="Menta Maya"></a></a></div>
+
+        <div class="fexcajas restaurant guadalajara special">       <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/vidaverde.png"    alt="Vida Verde"></a></a></div>
+        <div class="fexcajas restaurant guadalajara special">       <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/mundoverde.png"   alt="Mundo Verde"></a></a></div>
+
+        <div class="fexcajas restaurant mazatlan special">          <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/saudavel.jpg"     alt="Saudavel"></a></a></div>
+        <div class="fexcajas restaurant mazatlan special">          <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/lavidasana.jpg"   alt="LA VIDA SANA"></a></a></div>
+        <div class="fexcajas restaurant mazatlan special">          <a href="#" ><img class="imga" src="./imagenes/img_lugares/New ciudaddes fotos/puravida.jpg"     alt="Puravida"></a></a></div>    
     </div>
 
 
@@ -157,10 +193,11 @@ $imageUser = $_SESSION["imagen"];
 
 
     <script src="https://kit.fontawesome.com/dd255fbb38.js" crossorigin="anonymous"></script>
-    <script defer src="Prueba7/java.js"></script>
+    <script defer src="./js/scripts-lugares.js"></script>
     <script src="whatss.js"></script>
-    <script src="FinalPrueba/java.js"></script>
     <script src="./js/maps-sites.js"></script>
+  <script src="./Prueba7/java.js"></script>
+    <script src="./js/scripts-lugares.js"></script>
 
 
 </body>

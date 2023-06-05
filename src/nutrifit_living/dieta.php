@@ -20,7 +20,6 @@ if ( isset( $_SESSION['viewForm'] ) ) {
     $viewForm = "true";
 }
 
-
 function ChequeadoMujer() {
 
     if ( $_SESSION['sexoFormGratis'] == 'mujer' ) {
@@ -37,16 +36,6 @@ function ChequeadoHombre() {
 
 }
 
-
-if ($privilegio == 0) {
-
-    $accesoPrzn = " ";
-
-} else {
-
-    $accesoPrzn = "#";
-
-} 
 
 
 ?>
@@ -192,9 +181,9 @@ if ($privilegio == 0) {
 <pre class="titulo_de_servicios">Planes para elegir</pre>
 
 
-<form action="cards_planes/code-form-gratis.php"  method="POST"  class="dieta  formDietaGratis acomodoformGratis" id="FormGratis">
+<form class="dieta  formDietaGratis acomodoformGratis" id="FormGratis">
     
-    <h2>Plan Gratuito</h2>
+    <h2 >Plan Gratuito</h2>
     <br>
  <div>
         <!-- <label >Nombre -->
@@ -237,9 +226,11 @@ if ($privilegio == 0) {
        </label>
     </div>
 
-    <button type="submit" class="buttonenviar" id="calcSalud" name="send" value="<?php echo $viewForm; ?>" >Calcular</button>
+    <button class="buttonenviar" id="calcSalud" >Calcular</button>
 
 </form>
+
+
 
 <!-- Plan Personalizado -->
 
@@ -420,7 +411,7 @@ if ($privilegio == 0) {
         
     </div>
 
-    <button id="btnCambiarPlan" value="<?php echo $accesoPrzn; ?>" >Ver plan Personalizado</button>
+    <button id="btnCambiarPlan" value="#" >Ver plan Personalizado</button>
 </div>
 
 
@@ -516,59 +507,9 @@ if ($privilegio == 0) {
     <!-- <script src="whatss.js"></script> -->
     <script src="./js/cambiar-plan.js"></script>
     <script src="js/calculos-formularios.js"></script>
+    <script src="./Prueba7/peticion_get.js"></script>
 
 
-<script>
-
-    if ( calcSalud.value === "false" ) {
-
-        if (hombreUser.checked) {
-
-            resultadosFinales(true);
-
-        } else if (mujerUser.checked) {
-
-            resultadosFinales(false);
-        }
-
-        ventanaCalculosGratis.classList.toggle('mostrarVentanaDietaCalculos');
-        <?php $_SESSION['viewForm']  = "true"; ?>
-    }
-
-  
-    const Actividad = document.getElementById('actividadRel'),
-    ejercicioSemanal = document.getElementById('ejercicioSemanal'),
-    ejerOcasional = document.querySelectorAll('.duraCtividad'),
-    actividadfisica = document.getElementById('duraciónActividad');
-
-    Actividad.addEventListener('change', () => {
-        ejercicioSemanal.classList.remove('disNone');
-
-        if ( Actividad.value === "Ninguna" ) {
-            ejercicioSemanal.classList.add('disNone');
-            actividadfisica.classList.add('disNone');
-        }
-
-    });
-
-    ejerOcasional[0].addEventListener('click', () => {
-        actividadfisica.classList.remove('disNone');
-    });
-
-    ejerOcasional[1].addEventListener('click', () => {
-        actividadfisica.classList.remove('disNone');
-    });
-
-    ejerOcasional[2].addEventListener('click', () => {
-        actividadfisica.classList.remove('disNone');
-    });
-
-    ejerOcasional[3].addEventListener('click', () => {
-        actividadfisica.classList.remove('disNone');
-    });
-
-
-</script>
 
             
     </body>

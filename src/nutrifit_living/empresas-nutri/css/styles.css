@@ -5,11 +5,16 @@
     font-family: 'poppins', sans-serif ;
 }
 
+:root {
+    --sideBarColor: #299B63;
+    --nutri-verde-BG:rgb(57, 195, 133);
+    --BG-green-transparent: rgba(115, 201, 78, 0.339);
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
+    background-image: url("../../imagenes/bg-cocina.jpg"); 
+    background-size: 100% 100%;
+    overflow-x: hidden; 
 }
 
 .containerBoxMenus {
@@ -207,10 +212,6 @@ a:hover {
 
 #mainChange {
     content: "";
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../../imagenes/fondo-nutriologo-inicio.jpg");
-    background-size: cover;
 }
 
 .container-fluid {
@@ -227,5 +228,737 @@ a:hover {
     margin: 0.5em 2.5em 0 0;
 }
 
+/* Para la sección de dietas  */
+
+.titleDietas {
+    position: absolute;
+    top: 4em;
+    left: 13em;
+    margin: 0;
+    color: green;
+}
+
+/* Container de información de los pacientes */
+
+.contPacientes {
+    display: flex;
+    width: min-content;
+}
+
+/* Estilizado Tabla Pacientes */
+
+.TableContainer{
+  position: absolute;
+  top: 13em;
+  left: 20em;
+    width: 400px;
+  font-size:medium;
+  display:inline;
+  z-index: 2;
+}
+
+.contTable{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 80%;
+  box-shadow: 3px 3px rgba(128, 128, 128, 0.382);
+}
+
+.contTable tr th, .contTable td{
+	padding: 20px;
+}
+
+.headTable {
+	background-color: var(--sideBarColor);
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+.contTable tr:nth-child(even){
+	background-color: #ddd;
+}
+
+.contTable tr:hover td{
+    transition: all 0.2s ease-in;
+	background-color: var(--hoverTable);
+	color: white;
+}
+
+/* Para mostrar el pdf de la dieta del paciente clinico: */
+
+/* Estilo PDF Viewer */
+
+.titleProgViews {
+    margin-left: 2em;
+    color: var(--sideBarColor);
+  }
+
+  .top-bar-User-Slc {
+    /* background: #333; */
+    position: absolute;
+    left: 4.5em;
+    color: #fff;
+    margin-top: 7em;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: -moz-min-content;
+    height: min-content;
+    text-align: center;
+  }
+  
+  .btnSlcUser {
+    background: var(--sideBarColor);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1em 2rem;
+    width: -moz-max-content;
+    width: max-content;
+    position: relative;
+    bottom: 4em;
+    left: 19em;
+  }
+  
+  .btnSlcUser:hover {
+    opacity: 0.9;
+  }
+  
+  .page-info-PDF-User-Slc {
+    margin-left: -2.8em;
+    font-size: 1.2em;
+    width: -moz-max-content;
+    width: max-content;
+    color: black;
+    z-index: 1000;
+  }
+  
+  .error {
+    background: orangered;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  .h2InfoUserSlc {
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: 2em;
+  }
+  
+  .canvaPDFSlc {
+    width: 55em;
+    height: 40em;
+    position: absolute;
+    top: 12em;
+    left: 24em;
+  }
+
+  /* Estilizado user pdfs select */
+
+.select {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:250px;
+    height:40px;
+    border: 1px solid rgb(163, 162, 162);
+  }
+  
+  .select label {
+    color: black;
+  }
+  
+  .option {
+    text-align: center;
+    padding:0 30px 0 10px;
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    background: rgb(217, 217, 217);
+    border-top:white solid 1px;
+    position:absolute;
+    top:0;
+    width: 100%;
+    pointer-events:none;
+    order:2;
+    z-index:1;
+    transition:background .4s ease-in-out;
+    box-sizing:border-box;
+    overflow:hidden;
+    white-space:nowrap;
+    
+  }
+  
+  .option:hover {
+    background: white;
+  }
+  
+  .select:focus .option {
+    position:relative;
+    pointer-events:all;
+  }
+  
+  .select input {
+    opacity:0;
+    position:absolute;
+    left:-99999px;
+  }
+  
+  input:checked + label {
+    order: 1;
+    z-index:2;
+    background:rgb(217, 217, 217);
+    border-top:none;
+    position:relative;
+  }
+  
+  input:checked + label:after {
+    content:'';
+    width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid white;
+    position:absolute;
+    right:10px;
+    top:calc(50% - 2.5px);
+    pointer-events:none;
+    z-index:3;
+  }
+  
+  input:checked + label:before {
+    position:absolute;
+    right:0;
+    height: 40px;
+    width: 40px;
+    content: '';
+    background:rgb(217, 217, 217);
+  }
+  
+  /* Labels */
+  
+  .labFormIngre {
+    color: var(--bgSidebarBlue);
+    margin: 0 100% 0 0;
+    font-weight: bold;
+  }
+
+.slcGraficas {
+    position: absolute;
+    right: 2em;
+    top: 5em;
+  }
+  
+  .catGraficas {
+    position: absolute;
+    top: -2em;
+  }
+  
+  .preGrafics {
+    margin-top: 5em;
+    height: max-content;
+    padding-bottom: 5em;
+  }
+
+/* ToDo */
+
+.todoList {
+  position: absolute;
+  top: 58%;
+  right: -4em;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: max-content;
+  background: var(--nutri-verde-BG);
+  border-radius: 10px;
+  box-shadow: 0 7px 30px rgba(75, 70, 6, 0.3);
+}
+
+.cover-img .cover-inner {
+  background: url('../../imagenes/desayuno_cocina.jpg');
+  height: 190px;
+  background-size: cover;
+  background-position: 10%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+
+.cover-img .cover-inner::after {
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cover-img h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+}
+
+.content {
+  padding: 10px 20px;
+}
+
+.content form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 0 10px 0 5px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.content form > * {
+  background: transparent;
+  border: none;
+  height: 35px;
+}
+
+.content input[type="text"] {
+  padding: 0 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #c7c7c7;
+  outline: none;
+}
+
+.content input-buttons a {
+  text-decoration: none;
+}
+
+.content input-buttons i {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #eaeaea;
+}
+
+.content ul .todos {
+  margin-left: 0;
+  padding: 0;
+  letter-spacing: none;
+  height: max-content;
+  overflow: auto;
+}
+
+.align {
+  padding: 0;
+}
+
+.content li {
+  user-select: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content li i {
+  color: #c3c3c3;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.content input[type="checkbox"] {
+  display: none;
+}
+
+.content input[type="checkbox"] + label {
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 5px 5px 5px 40px;
+}
+
+.content input[type="checkbox"] + label span.check {
+  left: 4px;
+  top: 50%;
+  position: absolute;
+  transform: translatey(-50%);
+  width: 18px;
+  height: 18px;
+  display: block;
+  background: var(--BG-green-transparent);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.562);
+  box-shadow: -2px -2px 2px rgba(192, 192, 192, 0.5),
+    inset 2px 2px 4px rgba(152, 152, 152, 0.5),
+    inset -2px -2px 2px rgba(159, 159, 159, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content input[type="checkbox"]:checked + label {
+  order: 0;
+  width: 10em;
+  color: black !important;
+  color: #e8e8e8;
+  text-decoration: line-through;
+}
+
+.content input[type="checkbox"]:checked + label span.check {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.content input[type="checkbox"] + label span.check::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("https://www.freepnglogos.com/uploads/tick-png/check-mark-tick-vector-graphic-21.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  transform: scale(0);
+  transition: transform 300ms cubic-bezier(0.3, 0, 0, 1.5);
+}
+
+.content input[type="checkbox"]:checked + label span.check::after {
+  transform: scale(1);
+}
+
+.content input[type="checkbox"] + label span.check::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  /* background: #d9d9d9; */
+  opacity: 0.8;
+  transform: scale(0);
+}
+
+.content input[type="checkbox"]:checked + label::before {
+  background-color: transparent;
+}
+
+.content input[type="checkbox"]:checked + label::after {
+  background-color: transparent;
+  border: none;
+}
+
+.content input[type="checkbox"]:checked + label span.check::before {
+  opacity: 0;
+  transform: scale(1.3);
+  transition: opacity 300ms cubic-bezier(0.2, 0, 0, 1),
+    transform 400ms cubic-bezier(0.3, 0, 0, 1.4);
+}
 
 
+.plus-icon {
+    color:  #ffb510;
+}
+
+.btnCompletadoToDo {
+  border-radius: 100px 100px;
+  border: 1px solid rgba(0, 0, 0, 0.562);
+  color: white;
+  padding: 0.5em;
+  margin-left: 5.5em;
+  background: var(--BG-green-transparent);
+  box-shadow: -2px -2px 2px rgba(192, 192, 192, 0.5),
+    inset 2px 2px 4px rgba(152, 152, 152, 0.5),
+    inset -2px -2px 2px rgba(159, 159, 159, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content input[type="checkbox"] + label:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.498);
+}
+
+.btnCompletadoToDo:hover {
+  color: white;
+  background-color: var(--nutri-verde-BG);
+}
+
+/* Ventana para rellenar espacio con cards */
+
+.containerCards {
+  position: absolute;
+  top: 12em;
+  right: 2em;
+  width: 55vw;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.containerCards .cardRelleno {
+  width: 17em;
+  height: 30em;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.containerCards .cardRelleno:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.containerCards .cardRelleno img {
+  width: 100%;
+  height: 12em;
+  margin:0 0 1em 0;
+}
+
+.containerCards .cardRelleno h4 {
+  font-weight: 600;
+}
+
+.containerCards .cardRelleno p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.containerCards .cardRelleno a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #3498db;
+}
+
+
+/* Estilizado Información en ventana emergente UL */
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.329);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1001;
+}
+
+.modalGeneral {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  border: 1px solid green;
+  width: 60em;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modalVentInitial {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  border: 1px solid green;
+  width: 60em;
+  height: 40em;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.compra {
+  display: flex;
+}
+
+.info-user-page {
+  width: 100%;
+  height: 50em;
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+
+.info-user-page div img {
+  width: 15em;
+  height: 15em;
+  margin: 0;
+  padding: 0.5em;
+  background-color: var(--Color-Menu);
+  border-radius: 1em;
+}
+
+.info-user-page p, .info-text p {
+  color: var(--Color7nutri);
+  font-size: larger;
+  margin: 0.5em;
+  padding: 0;
+  border-bottom: 1px solid var(--Color-hover);
+}
+
+.info-text p:not(.sepr-border) {
+  border: transparent;
+  padding: 0;
+}
+
+.inputFile {
+  opacity: 0;
+  padding: 8em 0 8.4em 0;
+  width: 18em;
+  z-index: 1000;
+  background-color: #002e01;
+}
+
+.insertImg {
+  width: 15em;
+  height: 15em;
+  margin: 2em 0 2em 0;
+  background-color: rgba(0, 0, 0, 0.355);
+  border-radius: 1em;
+}
+
+.insertImg p {
+  color: black;
+  position: absolute;
+  margin: 5.5em 0 0 3.8em;
+}
+
+.botonVerProgreso {
+  background: #0DB02B;
+  border: 2px solid #317f43;
+  border-radius: 10px;
+  padding: 7px 19px;
+  color: white;
+  text-align: center;
+  font-size: large;
+  text-decoration: none;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.botonVerProgreso:hover {
+  background: #317f43;
+  border: 2px solid #0DB02B;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--Color-container-BG);
+  margin: 0 0 0 2em;
+  padding: 2em 36em 2em 2em;
+  width: 30em;
+  height: inherit;
+  border-radius: 0.5em;
+}
+
+.skills h2 {
+  color: var(--sideBarColor);
+  width: max-content;
+}
+
+.titleProgreso {
+  width: 20em;
+  margin-left: 6.5em;
+  font-size: large;
+  color: var(--Color4nutri);
+}
+
+.titleProgreso p {
+  width: inherit;
+}
+
+#close {
+  border-radius: 100px 100px 100px 100px;
+  background-color: var(--Color2nutri);
+  width: 3em;
+  height: 3em;
+  align-self: flex-end;
+  margin: 1em;
+  transition: 0.2s;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#close img {
+  margin: 0;
+  width: 2em;
+  height: 2.4em;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+
+/* Sobreescribiendo estilos de la ventana */
+
+.InfoPendSelect {
+  list-style: none;
+  color: black;
+  text-align: left;
+  margin: 1.5em 0 0 0 ;
+  width: 60em;
+  height: max-content;
+  position: relative;
+  top: 1em;
+  right: 8.5em;
+}
+
+.InfoPendSelect li {
+  margin: 0.6em 0;
+  font-size: 1em;
+}
+
+/* Ventana emergente pacientes */
+
+
+.modal-pacientes {
+  background-color: transparent;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  pointer-events: none
+}
+
+.cont-Pacientes {
+  pointer-events: all;
+  position: relative;
+  left: 20em;
+  top: 3em;
+}
+
+.imgDietaAct {
+  width: 35em;
+  height: 30em;
+}
+  
+.titleEstraDietas {
+  position: absolute;
+  top: 5em;
+  left: 22em;
+}
