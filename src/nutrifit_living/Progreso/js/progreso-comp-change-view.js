@@ -10,6 +10,7 @@ const sideMenuProg = document.getElementById('sideMenuProg'),
 // Funciones 
 
 
+
 const metPostJX = (docPedido, ID=0) => {
         var xmlhttp;
         if (window.XMLHttpRequest) {
@@ -28,6 +29,51 @@ const metPostJX = (docPedido, ID=0) => {
         }
     xmlhttp.open("GET", `../php-views/${docPedido}.php`+'?ID='+ID, true);
     xmlhttp.send();
+}
+
+const metPostJXBitGeneral = (docPedido, ID=0) => {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+           var mensaje = xmlhttp.responseText;
+
+           const formSec1 = document.querySelectorAll('.formSec1');
+           const formSec1Cheks = document.querySelectorAll('.formSec1Checks');
+           const formSec2Checks = document.querySelectorAll('.formSec2Checks');
+           const formSec3 = document.querySelectorAll('.formSec3');
+           const formSec4 = document.querySelectorAll('.formSec4');
+
+           let edad = formSec1[0].value;
+           let peso = formSec1[1].value;
+           let altura = formSec1[2].value;
+            let sexo = "";
+            let estado = 'Activo'; 
+            let dias = "";
+
+            for (let i = 0; i < formSec2Checks.length; i++) {  
+                if ( formSec2Checks[i].checked ) {
+                    dias += `${formSec2Checks[i].value}`+',';
+                }
+            }
+
+           if ( formSec1Cheks[0].checked ) {
+                sexo = formSec1Cheks[0].value;
+           } else {
+                sexo = formSec1Cheks[1].value;
+           }
+           
+           mainChange.innerHTML="";
+           mainChange.innerHTML= mensaje;
+        }
+    }
+xmlhttp.open("GET", `../php-views/${docPedido}.php`+'?ID='+ID, true);
+xmlhttp.send();
 }
 
 
@@ -53,6 +99,8 @@ xmlhttp.open("GET", `../php-views/${docPedido}.php`+'?ID='+ID, true);
 xmlhttp.send();
 }
 
+
+
 // Para subir los ms
 
 const metJXSubirMs = (docPedido, ID) => {
@@ -76,6 +124,8 @@ const metJXSubirMs = (docPedido, ID) => {
 xmlhttp.open("GET", `../php-views/${docPedido}.php`+'?ID='+ID+'&Text='+texto, true);
 xmlhttp.send();
 }
+
+
 
 const metGetJXPsicoanalisis = (anorexia, bulimia, depresion) => {
     var xmlhttp;
@@ -221,6 +271,18 @@ function formPrincipalBitacora() {
           document.querySelector(".new-teps li").classList.add("new-is-active");
         }
         });
+        });
+
+        const bitacoraGeneral = document.getElementById('btnCerrarBitacora');
+        const bitacoraContainer = document.getElementById('bitacoraNewForm'); 
+        const containerAnalitic = document.getElementById('containerAnalitic');
+
+        bitacoraGeneral.addEventListener('click', () => {
+
+            containerAnalitic.classList.remove('opCeroForms');
+            bitacoraContainer.style.display="none";
+            metPostJXBitGeneral('subirFormBitGeneral');
+
         });
 
     }, 100);

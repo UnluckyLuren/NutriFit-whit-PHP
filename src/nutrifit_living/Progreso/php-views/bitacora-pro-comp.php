@@ -1,6 +1,6 @@
 
 
-<div class='containerAnalitic formAnalitic'>
+<div class='containerAnalitic formAnalitic opCeroForms' id="containerAnalitic">
   
   <div class='button-reg'>
   <div class='login'>SECCIÓN 1</div>
@@ -80,8 +80,6 @@
         </filter>
     </defs>
 </svg>
-
-
 
 </form>
 </div>
@@ -341,7 +339,7 @@
 
 <!-- Formulario principal bitácora -->
 
-<div class="new-container">
+<div class="new-container bitacoraNewForm" id="bitacoraNewForm">
   <div class="new-wrapper">
     <ul class="new-steps">
       <li class="new-is-active">Estado</li>
@@ -355,30 +353,31 @@
       <fieldset class="new-section new-is-active">
         <h3>Ingresa los siguientes resultados</h3>
         <img src="../img/img_bitácora/Edad.png" alt="Imagen">
-        <input type="text" name="edad" id="edad" placeholder="Edad">
+        <input type="text" name="edad" id="edad" placeholder="Edad"  class="formSec1">
 
         <img src="../img/img_bitácora/Peso.png" alt="imagen">
-        <input type="text" name="peso" id="peso" placeholder="Peso">
+        <input type="text" name="peso" id="peso" placeholder="Peso" class="formSec1">
 
         <img src="../img/img_bitácora/Altura.png" alt="imagen">
-        <input type="text" name="altura" id="altura" placeholder="Altura"
-        >
+        <input type="text" name="altura" id="altura" placeholder="Altura" class="formSec1">
         <h4>Genero</h4>
-        <input class="new-preg7" type="radio" name="pregunta7" id="pregunta7">
+        <input class="new-preg7" type="radio" name="pregunta7" id="pregunta7" class="formSec1Checks" value="hombre">
         <label for="pregunta7">Hombre</label>
-        <input class="new-preg7" type="radio" name="pregunta7" id="pregunta8">
+        <input class="new-preg7" type="radio" name="pregunta7" id="pregunta8" class="formSec1Checks" value="mujer">
         <label for="pregunta8">Mujer</label>
 
-        <p>Estilo de vida:</p>
+        <h4>Estilo de vida:</h4>
         <div class="new-contenedorsedenterio">
-          <input class="new-preg7" type="radio" name="pregunta9" id="pregunta9">
-          <label for="pregunta9">Activo</label>
-
-          <input class="new-preg7" type="radio" name="pregunta9" id="pregunta10">
+        
+          <input class="new-preg7" type="radio" name="pregunta7" id="pregunta9" class="formSec1Checks" value="activo">
+          <label for="pregunta9">Activo</label> <br>
+          <br>
+          <input class="new-preg7" type="radio" name="pregunta7" id="pregunta10" class="formSec1Checks" value="Sedentario">
           <label for="pregunta10">Sedentario</label>
+
         </div>
 
-        <div class="new-button">Next</div>
+        <div class="new-button">Siguiente</div>
       </fieldset>
 
       <!-- Consumos -->
@@ -386,93 +385,93 @@
         <h3>Selecciona a continuación los días que cumpliste por completo los días con las comidas de tu dieta</h3>
         <div class="new-row new-cf contNewDias">
           <div class="new-four new-col">
-            <input type="checkbox" name="r1" id="r1">
+            <input type="checkbox" name="r1" id="r1" class="formSec2Checks" value="Lunes">
             <label for="r1">
               <h4>Lunes</h4>
             </label>
           </div>
 
           <div class="new-four new-col">
-            <input type="checkbox" name="r2" id="r2">
+            <input type="checkbox" name="r2" id="r2" class="formSec2Checks" value="Martes">
             <label for="r2">
               <h4>Martes</h4>
             </label>
           </div>
 
           <div class="new-four new-col">
-            <input type="checkbox" name="r3" id="r3">
+            <input type="checkbox" name="r3" id="r3" class="formSec2Checks" value="Miercoles">
             <label for="r3">
               <h4>Miércoles</h4>
             </label>
           </div>
 
           <div class="new-four new-col">
-            <input type="checkbox" name="r4" id="r4">
+            <input type="checkbox" name="r4" id="r4" class="formSec2Checks" value="Jueves">
             <label for="r4">
               <h4>Jueves</h4>
             </label>
           </div>
 
           <div class="new-four new-col">
-            <input type="checkbox" name="r5" id="r5">
+            <input type="checkbox" name="r5" id="r5" class="formSec2Checks" value="Viernes">
             <label for="r5">
               <h4>Viernes</h4>
             </label>
           </div>
 
           <div class="new-four new-col">
-            <input type="checkbox" name="r6" id="r6">
+            <input type="checkbox" name="r6" id="r6" class="formSec2Checks" value="">
             <label for="r6">
               <h4>Sábado</h4>
             </label>
           </div>
         </div>
 
-        <div class="new-button">Next</div>
+        <div class="new-button">Siguiente</div>
       </fieldset>
 
       <!-- Nutrientes -->
       <fieldset class="new-section">
         <h3>¿Se siente cómodo con la porción de frutas?</h3>
-        <input class="new-preg1" type="radio" name="pregunta1" id="resp1">
+        <input class="new-preg1" type="radio" name="pregunta1" id="resp1" class="formSec3">
         <label for="resp1">Sí</label>
         <input class="new-preg1" type="radio" name="pregunta1" id="resp2">
         <label for="resp2">No</label>
 
         <h3>¿Sus porciones de carne le proporcionan una sensación de saciedad adecuada?</h3>
-        <input class="new-preg2" type="radio" name="pregunta2" id="resp3">
+        <input class="new-preg2" type="radio" name="pregunta2" id="resp3" class="formSec3">
         <label for="resp3">Sí</label>
         <input class="new-preg2" type="radio" name="pregunta2" id="resp8">
         <label for="resp8">No</label>
 
         <h3>¿Los cereales que consume le brindan una sensación de saciedad suficiente?</h3>
-        <input class="new-preg3" type="radio" name="pregunta3" id="resp4">
+        <input class="new-preg3" type="radio" name="pregunta3" id="resp4" class="formSec3">
         <label for="resp4">Sí</label>
         <input class="new-preg3" type="radio" name="pregunta3" id="resp5">
         <label for="resp5">No</label>
 
-        <h3>¿Considera que las leguminosas que consume son suficientes para sensación satisfactoria?</h3>
-        <input class="new-preg4" type="radio" name="pregunta4" id="resp6">
+        <h3>¿Considera que las leguminosas que consume son suficientes para su satisfacción</h3>
+        <input class="new-preg4" type="radio" name="pregunta4" id="resp6" class="formSec3">
         <label for="resp6">Sí</label>
         <input class="new-preg4" type="radio" name="pregunta4" id="resp7">
         <label for="resp7">No</label>
 
-        <div class="new-button">Next</div>
+        <div class="new-button">Siguiente</div>
       </fieldset>
 
       <fieldset class="new-section">
         <h3>Toma tus nuevas medidas y responde a continuación</h3>
-        <input type="text" name="Medida del cuello" id="medidacuello" placeholder="Medida del cuello">
-        <input type="text" name="Medida de la cintura" id="Medidacintura" placeholder="Medida de la cintura">
+        <input type="text" name="Medida del cuello" id="medidacuello" placeholder="Medida del cuello" class="formSec4">
+        <input type="text" name="Medida de la cintura" id="Medidacintura" placeholder="Medida de la cintura" class="formSec4">
 
         <!-- <input class="new-submit button" type="submit" value="Next"> -->
-        <div class="new-button">Next</div>
+        <div class="new-button">Finalizar</div>
       </fieldset>
 
       <fieldset class="new-section">
         <h3>Tus datos ya han sido guardados!</h3>
-        <p>Que la comida sea tu alimento y que esta se convierta en tu medicina.</p>
-        <div class="new-button"><a href="#">Cerrar</a></div>
+        <p>Que la comida sea tu alimento y <br> que esta se convierta en tu medicina.</p>
+        <div class=""><a href="#"  id="btnCerrarBitacora">Cerrar</a></div>
       </fieldset>
     </form>
   </div>

@@ -421,7 +421,7 @@ function ChequeadoHombre() {
         <!-- Para que se habra la ventana debes oponerle a un a el id: open -->
 
         <div class="modal-container" id="ventanaCalculosGratis">
-            <div class="modal">
+            <div class="modalGeneral">
                 <div class="compra containerVentanaDieta">       
                     <button id="close" type="submit" ><img src="imagenes/x.png" ></button>  
                     

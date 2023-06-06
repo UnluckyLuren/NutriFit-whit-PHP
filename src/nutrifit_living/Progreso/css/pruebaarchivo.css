@@ -316,6 +316,15 @@ input[type="radio"]:checked + label {
     color: #3498db;
   }
 
+  /* .new-contenedorsedenterio input[type="radio"] + label {
+    border: 1px solid #3498db;
+  } */
+/* 
+  .new-contenedorsedenterio input[type="radio"] + label {
+    color: #3498db;
+  } */
+
+
   .new-section .new-contenedorsedenterio input[type="radio"] + label {
     display: inline-block;
     padding: 10px 20px;
@@ -324,17 +333,23 @@ input[type="radio"]:checked + label {
     width: 22em;
 }
 
-.new-section .new-contenedorsedenterio input[type="radio"]:checked ~ label { 
+.new-section .new-contenedorsedenterio input[type="radio"]:checked + label { 
     background-color: #3498db;
     /* color: #fff; */
 }
 
 /* Preguntas de sect 4 */
-.new-section .new-contenedorsedenterio input[type="radio"]:checked ~ label { 
+.new-section .new-contenedorsedenterio input[type="radio"]:checked + label { 
     background-color: #cffec2;
     /* color: #fff; */
 }
 
 .contNewDias { margin-left: 5em; }
 
+/* Acomodo margen del form */
 
+
+.bitacoraNewForm {
+  position: relative;
+  bottom: 5em;
+}
